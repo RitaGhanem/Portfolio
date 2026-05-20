@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rita Ghanem — Product Manager & Systems Architect</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#0d0d0b;--bg2:#15151200;--bg3:#1a1a17;--line:#28282400;--line2:#34342f;--text:#ececeb;--muted:#7d7d76;--faint:#4a4a45;--accent:#cbb88e;--accent2:#8db49d;--sans:'Inter',sans-serif;--serif:'Fraunces',serif}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--text);font-family:var(--sans);font-size:14px;line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");pointer-events:none;z-index:9999;opacity:0.4}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;height:60px;padding:0 48px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);background:rgba(13,13,11,0.92);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
+.logo{font-family:var(--serif);font-size:18px;font-weight:400;color:var(--text);letter-spacing:-0.02em}
+.logo em{font-style:italic;color:var(--accent)}
+.nav-links{display:flex;gap:0;list-style:none}
+.nav-links a{font-size:11px;color:var(--muted);text-decoration:none;letter-spacing:0.15em;text-transform:uppercase;padding:0 18px;transition:color 0.2s;border-left:1px solid var(--line)}
+.nav-links a:hover{color:var(--text)}
+.nav-links li:first-child a{border-left:none}
+.hero{min-height:100vh;display:grid;grid-template-columns:1fr 1fr;padding-top:60px;border-bottom:1px solid var(--line)}
+.hero-left{padding:80px 48px;border-right:1px solid var(--line);display:flex;flex-direction:column;justify-content:flex-end}
+.hero-tag{font-size:11px;letter-spacing:0.25em;text-transform:uppercase;color:var(--muted);margin-bottom:32px;display:flex;align-items:center;gap:12px}
+.hero-tag::before{content:'';width:24px;height:1px;background:var(--accent)}
+.hero-name{font-family:var(--serif);font-size:clamp(56px,7vw,92px);font-weight:300;line-height:0.95;color:var(--text);margin-bottom:40px;letter-spacing:-0.03em}
+.hero-name em{font-style:italic;color:var(--accent);font-weight:300}
+.hero-statement{font-size:16px;color:var(--muted);max-width:480px;line-height:1.8;font-weight:300}
+.hero-statement strong{color:var(--text);font-weight:400}
+.hero-right{padding:80px 48px;display:flex;flex-direction:column;justify-content:space-between}
+.hero-role{font-size:11px;color:var(--muted);letter-spacing:0.2em;text-transform:uppercase;margin-bottom:24px}
+.hero-card{background:var(--bg2);border:1px solid var(--line);padding:32px;border-radius:2px;margin-bottom:auto}
+.hero-card-title{font-family:var(--serif);font-size:20px;color:var(--accent);font-weight:300;font-style:italic;line-height:1.5}
+.meta-row{display:flex;justify-content:space-between;align-items:baseline;padding:16px 0;border-bottom:1px solid var(--line)}
+.meta-row:last-child{border-bottom:none}
+.meta-label{font-size:10px;color:var(--muted);letter-spacing:0.18em;text-transform:uppercase}
+.meta-value{font-size:13px;color:var(--text)}
+section{border-bottom:1px solid var(--line)}
+.section-header{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px solid var(--line)}
+.section-label{padding:28px 48px;border-right:1px solid var(--line);font-size:11px;letter-spacing:0.25em;text-transform:uppercase;color:var(--muted);display:flex;align-items:center;gap:14px}
+.section-label::before{content:'';width:24px;height:1px;background:var(--accent)}
+.section-num{padding:28px 48px;font-size:10px;color:var(--faint)}
+.section-intro{padding:48px 48px 0;max-width:760px}
+.section-title{font-family:var(--serif);font-size:36px;font-weight:300;color:var(--text);line-height:1.15;margin-bottom:16px;letter-spacing:-0.02em}
+.section-title em{font-style:italic;color:var(--accent)}
+.section-sub{font-size:14px;color:var(--muted);line-height:1.8;font-weight:300}
+.exp-list{padding:48px 0}
+.exp-item{display:grid;grid-template-columns:280px 1fr;padding:36px 48px;border-top:1px solid var(--line);transition:background 0.2s}
+.exp-item:hover{background:var(--bg2)}
+.exp-role{font-family:var(--serif);font-size:22px;font-weight:300;color:var(--text);margin-bottom:6px;letter-spacing:-0.01em}
+.exp-org{font-size:13px;color:var(--accent);margin-bottom:4px}
+.exp-period{font-size:11px;color:var(--muted);letter-spacing:0.1em}
+.exp-right{padding-left:48px;border-left:1px solid var(--line)}
+.exp-desc{font-size:13px;color:var(--muted);line-height:1.8;margin-bottom:16px}
+.exp-bullets{list-style:none}
+.exp-bullets li{font-size:13px;color:var(--muted);padding:6px 0;padding-left:20px;position:relative;line-height:1.7}
+.exp-bullets li::before{content:'—';position:absolute;left:0;color:var(--line2)}
+.exp-bullets li strong{color:var(--text);font-weight:400}
+.projects-grid{display:grid;grid-template-columns:1fr 1fr}
+.project{padding:40px 48px;border-right:1px solid var(--line);border-top:1px solid var(--line);transition:background 0.3s;position:relative}
+.project:nth-child(2n){border-right:none}
+.project:hover{background:var(--bg2)}
+.project::before{content:'';position:absolute;top:0;left:0;width:2px;height:0;background:var(--accent);transition:height 0.4s ease}
+.project:hover::before{height:100%}
+.project-tag{font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:var(--accent);margin-bottom:12px}
+.project-name{font-family:var(--serif);font-size:22px;font-weight:300;color:var(--text);line-height:1.25;margin-bottom:12px;letter-spacing:-0.01em}
+.project-desc{font-size:13px;color:var(--muted);line-height:1.8;margin-bottom:18px}
+.project-stack{display:flex;flex-wrap:wrap;gap:6px}
+.pill{font-size:10px;padding:3px 9px;border:1px solid var(--line2);color:var(--muted);letter-spacing:0.05em;border-radius:1px}
+.skills{display:grid;grid-template-columns:1fr 1fr}
+.skill-block{padding:40px 48px;border-right:1px solid var(--line);border-top:1px solid var(--line)}
+.skill-block:nth-child(2n){border-right:none}
+.skill-cat{font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:var(--accent);margin-bottom:18px}
+.skill-list{font-size:13px;color:var(--text);line-height:2;font-weight:300}
+.phil{padding:48px;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.phil-quote{font-family:var(--serif);font-size:28px;font-weight:300;font-style:italic;color:var(--accent);line-height:1.4;letter-spacing:-0.01em}
+.phil-body{font-size:14px;color:var(--muted);line-height:1.9;font-weight:300}
+.contact{display:grid;grid-template-columns:1fr 1fr;min-height:50vh}
+.contact-left{padding:80px 48px;border-right:1px solid var(--line);display:flex;flex-direction:column;justify-content:center}
+.contact-headline{font-family:var(--serif);font-size:44px;font-weight:300;color:var(--text);line-height:1.1;margin-bottom:24px;letter-spacing:-0.02em}
+.contact-headline em{font-style:italic;color:var(--accent)}
+.contact-body{font-size:14px;color:var(--muted);line-height:1.8;font-weight:300;max-width:380px}
+.contact-right{padding:80px 48px;display:flex;flex-direction:column;justify-content:center}
+.contact-link{display:flex;justify-content:space-between;align-items:center;padding:20px 0;border-bottom:1px solid var(--line);text-decoration:none;transition:padding-left 0.2s}
+.contact-link:hover{padding-left:8px}
+.contact-link-label{font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted)}
+.contact-link-value{font-size:14px;color:var(--accent)}
+footer{padding:28px 48px;display:flex;justify-content:space-between;font-size:10px;color:var(--faint);letter-spacing:0.15em;text-transform:uppercase;border-top:1px solid var(--line)}
+@media(max-width:900px){
+  nav{padding:0 24px}.nav-links a{padding:0 10px;font-size:10px}
+  .hero,.projects-grid,.skills,.contact,.phil,.section-header{grid-template-columns:1fr}
+  .hero-left,.hero-right,.project,.skill-block,.contact-left,.section-label,.exp-right{border-right:none}
+  .exp-item{grid-template-columns:1fr;padding:32px 24px}
+  .exp-right{padding-left:0;border-left:none;margin-top:20px}
+  .hero-left,.hero-right,.contact-left,.contact-right{padding:48px 24px}
+  .section-label,.section-num{padding:20px 24px}
+  .section-intro,.phil{padding:32px 24px}
+  .project,.skill-block{padding:32px 24px}
+  .hero-name{font-size:48px}.section-title{font-size:28px}.contact-headline{font-size:32px}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="logo">Rita <em>Ghanem</em></div>
+  <ul class="nav-links">
+    <li><a href="#work">Work</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<section class="hero">
+  <div class="hero-left">
+    <div class="hero-tag">Portfolio · 2026</div>
+    <h1 class="hero-name">Rita<br><em>Ghanem</em></h1>
+    <p class="hero-statement"><strong>Product Manager, Systems Architect, and builder of smart things.</strong> I design operational systems and the infrastructure that makes them run — across financial software, smart-home integrations, and full-stack web platforms. Based in Beirut.</p>
+  </div>
+  <div class="hero-right">
+    <div class="hero-role">Currently</div>
+    <div class="hero-card">
+      <div class="hero-card-title">"I build systems. Sometimes the system is software. Sometimes it's a platform. Sometimes it's the infrastructure that lets an operation scale beyond what one person can hold in their head."</div>
+    </div>
+    <div>
+      <div class="meta-row"><span class="meta-label">Role</span><span class="meta-value">Product Manager · HedgeGuard</span></div>
+      <div class="meta-row"><span class="meta-label">Based in</span><span class="meta-value">Beirut, Lebanon</span></div>
+      <div class="meta-row"><span class="meta-label">Languages</span><span class="meta-value">English · French · Arabic</span></div>
+      <div class="meta-row"><span class="meta-label">Open to</span><span class="meta-value">Collaboration & technical projects</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="work">
+  <div class="section-header"><div class="section-label">Experience</div><div class="section-num">01</div></div>
+  <div class="section-intro" style="padding-bottom:24px">
+    <h2 class="section-title">Eight years across software, <em>systems, and operations</em>.</h2>
+    <p class="section-sub">From early web development through enterprise smart-home integrations to operational architecture for institutional financial software. Every role has reinforced the same idea — the system matters more than the tools.</p>
+  </div>
+  <div class="exp-list">
+
+    <div class="exp-item">
+      <div>
+        <div class="exp-role">Product Manager</div>
+        <div class="exp-org">HedgeGuard</div>
+        <div class="exp-period">Current</div>
+      </div>
+      <div class="exp-right">
+        <p class="exp-desc">HedgeGuard is a financial data and audit firm serving institutional clients across crypto and traditional finance. Three portfolio management platforms: <strong>Lynx</strong> (institutional crypto PMS), <strong>Gaia</strong> (client-facing crypto PMS), and a traditional PMS for non-crypto asset portfolios. Clients are hedge funds, family offices, and asset managers.</p>
+        <ul class="exp-bullets">
+          <li>Designed and built the <strong>Operations Hub</strong> — a centralized SharePoint Team site consolidating all operational tracking (Workstream Tracker, Issue Log, Feature Log, Roadmap, Tasks Dashboard, Prospect Pipeline, Website Task Log)</li>
+          <li>Architected normalized data structures across the Operations Hub designed to feed a future client-facing platform bot — chunked, queryable, with locked terminology</li>
+          <li>Own the <strong>BookStack documentation program</strong> across seven shelves covering onboarding, both PMS platforms, platform operations, developer/API portal, product updates, and internal strategy</li>
+          <li>Restructuring an <strong>Integrations & Mappings Registry</strong> covering ~88 exchanges and counterparties into a normalized multi-sheet schema feeding both documentation and the platform bot</li>
+          <li>Coordinate new portfolio setup, data migration, and go-live for institutional clients across all three platforms</li>
+          <li>Run daily NAV verification across client instances via hypercube extraction; designing n8n automations to graduate manual checks into scheduled pipelines</li>
+          <li>Triage incoming bugs and issues across all platforms, coordinate engineering investigation and validation, manage P1 escalation with Power Automate alerting</li>
+          <li>Coordinate API endpoint development and validation in Postman before client deployment; manage Lynx API mappings translating exchange data into the platform</li>
+          <li>Handle prospect questionnaires (security, compliance, SLA, DR/RPO/RTO) — triaging each into immediate answer, documentation gap, or roadmap entry</li>
+          <li>Designed a <strong>three-layer reporting cadence</strong>: continuous tracker updates, weekly narrative thread, monthly executive digest to CEO</li>
+          <li>Coordinated the WordPress migration on OVH hosting with external developer — runbook, backup, deployment, rollback, post-launch monitoring</li>
+        </ul>
+      </div>
+    </div>
+	<div class="exp-item">
+		  <div>
+			<div class="exp-role">Owner & CEO</div>
+			<div class="exp-org">Rogue Geometry (Design Studio) </div>
+			<div class="exp-period">Jul 2025 – Present</div>
+		  </div>
+		  <div class="exp-right">
+			<p class="exp-desc">Rogue Geometry is a studio concerned with how form remembers. <strong> We design objects that exist slightly out of time—quiet, deliberate, resistant to trends and explanation.</strong> <br> Not products. <br> Not décor. <br> Functional objects with presence. In a world of infinite generation, we choose finite authorship. We are not anti-technology. We use tools, electronics, software, and systems when appropriate. But form is never delegated.<br> <strong> Judgment remains human. Authorship is responsibility.</strong> <br> Function is ritual. Recognition matters more than accessibility. We make less so it can mean more. We build a body of work, not a catalog.</p>
+		  </div>
+		</div>
+    <div class="exp-item">
+      <div>
+        <div class="exp-role">Freelance Software Developer</div>
+        <div class="exp-org">IT4S</div>
+        <div class="exp-period">Apr 2021 – Present</div>
+      </div>
+      <div class="exp-right">
+        <p class="exp-desc">Independent technical consultant delivering web platforms, smart-home integrations, and operational automation across diverse client industries.</p>
+        <ul class="exp-bullets">
+          <li><strong>Multi-property residential smart-home deployments</strong> across the Mount Lebanon region — Raspberry Pi + Home Assistant integration covering lighting, climate, energy tracking, and security</li>
+          <li>Designed modular automation templates enabling customizable Home Assistant setups across lighting, climate, media, and security — tailored per household</li>
+          <li>Built full iOS / macOS-friendly smart-home dashboards with UI tested across Apple ecosystem for daily use patterns</li>
+          <li><strong>Custom web platforms:</strong> Glass & Mirror National Co. (corporate catalog), AACI / Advanced Aluminum Côte D'Ivoire (bilingual company site + virtual gallery), Ralouka Montesi Photography (portfolio with custom layout system)</li>
+          <li>Designed and built a complete modular ERP in Google Workspace for AACI — three control hubs (Project Lifecycle, Finance, HR), full Apps Script automation, Gmail parsing, bank reconciliation, document generation. In daily active use.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="exp-item">
+      <div>
+        <div class="exp-role">Software Developer</div>
+        <div class="exp-org">A-TECH Australia · Byblos</div>
+        <div class="exp-period">Jan 2020 – Mar 2021</div>
+      </div>
+      <div class="exp-right">
+        <p class="exp-desc">Built a 3D visualization tool and custom CRM platform for the construction industry, combining Unity, Figma, and real-time data integration.</p>
+        <ul class="exp-bullets">
+          <li>Developed a scalable Windows/Android/ iOS / macOS Unity application with real-time issue tracking and BIM integration</li>
+          <li>Engineered multi-user 3D experiences, FBX loaders, and VR/AR interactions</li>
+          <li>Built a CRM dashboard with role-based access control and real-time updates</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="exp-item">
+      <div>
+        <div class="exp-role">Software Developer</div>
+        <div class="exp-org">ACRADIA S.A.R.L · Mkalles</div>
+        <div class="exp-period">Feb 2019 – Jan 2020</div>
+      </div>
+      <div class="exp-right">
+        <p class="exp-desc">First professional role — built dynamic web applications and learned the fundamentals of full-stack development under real production constraints.</p>
+        <ul class="exp-bullets">
+          <li>Developed dynamic web applications using HTML, CSS, jQuery, and PHP</li>
+          <li>Built custom UI components for both touch and desktop environments</li>
+          <li>Designed MySQL-backed data flows and built email automation logic</li>
+          <li>Used Git and PHPStorm for version control and team workflow</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section id="projects">
+  <div class="section-header"><div class="section-label">Selected Projects</div><div class="section-num">02</div></div>
+  <div class="section-intro">
+    <h2 class="section-title">Things I've <em>built</em>.</h2>
+    <p class="section-sub">A selection of professional and personal projects across software, hardware, and operational systems. Each one solved a real problem at scale — for institutions, clients, or households.</p>
+  </div>
+  <div class="projects-grid" style="margin-top:48px">
+
+    <div class="project">
+      <div class="project-tag">Operational Infrastructure · HedgeGuard</div>
+      <h3 class="project-name">Operations Hub</h3>
+      <p class="project-desc">Centralized SharePoint Team site consolidating fragmented operational tracking into one source of truth. Workstream Tracker, Issue Log, Feature Log, Roadmap, Tasks Dashboard, and Prospect Pipeline — each surfaced as a Teams channel tab in its relevant context. Designed for future AI-bot integration with chunked, queryable schemas.</p>
+      <div class="project-stack"><span class="pill">SharePoint</span><span class="pill">Power Automate</span><span class="pill">Teams</span><span class="pill">Systems Architecture</span></div>
+    </div>
+
+    <div class="project">
+      <div class="project-tag">Documentation Program · HedgeGuard</div>
+      <h3 class="project-name">BookStack Knowledge Base</h3>
+      <p class="project-desc">Documentation strategy across seven shelves covering onboarding, both PMS platforms , platform operations, developer portal/API, product updates, and internal operations. Designed to feed a client-facing platform bot — written for external end users, chunkable for retrieval, with locked terminology.</p>
+      <div class="project-stack"><span class="pill">BookStack</span><span class="pill">Technical Writing</span><span class="pill">Knowledge Architecture</span><span class="pill">Bot-Ready Content</span></div>
+    </div>
+
+    <div class="project">
+      <div class="project-tag">Product Design · Rogue Geometry (Personal Design Studio)</div>
+      <h3 class="project-name">Smart Furniture & Gadgets</h3>
+      <p class="project-desc">Bustan Hydroponic System: Modular smart hydroponic tower. Arduino-controlled irrigation + lighting. Lebanese herbs focus. <br> FocusCube: Tamagotchi-inspired desk companion to boost productivity. <br> E-Paper Pocket Size Reader: Boox Palma-inspired handheld e-reader. <br> Pocket Cycle Tracker: Pager-sized minimalist hardware device. Cycle tracking + prediction. </p>
+      <div class="project-stack"><span class="pill">Product Design</span><span class="pill">Product Lifecycle</span><span class="pill">Microcontrollers</span><span class="pill">System Architecture</span></div>
+    </div>
+
+    <div class="project">
+      <div class="project-tag">Automation Program · HedgeGuard</div>
+      <h3 class="project-name">n8n Automation Pipeline</h3>
+      <p class="project-desc">Designing the automation program for repetitive operational work — daily NAV checks across all client instances with Teams alerting, monthly portfolio performance reports pulling hypercube data into Excel templates. Includes a workaround → automation graduation pipeline with usage frequency tracking.</p>
+      <div class="project-stack"><span class="pill">n8n</span><span class="pill">Hypercube API</span><span class="pill">Power Automate</span><span class="pill">Workflow Design</span></div>
+    </div>
+
+    <div class="project">
+      <div class="project-tag">Smart Home · Multi-Property Deployment</div>
+      <h3 class="project-name">Mount Lebanon Residential Network</h3>
+      <p class="project-desc">Smart-home deployments across multiple residential properties in the Monteverde and Mansourieh regions. Raspberry Pi + Home Assistant integration covering lighting, climate, energy tracking, and security. Custom iOS / macOS-friendly dashboards built and tested per household for daily use patterns.</p>
+      <div class="project-stack"><span class="pill">Raspberry Pi</span><span class="pill">Home Assistant</span><span class="pill">YAML</span><span class="pill">iOS / macOS UI</span><span class="pill">IoT Integration</span></div>
+    </div>
+
+    <div class="project">
+      <div class="project-tag">Operational System · Manufacturing Client</div>
+      <h3 class="project-name">AACI Modular ERP</h3>
+      <p class="project-desc">A fully automated internal ERP built inside Google Workspace for an aluminium and glass manufacturing company. Three control hubs — Project Lifecycle, Finance, HR — with Apps Script automation, Gmail parsing, bank reconciliation, payroll, and document generation. In daily active use.</p>
+      <div class="project-stack"><span class="pill">Google Apps Script</span><span class="pill">Sheets</span><span class="pill">Gmail API</span><span class="pill">Operational Architecture</span></div>
+    </div>
+
+    <div class="project">
+      <div class="project-tag">3D Visualization Platform · A-TECH Australia</div>
+      <h3 class="project-name">Construction CRM + BIM Tool</h3>
+      <p class="project-desc">Scalable Unity application with real-time issue tracking, BIM integration, multi-user 3D experiences, FBX loaders, and VR/AR interaction. Paired with a CRM dashboard featuring role-based access control and real-time data updates.</p>
+      <div class="project-stack"><span class="pill">Unity</span><span class="pill">C#</span><span class="pill">Figma</span><span class="pill">iOS / macOS</span><span class="pill">BIM</span></div>
+    </div>
+
+    <div class="project">
+      <div class="project-tag">Web · Multiple Clients</div>
+      <h3 class="project-name">Custom Web Platforms</h3>
+      <p class="project-desc">Custom-built websites across industries — Glass & Mirror National Co. (corporate catalog), AACI (bilingual site with virtual gallery), Ralouka Montesi Photography (creative portfolio with custom layout system) and many others.</p>
+      <div class="project-stack"><span class="pill">HTML</span><span class="pill">React</span><span class="pill">Angular</span><span class="pill">Figma</span><span class="pill">Bilingual UX</span></div>
+    </div>
+
+  </div>
+</section>
+
+<section id="skills">
+  <div class="section-header"><div class="section-label">Skills & Tools</div><div class="section-num">03</div></div>
+  <div class="skills">
+
+    <div class="skill-block">
+      <div class="skill-cat">Languages & Frameworks</div>
+      <div class="skill-list">C++, C#, Java, JavaScript, TypeScript, HTML, CSS, PHP, Swift, Objective-C, SQL, YAML, React, Angular, Firebase</div>
+    </div>
+
+    <div class="skill-block">
+      <div class="skill-cat">Systems & Operations</div>
+      <div class="skill-list">SharePoint, Power Automate, Power BI, Microsoft 365, BookStack, n8n, Notion, Trello, Jira, Operational Architecture, Documentation Strategy</div>
+    </div>
+
+    <div class="skill-block">
+      <div class="skill-cat">Design & Development</div>
+      <div class="skill-list">Figma, Framer, Unity, Unreal Engine, GitHub, Arduino IDE, Xcode, Docker, MongoDB, Sweet Home 3D, AutoCAD, Blender, Spline</div>
+    </div>
+
+    <div class="skill-block">
+      <div class="skill-cat">APIs & Integration</div>
+      <div class="skill-list">Postman, REST APIs, Hypercube data extraction, Excel/VBA, Google Apps Script, Home Assistant, WordPress / OVH, FileZilla</div>
+    </div>
+
+    <div class="skill-block">
+      <div class="skill-cat">Testing & QA</div>
+      <div class="skill-list">Functional Testing, Exploratory Testing, UI/UX Testing, Cross-Device Testing (iOS / macOS / Web), Home Automation QA, Chrome DevTools</div>
+    </div>
+
+    <div class="skill-block">
+      <div class="skill-cat">Communication & Process</div>
+      <div class="skill-list">Three-layer reporting cadence (Tracker → Thread → Email), CEO-facing summaries, runbook design, change management, phased rollout strategy</div>
+    </div>
+
+  </div>
+</section>
+
+<section>
+  <div class="section-header"><div class="section-label">How I Think</div><div class="section-num">04</div></div>
+  <div class="phil">
+    <div class="phil-quote">"The system matters more than the tools. I think in architectures, not in syntax."</div>
+    <div class="phil-body">
+      <p>My background is computer science — but my real specialty is operating across the entire stack of building a working system. From the data schema to the user experience, from the runbook to the executive digest, I care about how everything connects.</p>
+      <br>
+      <p>I learned to code in school. I learned to build by doing — designing operational systems for institutional clients, automating manufacturing operations, wiring homes into responsive networks, debugging weird edge cases until they made sense. That's the work I love. That's the work I'm best at.</p>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="section-header"><div class="section-label">Contact</div><div class="section-num">05</div></div>
+  <div class="contact">
+    <div class="contact-left">
+      <h2 class="contact-headline">Let's build<br><em>something good</em>.</h2>
+      <p class="contact-body">Open to collaborations, technical projects, and conversations about operational systems, financial software architecture, or smart-home design. Based in Beirut, working across English, French, and Arabic.</p>
+    </div>
+    <div class="contact-right">
+      <a class="contact-link" href="mailto:ritaghanem8@gmail.com">
+        <span class="contact-link-label">Email</span>
+        <span class="contact-link-value">ritaghanem8@gmail.com</span>
+      </a>
+      <a class="contact-link" href="tel:+96170290792">
+        <span class="contact-link-label">Phone</span>
+        <span class="contact-link-value">+961 70 29 07 92</span>
+      </a>
+      <a class="contact-link">
+        <span class="contact-link-label">Location</span>
+        <span class="contact-link-value">Beirut, Lebanon</span>
+      </a>
+      <a class="contact-link">
+        <span class="contact-link-label">Languages</span>
+        <span class="contact-link-value">EN · FR · AR</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <span>Rita Ghanem · Product Manager · 2026</span>
+  <span>Built with care · Beirut</span>
+</footer>
+
+</body>
+</html>
