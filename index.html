@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-style="bauhaus">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -432,13 +432,103 @@ html[data-style="bauhaus"] .bh-comp{display:block}
 .style-btn svg{width:26px;height:12px;flex:none}
 html[data-style="bauhaus"] .style-btn{border:2px solid var(--ink);color:var(--text);font-weight:600}
 @media (max-width:520px){.nav-cta{display:none}.style-btn span{display:none}}
+ 
+/* ================= MOTION ================= */
+@property --p{syntax:'<percentage>';inherits:false;initial-value:0%}
+.rv{opacity:0;transform:translateY(24px);transition:opacity .75s cubic-bezier(.2,.7,.2,1),transform .75s cubic-bezier(.2,.7,.2,1)}
+.rv.in{opacity:1;transform:none}
+.obj.rv.in{transition:opacity .75s,transform .35s cubic-bezier(.2,.7,.2,1),border-color .2s}
+.obj.in:hover{transform:translateY(-4px)}
+.proj-btn .proj-title{display:inline-block;transition:color .2s,transform .3s cubic-bezier(.2,.7,.2,1)}
+.proj-btn:hover .proj-title{transform:translateX(6px)}
+ 
+/* process lines draw in */
+.steps li{transition:--p 1.1s cubic-bezier(.6,0,.2,1)}
+.steps li:nth-child(2){transition-delay:.15s}.steps li:nth-child(3){transition-delay:.3s}.steps li:nth-child(4){transition-delay:.45s}.steps li:nth-child(5){transition-delay:.6s}
+.steps:not(.in) li{--p:0%!important}
+ 
+/* demo bars grow in */
+.demo:not(.in) .stack i{width:0!important}
+.stack i{transition:width .7s cubic-bezier(.2,.7,.2,1)}
+.opt-price b{transition:color .3s}
+ 
+/* headline underline */
+.hero h1 .l2{position:relative;display:inline-block}
+.hero h1 .l2::after{content:'';position:absolute;left:0;right:.12em;bottom:.02em;height:3px;background:var(--brass);transform:scaleX(0);transform-origin:left;animation:draw 1.1s cubic-bezier(.6,0,.2,1) 1s forwards}
+@keyframes draw{to{transform:scaleX(1)}}
+html[data-style="bauhaus"] .hero h1 .l2::after{height:.26em;bottom:.08em;background:var(--yellow);z-index:-1;right:0}
+html[data-style="bauhaus"] .hero h1{position:relative;z-index:0}
+ 
+/* ticker */
+.ticker{overflow:hidden;border-bottom:1px solid var(--line);padding:16px 0;white-space:nowrap}
+.ticker-track{display:inline-flex;align-items:center;gap:28px;animation:tick 48s linear infinite;padding-right:28px}
+.ticker:hover .ticker-track{animation-play-state:paused}
+.ticker span{font-family:var(--serif);font-style:italic;font-weight:300;font-size:clamp(20px,2.4vw,28px);color:var(--muted)}
+.tk{display:inline-block;width:8px;height:8px;background:var(--brass);transform:rotate(45deg);flex:none}
+@keyframes tick{to{transform:translateX(-50%)}}
+html[data-style="bauhaus"] .ticker{background:var(--ink);border-bottom:2px solid var(--ink);padding:14px 0}
+html[data-style="bauhaus"] .ticker span{color:var(--bg);font-style:normal;font-weight:600;letter-spacing:-.01em}
+html[data-style="bauhaus"] .tk{width:14px;height:14px;transform:none}
+html[data-style="bauhaus"] .tk-c{background:var(--red);border-radius:50%!important}
+html[data-style="bauhaus"] .tk-s{background:var(--blue)}
+html[data-style="bauhaus"] .tk-t{background:var(--yellow);clip-path:polygon(50% 0,100% 100%,0 100%)}
+ 
+/* bauhaus composition motion */
+.bh-comp{cursor:pointer}
+.bh-l{transition:transform .6s cubic-bezier(.2,.7,.2,1)}
+.bh-x{transition:transform 1s cubic-bezier(.3,1.4,.5,1)}
+.bh-a{transform-box:fill-box;transform-origin:center}
+.bh-a.sq{animation:sqTurn 14s ease-in-out infinite}
+.bh-a.ci{animation:ciBreathe 6s ease-in-out infinite alternate}
+.bh-a.tr{animation:trFloat 7s ease-in-out infinite alternate}
+.bh-a.ball{animation:roll 9s cubic-bezier(.45,0,.55,1) infinite alternate}
+@keyframes sqTurn{0%,100%{transform:rotate(0)}50%{transform:rotate(9deg)}}
+@keyframes ciBreathe{from{transform:translate(0,4px) scale(.97)}to{transform:translate(-6px,-10px) scale(1.05)}}
+@keyframes trFloat{from{transform:translateY(0) rotate(0)}to{transform:translateY(-14px) rotate(-4deg)}}
+@keyframes roll{from{transform:translateX(0)}to{transform:translateX(-318px)}}
+ 
+/* section markers pop in (bauhaus) */
+html[data-style="bauhaus"] .sec-head h2::before,html[data-style="bauhaus"] .sec-title-lg::before{transform:scale(0) rotate(-120deg);transition:transform .9s cubic-bezier(.3,1.6,.5,1) .15s}
+html[data-style="bauhaus"] .sec-head.in h2::before,html[data-style="bauhaus"] .in .sec-title-lg::before{transform:none}
+html[data-style="bauhaus"] .obj-btn h3::before{transition:transform .5s cubic-bezier(.3,1.6,.5,1)}
+html[data-style="bauhaus"] .obj:hover .obj-btn h3::before{transform:rotate(180deg) scale(1.3)}
+ 
+/* logo shapes hop on hover */
+.bh-mark i{transition:transform .3s}
+.logo:hover .bh-mark i{animation:hop .55s cubic-bezier(.3,1.6,.5,1)}
+.logo:hover .bh-mark .s{animation-delay:.07s}.logo:hover .bh-mark .t{animation-delay:.14s}
+@keyframes hop{40%{transform:translateY(-6px)}}
+ 
+@media (prefers-reduced-motion:reduce){
+  .rv{opacity:1!important;transform:none!important}
+  .ticker-track{animation:none!important}
+  .hero h1 .l2::after{transform:none}
+}
+ 
+/* ================= RG BADGE ================= */
+.rg-badge{position:fixed;right:calc(20px + env(safe-area-inset-right,0px));bottom:calc(20px + env(safe-area-inset-bottom,0px));width:104px;height:104px;z-index:150;display:block;transition:transform .35s cubic-bezier(.3,1.5,.5,1);-webkit-tap-highlight-color:transparent}
+.rg-badge svg{width:100%;height:100%;overflow:visible;filter:drop-shadow(0 6px 18px rgba(0,0,0,.18))}
+.rg-badge:hover{transform:scale(1.07)}
+.rg-bg{fill:var(--panel);stroke:var(--line2);stroke-width:1}
+.rg-spin{transform-box:view-box;transform-origin:60px 60px;animation:rgSpin 16s linear infinite}
+.rg-badge:hover .rg-spin{animation-duration:6s}
+.rg-ring{font:600 10.5px var(--sans);fill:var(--text);letter-spacing:.14em}
+.rg-core{fill:var(--brass)}
+.rg-init{font:italic 400 24px var(--serif);fill:var(--on-brass);letter-spacing:-.02em}
+@keyframes rgSpin{to{transform:rotate(360deg)}}
+html[data-style="bauhaus"] .rg-bg{fill:var(--bg);stroke:var(--ink);stroke-width:2.5}
+html[data-style="bauhaus"] .rg-core{fill:var(--red)}
+html[data-style="bauhaus"] .rg-init{font:700 23px var(--sans);font-style:normal;fill:#fff;letter-spacing:-.03em}
+html[data-style="bauhaus"] .rg-ring{font-weight:700}
+@media (max-width:600px){.rg-badge{width:78px;height:78px;right:calc(12px + env(safe-area-inset-right,0px));bottom:calc(12px + env(safe-area-inset-bottom,0px))}}
+@media (prefers-reduced-motion:reduce){.rg-spin{animation:none!important}}
 </style>
 <script>
 (function(){var t=null;try{t=localStorage.getItem('theme')}catch(e){}
 if(!t){t=window.matchMedia&&matchMedia('(prefers-color-scheme: light)').matches?'light':'dark'}
 document.documentElement.setAttribute('data-theme',t);
 var st=null;try{st=localStorage.getItem('style')}catch(e){}
-document.documentElement.setAttribute('data-style',st==='bauhaus'?'bauhaus':'classic')})();
+document.documentElement.setAttribute('data-style',st==='classic'?'classic':'bauhaus')})();
 </script>
 </head>
 <body>
@@ -484,11 +574,12 @@ document.documentElement.setAttribute('data-style',st==='bauhaus'?'bauhaus':'cla
     </div>
     <div class="hero-side">
     <svg class="bh-comp load d2" viewBox="0 0 400 220" aria-hidden="true">
-      <rect class="bh-p" data-d="10" x="228" y="18" width="150" height="150" fill="var(--blue)"/>
-      <circle class="bh-p" data-d="-16" cx="200" cy="112" r="78" fill="var(--red)"/>
-      <polygon class="bh-p" data-d="22" points="20,200 120,30 220,200" fill="var(--yellow)"/>
-      <rect class="bh-p" data-d="-8" x="0" y="206" width="400" height="10" fill="var(--ink)"/>
-      <circle class="bh-p" data-d="28" cx="340" cy="190" r="16" fill="var(--ink)"/>
+      <title>Click to rearrange</title>
+      <g class="bh-l" data-d="10"><g class="bh-x"><rect class="bh-a sq" x="228" y="18" width="150" height="150" fill="var(--blue)"/></g></g>
+      <g class="bh-l" data-d="-16"><g class="bh-x"><circle class="bh-a ci" cx="200" cy="112" r="78" fill="var(--red)"/></g></g>
+      <g class="bh-l" data-d="22"><g class="bh-x"><polygon class="bh-a tr" points="20,200 120,30 220,200" fill="var(--yellow)"/></g></g>
+      <g class="bh-l" data-d="-6"><rect x="0" y="206" width="400" height="10" fill="var(--ink)"/></g>
+      <g class="bh-l" data-d="28"><circle class="bh-a ball" cx="340" cy="190" r="16" fill="var(--ink)"/></g>
     </svg>
     <aside class="now load d3" aria-label="Current focus">
       <h2>Right now</h2>
@@ -502,6 +593,8 @@ document.documentElement.setAttribute('data-style',st==='bauhaus'?'bauhaus':'cla
     </div>
   </div>
 </header>
+ 
+<div class="ticker" aria-hidden="true"><div class="ticker-track"><span>Operations</span><i class="tk tk-c"></i><span>Automation</span><i class="tk tk-s"></i><span>Apps & platforms</span><i class="tk tk-t"></i><span>Data integrations</span><i class="tk tk-c"></i><span>ERP systems</span><i class="tk tk-s"></i><span>APIs</span><i class="tk tk-t"></i><span>Websites</span><i class="tk tk-c"></i><span>Documentation</span><i class="tk tk-s"></i><span>Hardware</span><i class="tk tk-t"></i><span>Process design</span><i class="tk tk-c"></i><span>Operations</span><i class="tk tk-c"></i><span>Automation</span><i class="tk tk-s"></i><span>Apps & platforms</span><i class="tk tk-t"></i><span>Data integrations</span><i class="tk tk-c"></i><span>ERP systems</span><i class="tk tk-s"></i><span>APIs</span><i class="tk tk-t"></i><span>Websites</span><i class="tk tk-c"></i><span>Documentation</span><i class="tk tk-s"></i><span>Hardware</span><i class="tk tk-t"></i><span>Process design</span><i class="tk tk-c"></i></div></div>
  
 <!-- APPROACH -->
 <section id="approach">
@@ -730,16 +823,51 @@ document.documentElement.setAttribute('data-style',st==='bauhaus'?'bauhaus':'cla
 </section>
 </main>
  
+ 
+<a class="rg-badge" href="#contact" aria-label="Rita Ghanem, system architect. Get in touch">
+  <svg viewBox="0 0 120 120" aria-hidden="true">
+    <defs><path id="rgRing" d="M60,60 m-44,0 a44,44 0 1,1 88,0 a44,44 0 1,1 -88,0"/></defs>
+    <circle class="rg-bg" cx="60" cy="60" r="58"/>
+    <g class="rg-spin">
+      <text class="rg-ring"><textPath href="#rgRing" textLength="274" lengthAdjust="spacing">SYSTEM ARCHITECT ✦ SYSTEM ARCHITECT ✦ </textPath></text>
+    </g>
+    <circle class="rg-core" cx="60" cy="60" r="27"/>
+    <text class="rg-init" x="60" y="60" text-anchor="middle" dominant-baseline="central">RG</text>
+  </svg>
+</a>
+ 
 <footer><div class="wrap"><span>Rita Ghanem · Beirut · 2026</span><span>Designed and built in-house</span></div></footer>
  
 <script>
 /* ---------- bauhaus composition parallax ---------- */
-(function(){const hero=document.querySelector('.hero'),ps=[...document.querySelectorAll('.bh-p')];
+(function(){const hero=document.querySelector('.hero'),ps=[...document.querySelectorAll('.bh-l')];
+ const comp=document.querySelector('.bh-comp');
+ if(comp)comp.addEventListener('click',()=>{
+   const xs=[...comp.querySelectorAll('.bh-x')],rnd=(a)=>(Math.random()*2-1)*a;
+   xs.forEach(x=>x.style.transform=`translate(${rnd(46)}px,${rnd(24)}px) rotate(${rnd(20)}deg)`);
+ });
  if(!hero||matchMedia('(prefers-reduced-motion: reduce)').matches)return;
  hero.addEventListener('pointermove',e=>{const r=hero.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;
   ps.forEach(p=>{const d=+p.dataset.d;p.style.transform=`translate(${x*d}px,${y*d}px)`})});
  hero.addEventListener('pointerleave',()=>ps.forEach(p=>p.style.transform=''));
 })();
+ 
+/* ---------- scroll reveal ---------- */
+function setupReveal(){
+  const sel=['.sec-head','.principles .pr','.feature','.demo','.spot > div','.proj','.obj','.team-types','.roster','.team-note > div','.steps','.steps li','.promises > div','.xp li','.tools > div','.contact > *'];
+  const els=[...document.querySelectorAll(sel.join(','))];
+  const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  els.forEach(el=>{
+    if(!el.matches('.steps'))el.classList.add('rv');
+    const sib=[...el.parentElement.children].filter(c=>c.tagName===el.tagName);
+    const i=sib.indexOf(el);
+    if(!el.matches('.steps li'))el.style.transitionDelay=((i%6)*70)+'ms';
+  });
+  if(reduce||!('IntersectionObserver' in window)){els.forEach(e=>e.classList.add('in'));return}
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);
+    setTimeout(()=>{if(!e.target.matches('.steps li'))e.target.style.transitionDelay=''},1200)}}),{rootMargin:'0px 0px -8% 0px',threshold:.08});
+  els.forEach(e=>io.observe(e));
+}
  
 /* ---------- style switcher ---------- */
 (function(){const b=document.getElementById('styleBtn'),l=document.getElementById('styleLbl'),h=document.documentElement;
@@ -963,6 +1091,13 @@ $('lotSeg').addEventListener('click',e=>{
   const b=e.target.closest('button');if(!b)return;lot=b.dataset.v;
   $('lotSeg').querySelectorAll('button').forEach(x=>x.setAttribute('aria-pressed',x===b));run();
 });
+function tween(el,to){
+  const from=+el.dataset.v||0;el.dataset.v=to;
+  if(matchMedia('(prefers-reduced-motion: reduce)').matches){el.textContent=usd(to);return}
+  cancelAnimationFrame(el._raf);const t0=performance.now(),d=550;
+  const step=t=>{const k=Math.min(1,(t-t0)/d),e=1-Math.pow(1-k,3);el.textContent=usd(from+(to-from)*e);if(k<1)el._raf=requestAnimationFrame(step)};
+  el._raf=requestAnimationFrame(step);
+}
 function run(){
   const A=+$('area').value,F=+$('frt').value/100,O=+$('oh').value/100,M=+$('mg').value/100,L=LOTS[lot];
   $('areaOut').textContent=A.toLocaleString('en')+' m²';$('frtOut').textContent=Math.round(F*100)+'%';
@@ -972,10 +1107,21 @@ function run(){
     return {n,d,lt,sell,parts:[sup,frt,ins,oh,sell-cost]};
   });
   const min=Math.min(...R.map(r=>r.sell)),max=Math.max(...R.map(r=>r.sell));
-  $('opts').innerHTML=R.map(r=>`<li class="${r.sell===min?'best':''}">
-    <div class="opt-head"><span class="opt-name">${r.n}<small>${r.d} · ${r.lt} weeks lead time</small></span>
-    <span class="opt-price"><b>${usd(r.sell)}</b><small>${usd(r.sell/A)} per m²</small></span></div>
-    <div class="stack" role="img" aria-label="Cost breakdown for ${r.n}">${r.parts.map((v,i)=>`<i style="width:${v/max*100}%;background:${COLORS[i]}"></i>`).join('')}</div></li>`).join('');
+  const ol=$('opts');
+  if(ol.children.length!==R.length){
+    ol.innerHTML=R.map(r=>`<li><div class="opt-head"><span class="opt-name"><span class="on"></span><small></small></span>
+      <span class="opt-price"><b data-v="0">$0</b><small></small></span></div>
+      <div class="stack" role="img">${r.parts.map((v,i)=>`<i style="width:0;background:${COLORS[i]}"></i>`).join('')}</div></li>`).join('');
+  }
+  R.forEach((r,k)=>{
+    const li=ol.children[k];li.classList.toggle('best',r.sell===min);
+    li.querySelector('.on').textContent=r.n;
+    li.querySelector('.opt-name small').textContent=`${r.d} · ${r.lt} weeks lead time`;
+    li.querySelector('.opt-price small').textContent=usd(r.sell/A)+' per m²';
+    li.querySelector('.stack').setAttribute('aria-label','Cost breakdown for '+r.n);
+    [...li.querySelectorAll('.stack i')].forEach((el,i)=>el.style.width=(r.parts[i]/max*100)+'%');
+    tween(li.querySelector('.opt-price b'),r.sell);
+  });
   const fast=R.reduce((a,b)=>a.lt<b.lt?a:b);
   $('summary').innerHTML=`<div><small>Spread between options</small><b>${usd(max-min)}</b></div>
     <div><small>Lowest price per m²</small><b>${usd(min/A)}</b></div>
@@ -983,7 +1129,7 @@ function run(){
 }
 ['area','frt','oh','mg'].forEach(id=>$(id).addEventListener('input',run));
 run();
+setupReveal();
 </script>
 </body>
 </html>
- 
