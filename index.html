@@ -7,14 +7,14 @@
 <meta name="description" content="Rita Ghanem, Chief Operating Officer at HedgeGuard. I design and build the systems businesses run on: customer apps, operational platforms, automation and integrations. Beirut.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300;1,9..144,400&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300;1,9..144,400&family=Hanken+Grotesk:wght@400;500;600&family=Jost:ital,wght@0,400;0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
   --bg:#131210;--panel:#1b1a17;--panel2:#22211d;--line:#2e2c27;--line2:#403d36;
   --text:#edebe4;--muted:#9a978d;--faint:#6b6860;
   --brass:#c9a96e;--brass-dim:#8a7550;--sage:#8fb59e;--rust:#d08a6a;
-  --on-brass:#131210;--nav-bg:rgba(19,18,16,.9);--tint:#17150f;
+  --on-brass:#131210;--nav-bg:rgba(19,18,16,.9);--tint:#17150f;--c1:#6f8fa8;--c2:#8a7550;--c3:#8fb59e;--c4:#9a978d;--c5:#c9a96e;
   --serif:'Fraunces',Georgia,'Times New Roman',serif;
   --sans:'Hanken Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif;
   --wrap:1180px;--pad:clamp(20px,4vw,48px);
@@ -296,11 +296,149 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
   .load{opacity:1;transform:none}
   html{scroll-behavior:auto}
 }
+ 
+/* ================= BAUHAUS THEME ================= */
+:root[data-style="bauhaus"]{--c1:var(--blue);--c2:var(--yellow);--c3:var(--red);--c4:var(--faint);--c5:var(--ink);--serif:'Jost','Futura','Century Gothic',system-ui,sans-serif;--sans:'Jost','Futura','Century Gothic',system-ui,sans-serif;
+  --bg:#141414;--panel:#1c1c1c;--panel2:#232323;--line:#3a3a3a;--line2:#e9e3d6;--text:#f2ede3;--muted:#b6b0a4;--faint:#8c877d;
+  --brass:#ec5140;--brass-dim:#ec5140;--sage:#6b93f0;--rust:#f5c21a;--on-brass:#fff;--nav-bg:rgba(20,20,20,.96);--tint:#141414;
+  --red:#e5483a;--blue:#3f6fd8;--yellow:#f5c21a;--ink:#f2ede3}
+@media (prefers-color-scheme:light){:root[data-style="bauhaus"]:not([data-theme="dark"]){--bg:#f2ede3;--panel:#fbf8f1;--panel2:#e9e2d3;--line:#d3cbbb;--line2:#141414;--text:#141414;--muted:#48443d;--faint:#736d64;--brass:#c8341f;--brass-dim:#c8341f;--sage:#1f4fa3;--rust:#b88700;--on-brass:#fff;--nav-bg:rgba(242,237,227,.96);--tint:#f2ede3;--red:#d13b2a;--blue:#1f4fa3;--yellow:#f2b705;--ink:#141414}}
+:root[data-style="bauhaus"][data-theme="light"]{--bg:#f2ede3;--panel:#fbf8f1;--panel2:#e9e2d3;--line:#d3cbbb;--line2:#141414;--text:#141414;--muted:#48443d;--faint:#736d64;--brass:#c8341f;--brass-dim:#c8341f;--sage:#1f4fa3;--rust:#b88700;--on-brass:#fff;--nav-bg:rgba(242,237,227,.96);--tint:#f2ede3;--red:#d13b2a;--blue:#1f4fa3;--yellow:#f2b705;--ink:#141414}
+ 
+html[data-style="bauhaus"] *,html[data-style="bauhaus"] *::before,html[data-style="bauhaus"] *::after{border-radius:0!important}
+html[data-style="bauhaus"] .pulse,html[data-style="bauhaus"] .steps li::after,html[data-style="bauhaus"] .theme-btn,html[data-style="bauhaus"] .bh-mark .c{border-radius:50%!important}
+html[data-style="bauhaus"] body{font-size:16.5px}
+html[data-style="bauhaus"] h1,html[data-style="bauhaus"] h2,html[data-style="bauhaus"] h3,html[data-style="bauhaus"] .proj-title,html[data-style="bauhaus"] .logo,html[data-style="bauhaus"] .sec-title-lg,html[data-style="bauhaus"] .contact h2{font-weight:500!important;letter-spacing:-.02em}
+html[data-style="bauhaus"] .hero h1{font-weight:600!important;letter-spacing:-.045em;line-height:.95}
+html[data-style="bauhaus"] .hero h1 .l2{font-style:normal;color:var(--red)}
+html[data-style="bauhaus"] .logo span,html[data-style="bauhaus"] .xp h3 span,html[data-style="bauhaus"] .contact h2 em{font-style:normal;color:var(--red)}
+html[data-style="bauhaus"] .logo{display:flex;align-items:center;gap:10px;font-weight:600!important}
+html[data-style="bauhaus"] .bh-mark{display:inline-flex;gap:3px;align-items:flex-end}
+html[data-style="bauhaus"] .bh-mark i{display:block;width:11px;height:11px}
+html[data-style="bauhaus"] .bh-mark .c{background:var(--red)}html[data-style="bauhaus"] .bh-mark .s{background:var(--blue)}
+html[data-style="bauhaus"] .bh-mark .t{background:var(--yellow);clip-path:polygon(50% 0,100% 100%,0 100%)}
+html[data-style="bauhaus"] nav{border-bottom:2px solid var(--ink)}
+html[data-style="bauhaus"] section,html[data-style="bauhaus"] .hero{border-bottom:2px solid var(--ink)}
+html[data-style="bauhaus"] .hero-role,html[data-style="bauhaus"] .kicker{font-weight:600;letter-spacing:.02em}
+ 
+/* hero composition */
+html[data-style="bauhaus"] .hero-side{display:flex;flex-direction:column;gap:22px}
+html[data-style="bauhaus"] .bh-comp{width:100%;max-width:440px;height:auto;align-self:flex-end;overflow:visible}
+html[data-style="bauhaus"] .bh-p{transition:transform .5s cubic-bezier(.2,.7,.2,1)}
+html[data-style="bauhaus"] .now{border:2px solid var(--ink);border-top:10px solid var(--red);background:var(--panel)}
+html[data-style="bauhaus"] .now-row{border-top-color:var(--line)}
+ 
+/* buttons & controls */
+html[data-style="bauhaus"] .btn{border:2px solid var(--ink);font-weight:600}
+html[data-style="bauhaus"] .btn:hover{background:var(--ink);color:var(--bg)}
+html[data-style="bauhaus"] .btn-solid{background:var(--red);border-color:var(--red);color:#fff}
+html[data-style="bauhaus"] .btn-solid:hover{background:var(--ink);border-color:var(--ink);color:var(--bg)}
+html[data-style="bauhaus"] .nav-cta{border:2px solid var(--ink);color:var(--text);font-weight:600}
+html[data-style="bauhaus"] .nav-cta:hover{background:var(--red);border-color:var(--red);color:#fff}
+html[data-style="bauhaus"] .theme-btn{border:2px solid var(--ink);color:var(--text)}
+html[data-style="bauhaus"] .chip{border:2px solid var(--line)}
+html[data-style="bauhaus"] .chip[aria-pressed=true]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+html[data-style="bauhaus"] .tab{border:2px solid var(--line)}
+html[data-style="bauhaus"] .tab[aria-selected=true]{background:var(--blue);border-color:var(--blue);color:#fff}
+ 
+/* section markers */
+html[data-style="bauhaus"] .sec-head h2::before,html[data-style="bauhaus"] .sec-title-lg::before{content:'';display:block;width:26px;height:26px;margin-bottom:20px;background:var(--red)}
+html[data-style="bauhaus"] #approach .sec-head h2::before{background:var(--red);border-radius:50%!important}
+html[data-style="bauhaus"] #demo .sec-head h2::before{background:var(--blue)}
+html[data-style="bauhaus"] #erp .sec-title-lg::before{background:var(--yellow);clip-path:polygon(50% 0,100% 100%,0 100%)}
+html[data-style="bauhaus"] #work .sec-head h2::before{background:var(--red)}
+html[data-style="bauhaus"] #objects .sec-head h2::before{background:var(--blue);border-radius:50%!important}
+html[data-style="bauhaus"] #team .sec-head h2::before{background:var(--yellow)}
+html[data-style="bauhaus"] #process .sec-head h2::before{background:var(--red);clip-path:polygon(50% 0,100% 100%,0 100%)}
+html[data-style="bauhaus"] #experience .sec-head h2::before{background:var(--ink);border-radius:50%!important}
+ 
+/* approach + feature */
+html[data-style="bauhaus"] .principles{border-top:2px solid var(--ink)}
+html[data-style="bauhaus"] .pr .eg{border-left:4px solid var(--blue)}
+html[data-style="bauhaus"] .pr:nth-child(2) .eg{border-left-color:var(--red)}
+html[data-style="bauhaus"] .pr:nth-child(3) .eg{border-left-color:var(--yellow)}
+html[data-style="bauhaus"] .feature{border:2px solid var(--ink);border-left:14px solid var(--blue)}
+html[data-style="bauhaus"] .flow b{color:var(--red);font-weight:600}
+ 
+/* demo */
+html[data-style="bauhaus"] #demo{background:var(--bg)}
+html[data-style="bauhaus"] .demo{border:2px solid var(--ink)}
+html[data-style="bauhaus"] .demo-controls{background:var(--yellow);border-right:2px solid var(--ink);--muted:#141414;--text:#141414;--bg:#fff7da;--line2:#141414;--brass:#141414;--on-brass:#fff}
+html[data-style="bauhaus"] .demo-controls label{font-weight:500}
+html[data-style="bauhaus"] .opt-price b{font-weight:600}
+html[data-style="bauhaus"] .summary{border:2px solid var(--ink)}
+html[data-style="bauhaus"] .stack{height:14px}
+ 
+/* ERP */
+html[data-style="bauhaus"] .hub{border:2px solid var(--ink);border-top:10px solid var(--yellow)}
+html[data-style="bauhaus"] .hub li::before{background:var(--red)}
+html[data-style="bauhaus"] .spot-facts{border-top:2px solid var(--ink)}
+ 
+/* work */
+html[data-style="bauhaus"] .projects{border-top:2px solid var(--ink)}
+html[data-style="bauhaus"] .proj-btn:hover .proj-title{color:var(--red)}
+html[data-style="bauhaus"] .plus{border:2px solid var(--ink)}
+html[data-style="bauhaus"] .plus::before,html[data-style="bauhaus"] .plus::after{background:var(--text)}
+html[data-style="bauhaus"] .pbd h4{color:var(--blue)}
+html[data-style="bauhaus"] .facts li::before{background:var(--red)}
+ 
+/* objects */
+html[data-style="bauhaus"] .obj{border:2px solid var(--ink);background:var(--panel)}
+html[data-style="bauhaus"] .obj.open{border-color:var(--red)}
+html[data-style="bauhaus"] .obj-st{border:none;font-weight:600;padding:3px 10px}
+html[data-style="bauhaus"] .obj-st.made{background:var(--blue);color:#fff}
+html[data-style="bauhaus"] .obj-st.bench{background:var(--yellow);color:#141414}
+html[data-style="bauhaus"] .obj.open .obj-more{color:var(--red)}
+html[data-style="bauhaus"] .obj-grid .obj:nth-child(3n+1) .obj-btn h3::before,html[data-style="bauhaus"] .obj-grid .obj:nth-child(3n+2) .obj-btn h3::before,html[data-style="bauhaus"] .obj-grid .obj:nth-child(3n) .obj-btn h3::before{content:'';display:inline-block;width:10px;height:10px;margin-right:10px;vertical-align:2px}
+html[data-style="bauhaus"] .obj-grid .obj:nth-child(3n+1) h3::before{background:var(--red);border-radius:50%!important}
+html[data-style="bauhaus"] .obj-grid .obj:nth-child(3n+2) h3::before{background:var(--blue)}
+html[data-style="bauhaus"] .obj-grid .obj:nth-child(3n) h3::before{background:var(--yellow);clip-path:polygon(50% 0,100% 100%,0 100%)}
+ 
+/* team */
+html[data-style="bauhaus"] .tt{border:2px solid var(--line)}
+html[data-style="bauhaus"] .tt[aria-pressed=true]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+html[data-style="bauhaus"] .roster{border:2px solid var(--ink)}
+html[data-style="bauhaus"] .roles li{border:2px solid var(--line)}
+html[data-style="bauhaus"] .roles li.lead{border-color:var(--red)}
+html[data-style="bauhaus"] .roles li.lead b{color:var(--red)}
+html[data-style="bauhaus"] .team-note div{border-top:4px solid var(--blue)}
+html[data-style="bauhaus"] .team-note div:nth-child(2){border-top-color:var(--red)}
+html[data-style="bauhaus"] .team-note div:nth-child(3){border-top-color:var(--yellow)}
+ 
+/* process */
+html[data-style="bauhaus"] .steps li{background:linear-gradient(90deg,var(--red) 0 var(--p),var(--line) var(--p) 100%) top left/100% 4px no-repeat}
+html[data-style="bauhaus"] .steps li::before{color:var(--ink);font-weight:600}
+html[data-style="bauhaus"] .steps li::after{background:var(--ink);width:14px;height:14px;top:-5px;left:clamp(0px,calc(var(--p) - 7px),calc(100% - 14px));box-shadow:0 0 0 3px var(--bg)}
+html[data-style="bauhaus"] .promises{border:2px solid var(--ink);background:var(--ink);gap:2px}
+html[data-style="bauhaus"] .promises div{border-top:8px solid var(--red)}
+html[data-style="bauhaus"] .promises div:nth-child(2){border-top-color:var(--blue)}
+html[data-style="bauhaus"] .promises div:nth-child(3){border-top-color:var(--yellow)}
+html[data-style="bauhaus"] .promises div:nth-child(4){border-top-color:var(--ink)}
+ 
+/* experience + contact */
+html[data-style="bauhaus"] .xp{border-top:2px solid var(--ink)}
+html[data-style="bauhaus"] .tools h3{color:var(--blue)}
+html[data-style="bauhaus"] .clinks a,html[data-style="bauhaus"] .clinks div{border-top:2px solid var(--line)}
+html[data-style="bauhaus"] .clinks a:hover span:last-child{color:var(--red)}
+html[data-style="bauhaus"] footer{border-top:2px solid var(--ink)}
+@media (max-width:900px){html[data-style="bauhaus"] .bh-comp{max-width:320px;align-self:flex-start}}
+ 
+/* style switcher */
+.bh-mark,.bh-comp{display:none}
+html[data-style="bauhaus"] .bh-mark{display:inline-flex}
+html[data-style="bauhaus"] .bh-comp{display:block}
+.style-btn{height:36px;padding:0 12px;border-radius:999px;border:1px solid var(--line2);background:none;color:var(--muted);cursor:pointer;display:inline-flex;align-items:center;gap:8px;font:500 13.5px var(--sans);transition:color .2s,border-color .2s}
+.style-btn:hover{color:var(--text);border-color:var(--muted)}
+.style-btn svg{width:26px;height:12px;flex:none}
+html[data-style="bauhaus"] .style-btn{border:2px solid var(--ink);color:var(--text);font-weight:600}
+@media (max-width:520px){.nav-cta{display:none}.style-btn span{display:none}}
 </style>
 <script>
 (function(){var t=null;try{t=localStorage.getItem('theme')}catch(e){}
 if(!t){t=window.matchMedia&&matchMedia('(prefers-color-scheme: light)').matches?'light':'dark'}
-document.documentElement.setAttribute('data-theme',t)})();
+document.documentElement.setAttribute('data-theme',t);
+var st=null;try{st=localStorage.getItem('style')}catch(e){}
+document.documentElement.setAttribute('data-style',st==='bauhaus'?'bauhaus':'classic')})();
 </script>
 </head>
 <body>
@@ -308,7 +446,7 @@ document.documentElement.setAttribute('data-theme',t)})();
  
 <nav aria-label="Main">
   <div class="wrap nav-in">
-    <a class="logo" href="#top">Rita <span>Ghanem</span></a>
+    <a class="logo" href="#top"><span class="bh-mark" aria-hidden="true"><i class="c"></i><i class="s"></i><i class="t"></i></span>Rita <span>Ghanem</span></a>
     <ul class="nav-links">
       <li><a href="#approach">Approach</a></li>
       <li><a href="#demo">Demo</a></li>
@@ -319,6 +457,10 @@ document.documentElement.setAttribute('data-theme',t)})();
       <li><a href="#experience">Experience</a></li>
     </ul>
     <div class="nav-right">
+      <button type="button" class="style-btn" id="styleBtn" title="Change visual style">
+        <svg viewBox="0 0 26 12" aria-hidden="true"><circle cx="5" cy="6" r="5" fill="#d13b2a"/><rect x="11" y="1" width="10" height="10" fill="#1f4fa3" opacity=".9"/><polygon points="20,11 23,1 26,11" fill="#f2b705"/></svg>
+        <span id="styleLbl">Bauhaus</span>
+      </button>
       <button type="button" class="theme-btn" id="themeBtn" aria-label="Switch to light mode">
         <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/></svg>
         <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
@@ -340,6 +482,14 @@ document.documentElement.setAttribute('data-theme',t)})();
         <a class="btn" href="#work">See the work</a>
       </div>
     </div>
+    <div class="hero-side">
+    <svg class="bh-comp load d2" viewBox="0 0 400 220" aria-hidden="true">
+      <rect class="bh-p" data-d="10" x="228" y="18" width="150" height="150" fill="var(--blue)"/>
+      <circle class="bh-p" data-d="-16" cx="200" cy="112" r="78" fill="var(--red)"/>
+      <polygon class="bh-p" data-d="22" points="20,200 120,30 220,200" fill="var(--yellow)"/>
+      <rect class="bh-p" data-d="-8" x="0" y="206" width="400" height="10" fill="var(--ink)"/>
+      <circle class="bh-p" data-d="28" cx="340" cy="190" r="16" fill="var(--ink)"/>
+    </svg>
     <aside class="now load d3" aria-label="Current focus">
       <h2>Right now</h2>
       <dl>
@@ -349,6 +499,7 @@ document.documentElement.setAttribute('data-theme',t)})();
         <div class="now-row"><dt>Based in</dt><dd>Beirut · working in English, French and Arabic</dd></div>
       </dl>
     </aside>
+    </div>
   </div>
 </header>
  
@@ -435,7 +586,7 @@ document.documentElement.setAttribute('data-theme',t)})();
           <small>USD, before tax</small>
         </div>
         <div class="legend" aria-hidden="true">
-          <span style="--c:#6f8fa8">Supply</span><span style="--c:#8a7550">Freight &amp; duty</span><span style="--c:#8fb59e">Installation</span><span style="--c:#9a978d">Overheads &amp; risk</span><span style="--c:#c9a96e">Margin</span>
+          <span style="--c:var(--c1)">Supply</span><span style="--c:var(--c2)">Freight &amp; duty</span><span style="--c:var(--c3)">Installation</span><span style="--c:var(--c4)">Overheads &amp; risk</span><span style="--c:var(--c5)">Margin</span>
         </div>
         <ul class="opts" id="opts"></ul>
         <div class="summary" id="summary"></div>
@@ -582,6 +733,19 @@ document.documentElement.setAttribute('data-theme',t)})();
 <footer><div class="wrap"><span>Rita Ghanem · Beirut · 2026</span><span>Designed and built in-house</span></div></footer>
  
 <script>
+/* ---------- bauhaus composition parallax ---------- */
+(function(){const hero=document.querySelector('.hero'),ps=[...document.querySelectorAll('.bh-p')];
+ if(!hero||matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+ hero.addEventListener('pointermove',e=>{const r=hero.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;
+  ps.forEach(p=>{const d=+p.dataset.d;p.style.transform=`translate(${x*d}px,${y*d}px)`})});
+ hero.addEventListener('pointerleave',()=>ps.forEach(p=>p.style.transform=''));
+})();
+ 
+/* ---------- style switcher ---------- */
+(function(){const b=document.getElementById('styleBtn'),l=document.getElementById('styleLbl'),h=document.documentElement;
+ const sync=()=>{const next=h.dataset.style==='bauhaus'?'Classic':'Bauhaus';l.textContent=next;b.setAttribute('aria-label','Switch to '+next.toLowerCase()+' style')};
+ sync();b.addEventListener('click',()=>{h.dataset.style=h.dataset.style==='bauhaus'?'classic':'bauhaus';try{localStorage.setItem('style',h.dataset.style)}catch(e){};sync()});})();
+ 
 /* ---------- theme ---------- */
 (function(){const b=document.getElementById('themeBtn'),h=document.documentElement;
  const sync=()=>b.setAttribute('aria-label',h.dataset.theme==='light'?'Switch to dark mode':'Switch to light mode');
@@ -792,7 +956,7 @@ const LOTS={
   win:{n:'Windows',inst:60,o:[['Option A','Premium European system',340,12],['Option B','Mid-range system',295,9],['Option C','Value system',255,7]]},
   clad:{n:'Cladding',inst:45,o:[['Option A','Premium panel',200,10],['Option B','Mid-range panel',165,8],['Option C','Value panel',140,6]]}
 };
-const COLORS=['#6f8fa8','#8a7550','#8fb59e','#9a978d','#c9a96e'];
+const COLORS=['var(--c1)','var(--c2)','var(--c3)','var(--c4)','var(--c5)'];
 const usd=n=>'$'+Math.round(n).toLocaleString('en');
 let lot='cw';
 $('lotSeg').addEventListener('click',e=>{
@@ -822,3 +986,4 @@ run();
 </script>
 </body>
 </html>
+ 
