@@ -2,377 +2,657 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Rita Ghanem — Product Manager & Systems Architect</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Rita Ghanem — Operations, systems and apps</title>
+<meta name="description" content="Rita Ghanem, Chief Operating Officer at HedgeGuard. I design and build the systems businesses run on: customer apps, operational platforms, automation and integrations. Beirut.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300;1,9..144,400&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{--bg:#0d0d0b;--bg2:#15151200;--bg3:#1a1a17;--line:#28282400;--line2:#34342f;--text:#ececeb;--muted:#7d7d76;--faint:#4a4a45;--accent:#cbb88e;--accent2:#8db49d;--sans:'Inter',sans-serif;--serif:'Fraunces',serif}
-html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
-body{background:var(--bg);color:var(--text);font-family:var(--sans);font-size:14px;line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden}
-body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");pointer-events:none;z-index:9999;opacity:0.4}
-nav{position:fixed;top:0;left:0;right:0;z-index:100;height:60px;padding:0 48px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);background:rgba(13,13,11,0.92);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
-.logo{font-family:var(--serif);font-size:18px;font-weight:400;color:var(--text);letter-spacing:-0.02em}
-.logo em{font-style:italic;color:var(--accent)}
-.nav-links{display:flex;gap:0;list-style:none}
-.nav-links a{font-size:11px;color:var(--muted);text-decoration:none;letter-spacing:0.15em;text-transform:uppercase;padding:0 18px;transition:color 0.2s;border-left:1px solid var(--line)}
+:root{
+  --bg:#131210;--panel:#1b1a17;--panel2:#22211d;--line:#2e2c27;--line2:#403d36;
+  --text:#edebe4;--muted:#9a978d;--faint:#6b6860;
+  --brass:#c9a96e;--brass-dim:#8a7550;--sage:#8fb59e;--rust:#d08a6a;
+  --serif:'Fraunces',Georgia,'Times New Roman',serif;
+  --sans:'Hanken Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --wrap:1180px;--pad:clamp(20px,4vw,48px);
+  padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;scroll-padding-top:72px}
+body{background:var(--bg);color:var(--text);font-family:var(--sans);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--brass);outline-offset:3px;border-radius:2px}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 var(--pad)}
+.skip{position:absolute;left:-999px;top:8px;background:var(--brass);color:#131210;padding:8px 14px;z-index:200}
+.skip:focus{left:8px}
+
+/* nav */
+nav{position:sticky;top:0;z-index:100;background:rgba(19,18,16,.9);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;height:60px}
+.logo{font-family:var(--serif);font-size:19px;text-decoration:none;letter-spacing:-.01em}
+.logo span{color:var(--brass);font-style:italic}
+.nav-links{display:flex;gap:26px;list-style:none}
+.nav-links a{font-size:14px;color:var(--muted);text-decoration:none;transition:color .2s}
 .nav-links a:hover{color:var(--text)}
-.nav-links li:first-child a{border-left:none}
-.hero{min-height:100vh;display:grid;grid-template-columns:1fr 1fr;padding-top:60px;border-bottom:1px solid var(--line)}
-.hero-left{padding:80px 48px;border-right:1px solid var(--line);display:flex;flex-direction:column;justify-content:flex-end}
-.hero-tag{font-size:11px;letter-spacing:0.25em;text-transform:uppercase;color:var(--muted);margin-bottom:32px;display:flex;align-items:center;gap:12px}
-.hero-tag::before{content:'';width:24px;height:1px;background:var(--accent)}
-.hero-name{font-family:var(--serif);font-size:clamp(56px,7vw,92px);font-weight:300;line-height:0.95;color:var(--text);margin-bottom:40px;letter-spacing:-0.03em}
-.hero-name em{font-style:italic;color:var(--accent);font-weight:300}
-.hero-statement{font-size:16px;color:var(--muted);max-width:480px;line-height:1.8;font-weight:300}
-.hero-statement strong{color:var(--text);font-weight:400}
-.hero-right{padding:80px 48px;display:flex;flex-direction:column;justify-content:space-between}
-.hero-role{font-size:11px;color:var(--muted);letter-spacing:0.2em;text-transform:uppercase;margin-bottom:24px}
-.hero-card{background:var(--bg2);border:1px solid var(--line);padding:32px;border-radius:2px;margin-bottom:auto}
-.hero-card-title{font-family:var(--serif);font-size:20px;color:var(--accent);font-weight:300;font-style:italic;line-height:1.5}
-.meta-row{display:flex;justify-content:space-between;align-items:baseline;padding:16px 0;border-bottom:1px solid var(--line)}
-.meta-row:last-child{border-bottom:none}
-.meta-label{font-size:10px;color:var(--muted);letter-spacing:0.18em;text-transform:uppercase}
-.meta-value{font-size:13px;color:var(--text)}
-section{border-bottom:1px solid var(--line)}
-.section-header{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px solid var(--line)}
-.section-label{padding:28px 48px;border-right:1px solid var(--line);font-size:11px;letter-spacing:0.25em;text-transform:uppercase;color:var(--muted);display:flex;align-items:center;gap:14px}
-.section-label::before{content:'';width:24px;height:1px;background:var(--accent)}
-.section-num{padding:28px 48px;font-size:10px;color:var(--faint)}
-.section-intro{padding:48px 48px 0;max-width:760px}
-.section-title{font-family:var(--serif);font-size:36px;font-weight:300;color:var(--text);line-height:1.15;margin-bottom:16px;letter-spacing:-0.02em}
-.section-title em{font-style:italic;color:var(--accent)}
-.section-sub{font-size:14px;color:var(--muted);line-height:1.8;font-weight:300}
-.exp-list{padding:48px 0}
-.exp-item{display:grid;grid-template-columns:280px 1fr;padding:36px 48px;border-top:1px solid var(--line);transition:background 0.2s}
-.exp-item:hover{background:var(--bg2)}
-.exp-role{font-family:var(--serif);font-size:22px;font-weight:300;color:var(--text);margin-bottom:6px;letter-spacing:-0.01em}
-.exp-org{font-size:13px;color:var(--accent);margin-bottom:4px}
-.exp-period{font-size:11px;color:var(--muted);letter-spacing:0.1em}
-.exp-right{padding-left:48px;border-left:1px solid var(--line)}
-.exp-desc{font-size:13px;color:var(--muted);line-height:1.8;margin-bottom:16px}
-.exp-bullets{list-style:none}
-.exp-bullets li{font-size:13px;color:var(--muted);padding:6px 0;padding-left:20px;position:relative;line-height:1.7}
-.exp-bullets li::before{content:'—';position:absolute;left:0;color:var(--line2)}
-.exp-bullets li strong{color:var(--text);font-weight:400}
-.projects-grid{display:grid;grid-template-columns:1fr 1fr}
-.project{padding:40px 48px;border-right:1px solid var(--line);border-top:1px solid var(--line);transition:background 0.3s;position:relative}
-.project:nth-child(2n){border-right:none}
-.project:hover{background:var(--bg2)}
-.project::before{content:'';position:absolute;top:0;left:0;width:2px;height:0;background:var(--accent);transition:height 0.4s ease}
-.project:hover::before{height:100%}
-.project-tag{font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:var(--accent);margin-bottom:12px}
-.project-name{font-family:var(--serif);font-size:22px;font-weight:300;color:var(--text);line-height:1.25;margin-bottom:12px;letter-spacing:-0.01em}
-.project-desc{font-size:13px;color:var(--muted);line-height:1.8;margin-bottom:18px}
-.project-stack{display:flex;flex-wrap:wrap;gap:6px}
-.pill{font-size:10px;padding:3px 9px;border:1px solid var(--line2);color:var(--muted);letter-spacing:0.05em;border-radius:1px}
-.skills{display:grid;grid-template-columns:1fr 1fr}
-.skill-block{padding:40px 48px;border-right:1px solid var(--line);border-top:1px solid var(--line)}
-.skill-block:nth-child(2n){border-right:none}
-.skill-cat{font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:var(--accent);margin-bottom:18px}
-.skill-list{font-size:13px;color:var(--text);line-height:2;font-weight:300}
-.phil{padding:48px;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
-.phil-quote{font-family:var(--serif);font-size:28px;font-weight:300;font-style:italic;color:var(--accent);line-height:1.4;letter-spacing:-0.01em}
-.phil-body{font-size:14px;color:var(--muted);line-height:1.9;font-weight:300}
-.contact{display:grid;grid-template-columns:1fr 1fr;min-height:50vh}
-.contact-left{padding:80px 48px;border-right:1px solid var(--line);display:flex;flex-direction:column;justify-content:center}
-.contact-headline{font-family:var(--serif);font-size:44px;font-weight:300;color:var(--text);line-height:1.1;margin-bottom:24px;letter-spacing:-0.02em}
-.contact-headline em{font-style:italic;color:var(--accent)}
-.contact-body{font-size:14px;color:var(--muted);line-height:1.8;font-weight:300;max-width:380px}
-.contact-right{padding:80px 48px;display:flex;flex-direction:column;justify-content:center}
-.contact-link{display:flex;justify-content:space-between;align-items:center;padding:20px 0;border-bottom:1px solid var(--line);text-decoration:none;transition:padding-left 0.2s}
-.contact-link:hover{padding-left:8px}
-.contact-link-label{font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted)}
-.contact-link-value{font-size:14px;color:var(--accent)}
-footer{padding:28px 48px;display:flex;justify-content:space-between;font-size:10px;color:var(--faint);letter-spacing:0.15em;text-transform:uppercase;border-top:1px solid var(--line)}
-@media(max-width:900px){
-  nav{padding:0 24px}.nav-links a{padding:0 10px;font-size:10px}
-  .hero,.projects-grid,.skills,.contact,.phil,.section-header{grid-template-columns:1fr}
-  .hero-left,.hero-right,.project,.skill-block,.contact-left,.section-label,.exp-right{border-right:none}
-  .exp-item{grid-template-columns:1fr;padding:32px 24px}
-  .exp-right{padding-left:0;border-left:none;margin-top:20px}
-  .hero-left,.hero-right,.contact-left,.contact-right{padding:48px 24px}
-  .section-label,.section-num{padding:20px 24px}
-  .section-intro,.phil{padding:32px 24px}
-  .project,.skill-block{padding:32px 24px}
-  .hero-name{font-size:48px}.section-title{font-size:28px}.contact-headline{font-size:32px}
+.nav-cta{font-size:14px;text-decoration:none;border:1px solid var(--brass-dim);color:var(--brass);padding:7px 14px;border-radius:999px}
+.nav-cta:hover{background:var(--brass);color:#131210}
+@media (max-width:860px){.nav-links{display:none}}
+
+/* hero */
+.hero{padding:clamp(56px,10vw,120px) 0 clamp(48px,7vw,88px);border-bottom:1px solid var(--line)}
+.hero-grid{display:grid;grid-template-columns:1.35fr 1fr;gap:clamp(32px,6vw,80px);align-items:end}
+.hero-role{font-size:15px;color:var(--brass);margin-bottom:22px}
+.hero h1{font-family:var(--serif);font-weight:300;font-size:clamp(46px,7.2vw,96px);line-height:.98;letter-spacing:-.035em;margin-bottom:30px}
+.hero h1 .l2{display:block;font-style:italic;color:var(--muted)}
+.hero-lede{font-size:clamp(17px,1.6vw,19px);color:var(--muted);max-width:34em;line-height:1.65}
+.hero-lede strong{color:var(--text);font-weight:500}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px}
+.btn{display:inline-flex;align-items:center;gap:8px;font:500 15px var(--sans);text-decoration:none;padding:12px 20px;border-radius:999px;border:1px solid var(--line2);color:var(--text);background:none;cursor:pointer;transition:background .2s,color .2s,border-color .2s}
+.btn:hover{border-color:var(--text)}
+.btn-solid{background:var(--brass);border-color:var(--brass);color:#131210}
+.btn-solid:hover{background:var(--text);border-color:var(--text)}
+.now{border:1px solid var(--line);background:var(--panel);padding:26px 26px 8px;border-radius:4px}
+.now h2{font-family:var(--serif);font-weight:400;font-size:20px;margin-bottom:14px}
+.now-row{display:grid;grid-template-columns:92px 1fr;gap:14px;padding:13px 0;border-top:1px solid var(--line);font-size:14.5px}
+.now-row dt{color:var(--faint)}
+.now-row dd{color:var(--text)}
+.pulse{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--sage);margin-right:8px;vertical-align:1px;box-shadow:0 0 0 0 rgba(143,181,158,.6);animation:pulse 2.4s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(143,181,158,.55)}70%{box-shadow:0 0 0 8px rgba(143,181,158,0)}100%{box-shadow:0 0 0 0 rgba(143,181,158,0)}}
+.load{opacity:0;transform:translateY(14px);animation:rise .9s cubic-bezier(.2,.7,.2,1) forwards}
+.load.d1{animation-delay:.08s}.load.d2{animation-delay:.2s}.load.d3{animation-delay:.34s}.load.d4{animation-delay:.5s}
+@keyframes rise{to{opacity:1;transform:none}}
+@media (max-width:900px){.hero-grid{grid-template-columns:1fr}}
+
+/* sections */
+section{padding:clamp(64px,9vw,112px) 0;border-bottom:1px solid var(--line)}
+.sec-head{display:grid;grid-template-columns:1fr 1.3fr;gap:clamp(24px,5vw,72px);margin-bottom:clamp(36px,5vw,56px);align-items:end}
+.sec-head h2{font-family:var(--serif);font-weight:300;font-size:clamp(32px,4.4vw,52px);line-height:1.05;letter-spacing:-.025em}
+.sec-head p{color:var(--muted);max-width:36em}
+@media (max-width:860px){.sec-head{grid-template-columns:1fr}}
+
+/* principles */
+.principles{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line)}
+.pr{padding:30px 28px 30px 0;border-right:1px solid var(--line)}
+.pr+.pr{padding-left:28px}
+.pr:last-child{border-right:none}
+.pr h3{font-family:var(--serif);font-weight:400;font-size:23px;line-height:1.2;margin-bottom:12px}
+.pr p{color:var(--muted);font-size:15.5px}
+.pr .eg{margin-top:16px;font-size:14px;color:var(--text);border-left:2px solid var(--brass-dim);padding-left:12px}
+@media (max-width:860px){.principles{grid-template-columns:1fr}.pr,.pr+.pr{padding:26px 0;border-right:none;border-bottom:1px solid var(--line)}}
+
+/* feature: hedgeguard */
+.feature{margin-top:clamp(48px,6vw,72px);display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,5vw,64px);background:var(--panel);border:1px solid var(--line);border-radius:4px;padding:clamp(26px,4vw,44px)}
+.feature h3{font-family:var(--serif);font-weight:300;font-size:clamp(26px,3vw,34px);line-height:1.12;letter-spacing:-.015em;margin:6px 0 16px}
+.kicker{font-size:14px;color:var(--brass)}
+.feature p{color:var(--muted)}
+.flow{list-style:none;display:flex;flex-direction:column;gap:0}
+.flow li{display:grid;grid-template-columns:30px 1fr;gap:14px;padding:14px 0;border-top:1px solid var(--line);font-size:15px}
+.flow li:first-child{border-top:none;padding-top:0}
+.flow b{font-family:var(--serif);font-weight:400;color:var(--brass);font-size:18px;line-height:1.3}
+.flow span strong{display:block;color:var(--text);font-weight:500}
+.flow span{color:var(--muted)}
+@media (max-width:860px){.feature{grid-template-columns:1fr}}
+
+/* demo — the one bold moment */
+#demo{background:linear-gradient(180deg,var(--bg),#17150f 40%,var(--bg))}
+.demo{display:grid;grid-template-columns:340px 1fr;border:1px solid var(--line2);border-radius:6px;overflow:hidden;background:var(--panel)}
+.demo-controls{padding:28px;border-right:1px solid var(--line2);display:flex;flex-direction:column;gap:18px;background:var(--panel2)}
+.field label{display:flex;justify-content:space-between;font-size:14px;color:var(--muted);margin-bottom:7px}
+.field label output{color:var(--text);font-variant-numeric:tabular-nums}
+.field input[type=range]{width:100%;accent-color:var(--brass)}
+.seg{display:flex;border:1px solid var(--line2);border-radius:4px;overflow:hidden}
+.seg button{flex:1;background:var(--bg);border:none;color:var(--muted);font:14px var(--sans);padding:9px 4px;cursor:pointer;border-right:1px solid var(--line2)}
+.seg button:last-child{border-right:none}
+.seg button[aria-pressed=true]{background:var(--brass);color:#131210;font-weight:600}
+.demo-out{padding:28px;display:flex;flex-direction:column;gap:22px;min-width:0}
+.demo-top{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap}
+.demo-top h3{font-family:var(--serif);font-weight:400;font-size:22px}
+.demo-top small{color:var(--faint);font-size:13px}
+.opts{list-style:none;display:flex;flex-direction:column}
+.opts li{padding:16px 0;border-top:1px solid var(--line)}
+.opt-head{display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin-bottom:10px;flex-wrap:wrap}
+.opt-name{font-size:15.5px}
+.opt-name small{display:block;color:var(--faint);font-size:13px}
+.opt-price{text-align:right;font-variant-numeric:tabular-nums}
+.opt-price b{display:block;font-family:var(--serif);font-weight:400;font-size:21px}
+.opt-price small{color:var(--muted);font-size:13px}
+.best .opt-price b{color:var(--sage)}
+.best .opt-name::after{content:'Lowest price';display:inline-block;margin-left:10px;font-size:12px;color:var(--sage);border:1px solid rgba(143,181,158,.45);padding:1px 8px;border-radius:999px;vertical-align:2px}
+.stack{display:flex;height:10px;border-radius:3px;overflow:hidden;background:var(--bg)}
+.stack i{display:block;height:100%;transition:width .5s cubic-bezier(.2,.7,.2,1)}
+.legend{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:13px;color:var(--muted)}
+.legend span::before{content:'';display:inline-block;width:9px;height:9px;border-radius:2px;margin-right:6px;background:var(--c);vertical-align:-1px}
+.summary{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:4px;overflow:hidden}
+.summary div{background:var(--bg);padding:14px 16px}
+.summary small{display:block;font-size:13px;color:var(--faint)}
+.summary b{font-family:var(--serif);font-weight:400;font-size:20px;font-variant-numeric:tabular-nums}
+.demo-note{font-size:13px;color:var(--faint)}
+@media (max-width:900px){.demo{grid-template-columns:1fr}.demo-controls{border-right:none;border-bottom:1px solid var(--line2)}}
+@media (max-width:520px){.summary{grid-template-columns:1fr}}
+
+/* work */
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:28px}
+.chip{font:14px var(--sans);padding:8px 15px;border-radius:999px;border:1px solid var(--line2);background:none;color:var(--muted);cursor:pointer;transition:all .2s}
+.chip:hover{color:var(--text);border-color:var(--muted)}
+.chip[aria-pressed=true]{background:var(--text);color:var(--bg);border-color:var(--text)}
+.chip .n{opacity:.55;margin-left:4px;font-variant-numeric:tabular-nums}
+.projects{list-style:none;border-top:1px solid var(--line)}
+.proj{border-bottom:1px solid var(--line)}
+.proj[hidden]{display:none}
+.proj-btn{width:100%;display:grid;grid-template-columns:1fr auto 28px;gap:18px;align-items:center;text-align:left;background:none;border:none;color:inherit;font:inherit;padding:22px 4px;cursor:pointer}
+.proj-btn:hover .proj-title{color:var(--brass)}
+.proj-title{font-family:var(--serif);font-weight:400;font-size:clamp(20px,2.2vw,25px);line-height:1.2;transition:color .2s}
+.proj-ctx{display:block;font-family:var(--sans);font-size:14px;color:var(--faint);margin-top:4px}
+.proj-status{font-size:13px;color:var(--muted);white-space:nowrap}
+.proj-status.live{color:var(--sage)}
+.proj-status.wip{color:var(--brass)}
+.plus{width:28px;height:28px;border:1px solid var(--line2);border-radius:50%;position:relative}
+.plus::before,.plus::after{content:'';position:absolute;left:50%;top:50%;width:11px;height:1.5px;background:var(--muted);transform:translate(-50%,-50%);transition:transform .3s}
+.plus::after{transform:translate(-50%,-50%) rotate(90deg)}
+.proj-btn[aria-expanded=true] .plus::after{transform:translate(-50%,-50%) rotate(0)}
+.proj-body{display:grid;grid-template-rows:0fr;transition:grid-template-rows .4s cubic-bezier(.2,.7,.2,1)}
+.proj.open .proj-body{grid-template-rows:1fr}
+.proj-inner{overflow:hidden}
+.pbd{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;padding:4px 4px 28px}
+.pbd h4{font-size:13px;font-weight:600;color:var(--brass);margin-bottom:6px}
+.pbd p{font-size:15px;color:var(--muted)}
+.tags{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:6px}
+.tags span{font-size:12.5px;color:var(--muted);border:1px solid var(--line);padding:3px 10px;border-radius:999px}
+@media (max-width:760px){.pbd{grid-template-columns:1fr;gap:16px}.proj-status{display:none}.proj-btn{grid-template-columns:1fr 28px}}
+
+/* team */
+.team{display:grid;grid-template-columns:300px 1fr;gap:clamp(24px,4vw,56px)}
+.team-types{display:flex;flex-direction:column;gap:6px}
+.tt{text-align:left;font:15.5px var(--sans);padding:14px 16px;border:1px solid var(--line);border-radius:4px;background:none;color:var(--muted);cursor:pointer;transition:all .2s}
+.tt:hover{color:var(--text)}
+.tt[aria-pressed=true]{background:var(--panel);border-color:var(--brass-dim);color:var(--text)}
+.roster{background:var(--panel);border:1px solid var(--line);border-radius:4px;padding:clamp(22px,3vw,34px)}
+.roster h3{font-family:var(--serif);font-weight:400;font-size:24px;margin-bottom:6px}
+.roster > p{color:var(--muted);margin-bottom:20px;max-width:40em}
+.roles{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.roles li{border:1px solid var(--line);border-radius:4px;padding:14px 16px;background:var(--bg);animation:rise .45s cubic-bezier(.2,.7,.2,1) both}
+.roles li b{display:block;font-weight:500;font-size:15.5px}
+.roles li span{font-size:14px;color:var(--muted)}
+.roles li.lead{border-color:var(--brass-dim)}
+.roles li.lead b{color:var(--brass)}
+.team-note{margin-top:28px;display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.team-note div{border-top:1px solid var(--line2);padding-top:14px}
+.team-note b{display:block;font-weight:500;margin-bottom:4px}
+.team-note p{font-size:15px;color:var(--muted)}
+@media (max-width:860px){.team{grid-template-columns:1fr}.team-types{flex-direction:row;flex-wrap:wrap}.tt{flex:1 1 44%}.roles{grid-template-columns:1fr}.team-note{grid-template-columns:1fr}}
+
+/* process */
+.steps{list-style:none;display:grid;grid-template-columns:repeat(5,1fr);border-top:1px solid var(--line2);counter-reset:s}
+.steps li{padding:22px 20px 0 0;position:relative;counter-increment:s}
+.steps li::before{content:counter(s);display:block;font-family:var(--serif);font-size:36px;font-weight:300;color:var(--brass);line-height:1;margin-bottom:14px}
+.steps li::after{content:'';position:absolute;top:-4px;left:0;width:7px;height:7px;border-radius:50%;background:var(--brass)}
+.steps b{display:block;font-weight:500;margin-bottom:6px}
+.steps p{font-size:15px;color:var(--muted)}
+.steps small{display:block;margin-top:8px;font-size:13px;color:var(--faint)}
+.promises{margin-top:clamp(40px,5vw,60px);display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:4px;overflow:hidden}
+.promises div{background:var(--bg);padding:22px}
+.promises b{display:block;font-family:var(--serif);font-weight:400;font-size:19px;margin-bottom:6px}
+.promises p{font-size:14.5px;color:var(--muted)}
+@media (max-width:960px){.steps{grid-template-columns:1fr 1fr;gap:28px 20px}.promises{grid-template-columns:1fr 1fr}}
+@media (max-width:540px){.steps,.promises{grid-template-columns:1fr}}
+
+/* experience */
+.xp{list-style:none;border-top:1px solid var(--line)}
+.xp li{display:grid;grid-template-columns:200px 1fr;gap:28px;padding:24px 0;border-bottom:1px solid var(--line)}
+.xp-when{color:var(--faint);font-size:14px;font-variant-numeric:tabular-nums}
+.xp h3{font-family:var(--serif);font-weight:400;font-size:22px;line-height:1.2}
+.xp h3 span{color:var(--brass);font-style:italic;font-weight:300}
+.xp p{color:var(--muted);margin-top:8px;max-width:48em;font-size:15.5px}
+@media (max-width:700px){.xp li{grid-template-columns:1fr;gap:6px}}
+
+.tools{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:clamp(40px,5vw,60px)}
+.tools h3{font-size:14px;font-weight:600;color:var(--brass);margin-bottom:8px}
+.tools p{font-size:15px;color:var(--muted)}
+@media (max-width:760px){.tools{grid-template-columns:1fr}}
+
+/* contact */
+#contact{border-bottom:none}
+.contact{display:grid;grid-template-columns:1.2fr 1fr;gap:clamp(32px,6vw,80px);align-items:end}
+.contact h2{font-family:var(--serif);font-weight:300;font-size:clamp(40px,6vw,76px);line-height:1;letter-spacing:-.03em}
+.contact h2 em{color:var(--brass)}
+.contact > div > p{color:var(--muted);margin-top:22px;max-width:30em}
+.clinks{display:flex;flex-direction:column}
+.clinks a,.clinks div{display:flex;justify-content:space-between;gap:16px;padding:16px 0;border-top:1px solid var(--line);text-decoration:none;font-size:16px}
+.clinks a:hover span:last-child{color:var(--brass)}
+.clinks span:first-child{color:var(--faint)}
+@media (max-width:860px){.contact{grid-template-columns:1fr}}
+footer{border-top:1px solid var(--line);padding:24px 0;font-size:13px;color:var(--faint)}
+footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .load{opacity:1;transform:none}
+  html{scroll-behavior:auto}
 }
 </style>
 </head>
 <body>
+<a class="skip" href="#main">Skip to content</a>
 
-<nav>
-  <div class="logo">Rita <em>Ghanem</em></div>
-  <ul class="nav-links">
-    <li><a href="#work">Work</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="#skills">Skills</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
+<nav aria-label="Main">
+  <div class="wrap nav-in">
+    <a class="logo" href="#top">Rita <span>Ghanem</span></a>
+    <ul class="nav-links">
+      <li><a href="#approach">Approach</a></li>
+      <li><a href="#demo">Demo</a></li>
+      <li><a href="#work">Work</a></li>
+      <li><a href="#team">Team</a></li>
+      <li><a href="#process">Process</a></li>
+      <li><a href="#experience">Experience</a></li>
+    </ul>
+    <a class="nav-cta" href="#contact">Start a project</a>
+  </div>
 </nav>
 
-<section class="hero">
-  <div class="hero-left">
-    <div class="hero-tag">Portfolio · 2026</div>
-    <h1 class="hero-name">Rita<br><em>Ghanem</em></h1>
-    <p class="hero-statement"><strong>Product Manager, Systems Architect, and builder of smart things.</strong> I design operational systems and the infrastructure that makes them run — across financial software, smart-home integrations, and full-stack web platforms. Based in Beirut.</p>
-  </div>
-  <div class="hero-right">
-    <div class="hero-role">Currently</div>
-    <div class="hero-card">
-      <div class="hero-card-title">"I build systems. Sometimes the system is software. Sometimes it's a platform. Sometimes it's the infrastructure that lets an operation scale beyond what one person can hold in their head."</div>
-    </div>
+<main id="main">
+<header class="hero" id="top">
+  <div class="wrap hero-grid">
     <div>
-      <div class="meta-row"><span class="meta-label">Role</span><span class="meta-value">Product Manager · HedgeGuard</span></div>
-      <div class="meta-row"><span class="meta-label">Based in</span><span class="meta-value">Beirut, Lebanon</span></div>
-      <div class="meta-row"><span class="meta-label">Languages</span><span class="meta-value">English · French · Arabic</span></div>
-      <div class="meta-row"><span class="meta-label">Open to</span><span class="meta-value">Collaboration & technical projects</span></div>
+      <p class="hero-role load d1">Chief Operating Officer at HedgeGuard · Independent systems &amp; app builder</p>
+      <h1 class="load d2">I make systems<span class="l2">work better.</span></h1>
+      <p class="hero-lede load d3">I design, build and run the systems businesses depend on: <strong>customer apps, operational platforms, automation and data integrations</strong>. I start from how the work actually happens, then build the smallest thing that measurably improves it, and grow it from there.</p>
+      <div class="hero-actions load d4">
+        <a class="btn btn-solid" href="#demo">Try the estimating demo</a>
+        <a class="btn" href="#work">See the work</a>
+      </div>
+    </div>
+    <aside class="now load d3" aria-label="Current focus">
+      <h2>Right now</h2>
+      <dl>
+        <div class="now-row"><dt>Role</dt><dd>Chief Operating Officer, HedgeGuard</dd></div>
+        <div class="now-row"><dt>Building</dt><dd><span class="pulse" aria-hidden="true"></span>HedgeGuard's next-generation platform</dd></div>
+        <div class="now-row"><dt>Taking on</dt><dd>Apps, platforms and operational systems for growing businesses</dd></div>
+        <div class="now-row"><dt>Based in</dt><dd>Beirut · working in English, French and Arabic</dd></div>
+      </dl>
+    </aside>
+  </div>
+</header>
+
+<!-- APPROACH -->
+<section id="approach">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>How I make systems better</h2>
+      <p>Most operations already have a system. It lives in spreadsheets, WhatsApp threads and one person's head. My job is to find where it breaks, fix that first, and make the fix permanent.</p>
+    </div>
+    <div class="principles">
+      <div class="pr">
+        <h3>Map the real process first</h3>
+        <p>Before writing any code I trace how requests, data and decisions actually move, and who touches them. The gaps show up quickly.</p>
+        <p class="eg">At HedgeGuard, scattered trackers became one Operations Hub, with each list surfacing in the Teams channel where the work happens.</p>
+      </div>
+      <div class="pr">
+        <h3>Automate what repeats</h3>
+        <p>Any check done by hand every day is a candidate. I track how often a workaround gets used and turn the frequent ones into scheduled, monitored automations.</p>
+        <p class="eg">Daily NAV verification across client instances is moving from manual checks to scheduled pipelines with alerting.</p>
+      </div>
+      <div class="pr">
+        <h3>Ship in phases people can use</h3>
+        <p>A working pilot in weeks beats a perfect plan in months. Each phase is live, measured and owned by the client before the next begins.</p>
+        <p class="eg">The AACI ERP started as one hub and grew to three: projects, finance and HR. It's in daily use.</p>
+      </div>
+    </div>
+
+    <div class="feature">
+      <div>
+        <p class="kicker">Current flagship</p>
+        <h3>Building HedgeGuard's next-generation platform</h3>
+        <p>HedgeGuard serves hedge funds, family offices and asset managers across traditional and digital assets. As COO I run operations and client delivery, and I'm helping shape the new platform that brings three existing portfolio systems into a single product: turning what clients and the operations team struggle with today into its roadmap.</p>
+      </div>
+      <ol class="flow">
+        <li><b>1</b><span><strong>Operations feed the roadmap</strong>Every bug, client request and prospect question is triaged into an answer, a documentation gap or a roadmap item.</span></li>
+        <li><b>2</b><span><strong>Features grouped by client impact</strong>A structured roadmap ranks feature clusters with performance targets. Trades come first.</span></li>
+        <li><b>3</b><span><strong>APIs validated before clients see them</strong>Endpoints are tested in Postman and documented for integration teams before release.</span></li>
+        <li><b>4</b><span><strong>Migration planned from day one</strong>Client data, mappings and go-live steps are designed alongside the product, not after it.</span></li>
+      </ol>
     </div>
   </div>
 </section>
 
+<!-- DEMO -->
+<section id="demo" aria-labelledby="demo-title">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 id="demo-title">A quotation, in miniature</h2>
+      <p>For a facade contractor, every quote meant pricing two or three supplier options by hand, lot by lot. This is a stripped-down version of the estimating tool I built for them. Change any input and every option reprices at once.</p>
+    </div>
+
+    <div class="demo">
+      <form class="demo-controls" onsubmit="return false">
+        <div class="field">
+          <label id="lotLbl">Lot</label>
+          <div class="seg" role="group" aria-labelledby="lotLbl" id="lotSeg">
+            <button type="button" data-v="cw" aria-pressed="true">Curtain wall</button>
+            <button type="button" data-v="win" aria-pressed="false">Windows</button>
+            <button type="button" data-v="clad" aria-pressed="false">Cladding</button>
+          </div>
+        </div>
+        <div class="field">
+          <label for="area">Facade area <output id="areaOut" for="area"></output></label>
+          <input type="range" id="area" min="200" max="10000" step="100" value="2400">
+        </div>
+        <div class="field">
+          <label for="frt">Freight, duty &amp; clearing <output id="frtOut" for="frt"></output></label>
+          <input type="range" id="frt" min="5" max="35" step="1" value="18">
+        </div>
+        <div class="field">
+          <label for="oh">Overheads &amp; risk <output id="ohOut" for="oh"></output></label>
+          <input type="range" id="oh" min="5" max="25" step="1" value="12">
+        </div>
+        <div class="field">
+          <label for="mg">Margin on sell price <output id="mgOut" for="mg"></output></label>
+          <input type="range" id="mg" min="5" max="30" step="1" value="15">
+        </div>
+      </form>
+
+      <div class="demo-out" aria-live="polite">
+        <div class="demo-top">
+          <h3 id="qTitle">Three options, priced side by side</h3>
+          <small>USD, before tax</small>
+        </div>
+        <div class="legend" aria-hidden="true">
+          <span style="--c:#6f8fa8">Supply</span><span style="--c:#8a7550">Freight &amp; duty</span><span style="--c:#8fb59e">Installation</span><span style="--c:#9a978d">Overheads &amp; risk</span><span style="--c:#c9a96e">Margin</span>
+        </div>
+        <ul class="opts" id="opts"></ul>
+        <div class="summary" id="summary"></div>
+        <p class="demo-note">Figures are illustrative. The full tool adds country rates, exchange rates, access equipment, bonds and payment terms, and produces the client's price schedule directly.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WORK -->
 <section id="work">
-  <div class="section-header"><div class="section-label">Experience</div><div class="section-num">01</div></div>
-  <div class="section-intro" style="padding-bottom:24px">
-    <h2 class="section-title">Eight years across software, <em>systems, and operations</em>.</h2>
-    <p class="section-sub">From early web development through enterprise smart-home integrations to operational architecture for institutional financial software. Every role has reinforced the same idea — the system matters more than the tools.</p>
-  </div>
-  <div class="exp-list">
-
-    <div class="exp-item">
-      <div>
-        <div class="exp-role">Product Manager</div>
-        <div class="exp-org">HedgeGuard</div>
-        <div class="exp-period">Current</div>
-      </div>
-      <div class="exp-right">
-        <p class="exp-desc">HedgeGuard is a financial data and audit firm serving institutional clients across crypto and traditional finance. Three portfolio management platforms: <strong>Lynx</strong> (institutional crypto PMS), <strong>Gaia</strong> (client-facing crypto PMS), and a traditional PMS for non-crypto asset portfolios. Clients are hedge funds, family offices, and asset managers.</p>
-        <ul class="exp-bullets">
-          <li>Designed and built the <strong>Operations Hub</strong> — a centralized SharePoint Team site consolidating all operational tracking (Workstream Tracker, Issue Log, Feature Log, Roadmap, Tasks Dashboard, Prospect Pipeline, Website Task Log)</li>
-          <li>Architected normalized data structures across the Operations Hub.</li>
-          <li>Own the <strong>BookStack documentation program</strong> across seven shelves covering onboarding, both PMS platforms, platform operations, developer/API portal, product updates, and internal strategy</li>
-          <li>Restructuring an <strong>Integrations & Mappings Registry</strong> into a normalized multi-sheet schema feeding both documentation and the platform bot</li>
-          <li>Coordinate new portfolio setup, data migration, and go-live for institutional clients across all three platforms</li>
-          <li>Run daily NAV verification across client instances via hypercube extraction; designing n8n automations to graduate manual checks into scheduled pipelines</li>
-          <li>Triage incoming bugs and issues across all platforms, coordinate engineering investigation and validation, manage P1 escalation with Power Automate alerting</li>
-          <li>Coordinate API endpoint development and validation in Postman before client deployment; manage API mappings translating exchange data into the platform</li>
-          <li>Handle prospect questionnaires — triaging each into immediate answer, documentation gap, or roadmap entry</li>
-          <li>Designed a <strong>three-layer reporting cadence</strong>: continuous tracker updates, weekly narrative thread, monthly executive digest to CEO</li>
-        </ul>
-      </div>
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Selected work</h2>
+      <p>Platforms, apps, operational systems and a few physical things. Open any project to see the problem, what was built and where it stands.</p>
     </div>
-	<div class="exp-item">
-		  <div>
-			<div class="exp-role">Owner & CEO</div>
-			<div class="exp-org">Rogue Geometry (Design Studio) </div>
-			<div class="exp-period">Jul 2025 – Present</div>
-		  </div>
-		  <div class="exp-right">
-			<p class="exp-desc">Rogue Geometry is a studio concerned with how form remembers. <strong> We design objects that exist slightly out of time—quiet, deliberate, resistant to trends and explanation.</strong> <br> Not products. <br> Not décor. <br> Functional objects with presence. In a world of infinite generation, we choose finite authorship. We are not anti-technology. We use tools, electronics, software, and systems when appropriate. But form is never delegated.<br> <strong> Judgment remains human. Authorship is responsibility.</strong> <br> Function is ritual. Recognition matters more than accessibility. We make less so it can mean more. We build a body of work, not a catalog.</p>
-		  </div>
-		</div>
-    <div class="exp-item">
-      <div>
-        <div class="exp-role">Freelance Software Developer</div>
-        <div class="exp-org">IT4S</div>
-        <div class="exp-period">Apr 2021 – Present</div>
-      </div>
-      <div class="exp-right">
-        <p class="exp-desc">Independent technical consultant delivering web platforms, smart-home integrations, and operational automation across diverse client industries.</p>
-        <ul class="exp-bullets">
-          <li><strong>Multi-property residential smart-home deployments</strong> across the Mount Lebanon region — Raspberry Pi + Home Assistant integration covering lighting, climate, energy tracking, and security</li>
-          <li>Designed modular automation templates enabling customizable Home Assistant setups across lighting, climate, media, and security — tailored per household</li>
-          <li>Built full iOS / macOS-friendly smart-home dashboards with UI tested across Apple ecosystem for daily use patterns</li>
-          <li><strong>Custom web platforms:</strong> Glass & Mirror National Co. (corporate catalog), AACI / Advanced Aluminum Côte D'Ivoire (bilingual company site + virtual gallery), Ralouka Montesi Photography (portfolio with custom layout system)</li>
-          <li>Designed and built a complete modular ERP in Google Workspace for AACI — three control hubs (Project Lifecycle, Finance, HR), full Apps Script automation, Gmail parsing, bank reconciliation, document generation. In daily active use.</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="exp-item">
-      <div>
-        <div class="exp-role">Software Developer</div>
-        <div class="exp-org">A-TECH Australia · Byblos</div>
-        <div class="exp-period">Jan 2020 – Mar 2021</div>
-      </div>
-      <div class="exp-right">
-        <p class="exp-desc">Built a 3D visualization tool and custom CRM platform for the construction industry, combining Unity, Figma, and real-time data integration.</p>
-        <ul class="exp-bullets">
-          <li>Developed a scalable Windows/Android/ iOS / macOS Unity application with real-time issue tracking and BIM integration</li>
-          <li>Engineered multi-user 3D experiences, FBX loaders, and VR/AR interactions</li>
-          <li>Built a CRM dashboard with role-based access control and real-time updates</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="exp-item">
-      <div>
-        <div class="exp-role">Software Developer</div>
-        <div class="exp-org">ACRADIA S.A.R.L · Mkalles</div>
-        <div class="exp-period">Feb 2019 – Jan 2020</div>
-      </div>
-      <div class="exp-right">
-        <p class="exp-desc">First professional role — built dynamic web applications and learned the fundamentals of full-stack development under real production constraints.</p>
-        <ul class="exp-bullets">
-          <li>Developed dynamic web applications using HTML, CSS, jQuery, and PHP</li>
-          <li>Built custom UI components for both touch and desktop environments</li>
-          <li>Designed MySQL-backed data flows and built email automation logic</li>
-          <li>Used Git and PHPStorm for version control and team workflow</li>
-        </ul>
-      </div>
-    </div>
-
+    <div class="filters" role="group" aria-label="Filter projects" id="filters"></div>
+    <ul class="projects" id="projects"></ul>
   </div>
 </section>
 
-<section id="projects">
-  <div class="section-header"><div class="section-label">Selected Projects</div><div class="section-num">02</div></div>
-  <div class="section-intro">
-    <h2 class="section-title">Things I've <em>built</em>.</h2>
-    <p class="section-sub">A selection of professional and personal projects across software, hardware, and operational systems. Each one solved a real problem at scale — for institutions, clients, or households.</p>
-  </div>
-  <div class="projects-grid" style="margin-top:48px">
-
-    <div class="project">
-      <div class="project-tag">Operational Infrastructure · HedgeGuard</div>
-      <h3 class="project-name">Operations Hub</h3>
-      <p class="project-desc">Centralized SharePoint Team site consolidating fragmented operational tracking into one source of truth. Workstream Tracker, Issue Log, Feature Log, Roadmap, Tasks Dashboard, and Prospect Pipeline — each surfaced as a Teams channel tab in its relevant context. Designed for future AI-bot integration with chunked, queryable schemas.</p>
-      <div class="project-stack"><span class="pill">SharePoint</span><span class="pill">Power Automate</span><span class="pill">Teams</span><span class="pill">Systems Architecture</span></div>
+<!-- TEAM -->
+<section id="team">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>A team built for each project</h2>
+      <p>I lead every project personally and bring in the specialists it needs: designers, developers, IT and security people, architects. Each is chosen for hands-on experience with that kind of work, not because they happen to be on a payroll.</p>
     </div>
-
-    <div class="project">
-      <div class="project-tag">Documentation Program · HedgeGuard</div>
-      <h3 class="project-name">BookStack Knowledge Base</h3>
-      <p class="project-desc">Documentation strategy across seven shelves covering onboarding, both PMS platforms , platform operations, developer portal/API, product updates, and internal operations. Designed to feed a client-facing platform bot — written for external end users, chunkable for retrieval, with locked terminology.</p>
-      <div class="project-stack"><span class="pill">BookStack</span><span class="pill">Technical Writing</span><span class="pill">Knowledge Architecture</span><span class="pill">Bot-Ready Content</span></div>
+    <div class="team">
+      <div class="team-types" role="group" aria-label="Project type" id="teamTypes"></div>
+      <div class="roster" aria-live="polite">
+        <h3 id="rTitle"></h3>
+        <p id="rDesc"></p>
+        <ul class="roles" id="rRoles"></ul>
+      </div>
     </div>
-
-    <div class="project">
-      <div class="project-tag">Product Design · Rogue Geometry (Personal Design Studio)</div>
-      <h3 class="project-name">Smart Furniture & Gadgets</h3>
-      <p class="project-desc">Bustan Hydroponic System: Modular smart hydroponic tower. Arduino-controlled irrigation + lighting. Lebanese herbs focus. <br> FocusCube: Tamagotchi-inspired desk companion to boost productivity. <br> E-Paper Pocket Size Reader: Boox Palma-inspired handheld e-reader. <br> Pocket Cycle Tracker: Pager-sized minimalist hardware device. Cycle tracking + prediction. </p>
-      <div class="project-stack"><span class="pill">Product Design</span><span class="pill">Product Lifecycle</span><span class="pill">Microcontrollers</span><span class="pill">System Architecture</span></div>
-    </div>
-
-    <div class="project">
-      <div class="project-tag">Automation Program · HedgeGuard</div>
-      <h3 class="project-name">n8n Automation Pipeline</h3>
-      <p class="project-desc">Designing the automation program for repetitive operational work — daily NAV checks across all client instances with Teams alerting, monthly portfolio performance reports pulling hypercube data into Excel templates. Includes a workaround → automation graduation pipeline with usage frequency tracking.</p>
-      <div class="project-stack"><span class="pill">n8n</span><span class="pill">Hypercube API</span><span class="pill">Power Automate</span><span class="pill">Workflow Design</span></div>
-    </div>
-
-    <div class="project">
-      <div class="project-tag">Smart Home · Multi-Property Deployment</div>
-      <h3 class="project-name">Mount Lebanon Residential Network</h3>
-      <p class="project-desc">Smart-home deployments across multiple residential properties in the Monteverde and Mansourieh regions. Raspberry Pi + Home Assistant integration covering lighting, climate, energy tracking, and security. Custom iOS / macOS-friendly dashboards built and tested per household for daily use patterns.</p>
-      <div class="project-stack"><span class="pill">Raspberry Pi</span><span class="pill">Home Assistant</span><span class="pill">YAML</span><span class="pill">iOS / macOS UI</span><span class="pill">IoT Integration</span></div>
-    </div>
-
-    <div class="project">
-      <div class="project-tag">Operational System · Manufacturing Client</div>
-      <h3 class="project-name">AACI Modular ERP</h3>
-      <p class="project-desc">A fully automated internal ERP built inside Google Workspace for an aluminium and glass manufacturing company. Three control hubs — Project Lifecycle, Finance, HR — with Apps Script automation, Gmail parsing, bank reconciliation, payroll, and document generation. In daily active use.</p>
-      <div class="project-stack"><span class="pill">Google Apps Script</span><span class="pill">Sheets</span><span class="pill">Gmail API</span><span class="pill">Operational Architecture</span></div>
-    </div>
-
-    <div class="project">
-      <div class="project-tag">3D Visualization Platform · A-TECH Australia</div>
-      <h3 class="project-name">Construction CRM + BIM Tool</h3>
-      <p class="project-desc">Scalable Unity application with real-time issue tracking, BIM integration, multi-user 3D experiences, FBX loaders, and VR/AR interaction. Paired with a CRM dashboard featuring role-based access control and real-time data updates.</p>
-      <div class="project-stack"><span class="pill">Unity</span><span class="pill">C#</span><span class="pill">Figma</span><span class="pill">iOS / macOS</span><span class="pill">BIM</span></div>
-    </div>
-
-    <div class="project">
-      <div class="project-tag">Web · Multiple Clients</div>
-      <h3 class="project-name">Custom Web Platforms</h3>
-      <p class="project-desc">Custom-built websites across industries — Glass & Mirror National Co. (corporate catalog), AACI (bilingual site with virtual gallery), Ralouka Montesi Photography (creative portfolio with custom layout system) and many others.</p>
-      <div class="project-stack"><span class="pill">HTML</span><span class="pill">React</span><span class="pill">Angular</span><span class="pill">Figma</span><span class="pill">Bilingual UX</span></div>
-    </div>
-
-  </div>
-</section>
-
-<section id="skills">
-  <div class="section-header"><div class="section-label">Skills & Tools</div><div class="section-num">03</div></div>
-  <div class="skills">
-
-    <div class="skill-block">
-      <div class="skill-cat">Languages & Frameworks</div>
-      <div class="skill-list">C++, C#, Java, JavaScript, TypeScript, HTML, CSS, PHP, Swift, Objective-C, SQL, YAML, React, Angular, Firebase</div>
-    </div>
-
-    <div class="skill-block">
-      <div class="skill-cat">Systems & Operations</div>
-      <div class="skill-list">SharePoint, Power Automate, Power BI, Microsoft 365, BookStack, n8n, Notion, Trello, Jira, Operational Architecture, Documentation Strategy</div>
-    </div>
-
-    <div class="skill-block">
-      <div class="skill-cat">Design & Development</div>
-      <div class="skill-list">Figma, Framer, Unity, Unreal Engine, GitHub, Arduino IDE, Xcode, Docker, MongoDB, Sweet Home 3D, AutoCAD, Blender, Spline</div>
-    </div>
-
-    <div class="skill-block">
-      <div class="skill-cat">APIs & Integration</div>
-      <div class="skill-list">Postman, REST APIs, Hypercube data extraction, Excel/VBA, Google Apps Script, Home Assistant, WordPress / OVH, FileZilla</div>
-    </div>
-
-    <div class="skill-block">
-      <div class="skill-cat">Testing & QA</div>
-      <div class="skill-list">Functional Testing, Exploratory Testing, UI/UX Testing, Cross-Device Testing (iOS / macOS / Web), Home Automation QA, Chrome DevTools</div>
-    </div>
-
-    <div class="skill-block">
-      <div class="skill-cat">Communication & Process</div>
-      <div class="skill-list">Three-layer reporting cadence (Tracker → Thread → Email), CEO-facing summaries, runbook design, change management, phased rollout strategy</div>
-    </div>
-
-  </div>
-</section>
-
-<section>
-  <div class="section-header"><div class="section-label">How I Think</div><div class="section-num">04</div></div>
-  <div class="phil">
-    <div class="phil-quote">"The system matters more than the tools. I think in architectures, not in syntax."</div>
-    <div class="phil-body">
-      <p>My background is computer science — but my real specialty is operating across the entire stack of building a working system. From the data schema to the user experience, from the runbook to the executive digest, I care about how everything connects.</p>
-      <br>
-      <p>I learned to code in school. I learned to build by doing — designing operational systems for institutional clients, automating manufacturing operations, wiring homes into responsive networks, debugging weird edge cases until they made sense. That's the work I love. That's the work I'm best at.</p>
+    <div class="team-note">
+      <div><b>One point of contact</b><p>You deal with me from first meeting to launch and after. No hand-offs between account managers.</p></div>
+      <div><b>Right-sized, not padded</b><p>You pay for the people your project needs, when it needs them. A pilot doesn't carry the cost of a full agency.</p></div>
+      <div><b>Experienced hands</b><p>Specialists who have shipped this kind of work before and do it themselves, not delegate it.</p></div>
     </div>
   </div>
 </section>
 
+<!-- PROCESS -->
+<section id="process">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>How a project runs</h2>
+      <p>Phased delivery. You see working software early, give feedback on real screens, and decide what comes next based on what people actually use.</p>
+    </div>
+    <ol class="steps">
+      <li><b>Discovery</b><p>Time with the people who do the work. Priorities, constraints, systems to connect.</p><small>1–2 weeks</small></li>
+      <li><b>Prototype</b><p>Key screens and flows you can click through and put in front of the people who will use them.</p><small>2–3 weeks</small></li>
+      <li><b>Pilot</b><p>Core features live with a first group of users, on real data.</p><small>6–10 weeks</small></li>
+      <li><b>Measure</b><p>Usage, time saved, errors caught. We fix what the numbers show.</p><small>Ongoing</small></li>
+      <li><b>Next phase</b><p>Roll out to more teams or sites and add the next set of features, priced separately.</p><small>Per phase</small></li>
+    </ol>
+    <div class="promises">
+      <div><b>You own the code</b><p>Source code, accounts and data are yours, in your name, from day one.</p></div>
+      <div><b>Security built in</b><p>Encrypted data, proven sign-in, least-access permissions, and an independent test before launch.</p></div>
+      <div><b>Documented</b><p>Your team gets clear guides for running the system, and developers get technical docs, the same standard I set at HedgeGuard.</p></div>
+      <div><b>Fixed-scope phases</b><p>Each phase has a clear scope and price. Changes are agreed in writing before work starts.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Experience</h2>
+      <p>Computer science by training, with minors in human-computer interaction and mobile app development. Eight years building across software, operations and hardware.</p>
+    </div>
+    <ul class="xp">
+      <li><span class="xp-when">Current</span><div><h3>Chief Operating Officer <span>HedgeGuard</span></h3><p>Portfolio management software for hedge funds, family offices and asset managers. Previously Product Manager. Runs operations, client onboarding and go-live, API delivery, documentation and reporting, and shapes the next-generation platform.</p></div></li>
+      <li><span class="xp-when">2025 – present</span><div><h3>Founder <span>Rogue Geometry</span></h3><p>A design studio making limited-edition functional objects that combine electronics, software and 3D-printed form.</p></div></li>
+      <li><span class="xp-when">2021 – present</span><div><h3>Independent consultant <span>IT4S</span></h3><p>Web platforms, business systems, smart-home installations and automation for clients in construction, retail, fashion and services.</p></div></li>
+      <li><span class="xp-when">2020 – 2021</span><div><h3>Software Developer <span>A-TECH Australia</span></h3><p>3D visualisation and CRM platform for construction: BIM integration, live issue tracking, multi-user 3D and VR/AR.</p></div></li>
+      <li><span class="xp-when">2019 – 2020</span><div><h3>Software Developer <span>ACRADIA</span></h3><p>Full-stack web applications in PHP and MySQL, with interfaces for touch and desktop.</p></div></li>
+    </ul>
+    <div class="tools">
+      <div><h3>Apps &amp; platforms</h3><p>React, React Native, Angular, TypeScript, Swift, Firebase, REST APIs, Postman, Unity/C#</p></div>
+      <div><h3>Operations &amp; automation</h3><p>SharePoint, Power Automate, Teams, n8n, Google Apps Script, Excel/VBA, BookStack</p></div>
+      <div><h3>Design, web &amp; hardware</h3><p>Figma, Framer, Cloudflare, GitHub, WordPress, ESP32, Raspberry Pi, Home Assistant, Revit, AutoCAD</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
 <section id="contact">
-  <div class="section-header"><div class="section-label">Contact</div><div class="section-num">05</div></div>
-  <div class="contact">
-    <div class="contact-left">
-      <h2 class="contact-headline">Let's build<br><em>something good</em>.</h2>
-      <p class="contact-body">Open to collaborations, technical projects, and conversations about operational systems, financial software architecture, or smart-home design. Based in Beirut, working across English, French, and Arabic.</p>
+  <div class="wrap contact">
+    <div>
+      <h2>Let's make yours <em>work better.</em></h2>
+      <p>Tell me what's slowing your operation down. The first conversation is about the problem, not a sales pitch.</p>
     </div>
-    <div class="contact-right">
-      <a class="contact-link" href="mailto:ritaghanem8@gmail.com">
-        <span class="contact-link-label">Email</span>
-        <span class="contact-link-value">ritaghanem8@gmail.com</span>
-      </a>
-      <a class="contact-link" href="tel:+96170290792">
-        <span class="contact-link-label">Phone</span>
-        <span class="contact-link-value">+961 70 29 07 92</span>
-      </a>
-      <a class="contact-link">
-        <span class="contact-link-label">Location</span>
-        <span class="contact-link-value">Beirut, Lebanon</span>
-      </a>
-      <a class="contact-link">
-        <span class="contact-link-label">Languages</span>
-        <span class="contact-link-value">EN · FR · AR</span>
-      </a>
+    <div class="clinks">
+      <a href="mailto:ritaghanem8@gmail.com"><span>Email</span><span>ritaghanem8@gmail.com</span></a>
+      <a href="tel:+96170290792"><span>Phone</span><span>+961 70 29 07 92</span></a>
+      <a href="https://wa.me/96170290792"><span>WhatsApp</span><span>Message me</span></a>
+      <div><span>Languages</span><span>English, French, Arabic</span></div>
     </div>
   </div>
 </section>
+</main>
 
-<footer>
-  <span>Rita Ghanem · Product Manager · 2026</span>
-  <span>Built with care · Beirut</span>
-</footer>
+<footer><div class="wrap"><span>Rita Ghanem · Beirut · 2026</span><span>Designed and built in-house</span></div></footer>
 
+<script>
+/* ---------- projects ---------- */
+const CATS=[
+  ['all','All'],
+  ['apps','Apps & platforms'],
+  ['ops','Operations & automation'],
+  ['build','Construction & architecture'],
+  ['web','Web & brand'],
+  ['hw','Hardware & ventures']
+];
+const P=[
+ {c:['apps','ops'],t:'Next-generation portfolio platform',x:'HedgeGuard',s:['wip','In progress'],
+  p:'Three separate portfolio systems, each with its own data model, workarounds and client migration path.',
+  b:'Operational input structured into a ranked roadmap with performance targets, API specs validated with clients, and migration planning run in parallel with the build.',
+  r:'The roadmap and operations tooling are live; feature development is underway, starting with trades.',
+  g:['Product roadmap','APIs','Migration','SharePoint']},
+ {c:['ops'],t:'Operations Hub',x:'HedgeGuard',s:['live','Live'],
+  p:'Workstreams, issues, features, prospects and website tasks were tracked in different places, so nobody had the whole picture.',
+  b:'One SharePoint hub with normalized lists, each surfaced in the Teams channel where that work happens, plus Power Automate flows that post one thread per item and reply only when something meaningful changes.',
+  r:'A single source of truth for the team and a weekly and monthly reporting rhythm up to the CEO.',
+  g:['SharePoint','Power Automate','Teams','Data design']},
+ {c:['ops'],t:'Automation program',x:'HedgeGuard',s:['wip','Expanding'],
+  p:'Daily NAV checks, weekly client performance tables and monthly reports were produced by hand.',
+  b:'Scheduled pipelines and Excel/VBA tooling that pull platform data into client-ready reports, with alerts when a check fails. Workarounds are tracked by frequency and promoted to automations.',
+  r:'Recurring reports now come out of templates in minutes; manual checks are moving to monitored schedules.',
+  g:['n8n','Power Automate','VBA','Reporting']},
+ {c:['apps'],t:'API endpoints & data integrations',x:'HedgeGuard',s:['live','Live'],
+  p:'Clients need platform data inside their own end-of-day processes, and exchange data has to land correctly in the platform.',
+  b:'New endpoints for NAV and inventory data, documented for client integration teams; exchange and custodian integrations validated in Postman; reconciliation gaps traced to root cause and handed to developers.',
+  r:'Clients pull official data programmatically, and reconciliation breaks are diagnosed quickly instead of patched.',
+  g:['REST APIs','Postman','Reconciliation','Technical docs']},
+ {c:['ops'],t:'Documentation program',x:'HedgeGuard',s:['live','Live'],
+  p:'Product knowledge was spread across people and threads; clients and new staff asked the same questions.',
+  b:'A seven-shelf knowledge base covering onboarding, each platform, operations, the developer and API portal and product updates, written so it can also feed a support bot.',
+  r:'A standard structure every new API doc follows, and fewer repeat questions.',
+  g:['BookStack','Technical writing','Knowledge design']},
+ {c:['ops','build'],t:'Modular ERP for a facade contractor',x:'Advanced Aluminium Côte d\'Ivoire',s:['live','In daily use'],
+  p:'Projects, finance and HR ran on disconnected spreadsheets and email.',
+  b:'An ERP built inside Google Workspace with three control hubs (project lifecycle, finance, HR), automated email parsing, bank reconciliation, payroll and document generation.',
+  r:'In daily use by the company. No licence fees, and staff kept the tools they already knew.',
+  g:['Google Apps Script','Sheets','Gmail API','Process design']},
+ {c:['build'],t:'Facade estimating tool',x:'Advanced Aluminium group',s:['wip','In progress'],
+  p:'Quoting meant pricing two or three supplier options per project by hand, lot by lot, before sending anything to the client.',
+  b:'An estimating workbook that prices several supplier options in parallel, from supplier price through freight, duty, installation and overheads to a sell price and a client-ready quotation.',
+  r:'First-pass estimates side by side in one place. Next step: importing a supplier\'s bill of quantities automatically.',
+  g:['Excel','Estimating','BOQ','Construction']},
+ {c:['build'],t:'Revit automation for architecture firms',x:'In collaboration with practising architects',s:['wip','In development'],
+  p:'Firms delivering airports and other large public projects lose hours to repetitive BIM work: setting up sheets and views, checking parameters and exporting drawing sets.',
+  b:'Automation tools that handle that repetitive production work inside Revit, designed with architects who deliver these projects so they fit how drawing sets are actually produced.',
+  r:'Architects spend their time on design and coordination instead of production chores.',
+  g:['Revit','BIM','Automation','Architecture']},
+ {c:['build','apps'],t:'Construction CRM + BIM platform',x:'A-TECH Australia',s:['live','Delivered'],
+  p:'Site issues and client communication were disconnected from the 3D building model.',
+  b:'A cross-platform Unity application (Windows, Android, iOS, macOS) with live issue tracking, BIM integration, multi-user 3D and VR/AR, plus a CRM dashboard with role-based access.',
+  r:'Teams tracked issues directly on the model, on any device.',
+  g:['Unity','C#','BIM','CRM']},
+ {c:['web','build'],t:'Bilingual website for a facade contractor',x:'aacafr.com',s:['live','Live'],
+  p:'An outdated site that didn\'t reflect the group\'s projects or reach its markets in Africa and the Gulf.',
+  b:'A 120-page English/French site generated from one content source: services, sectors, project pages and 14 market pages, with structured data, responsive images and search engine setup for each language.',
+  r:'Live on Cloudflare, deployed straight from a Git repository.',
+  g:['Static site generator','EN/FR','SEO','Cloudflare']},
+ {c:['web'],t:'Couture house site migration',x:'Brodé, Beirut',s:['live','Live'],
+  p:'A slow WordPress/WooCommerce site on a domain the client wanted to leave.',
+  b:'Migrated to a fast static site on a new domain: 46 dress galleries processed, search optimisation, and layout fixes across screen sizes.',
+  r:'Faster pages, lower running costs and no plugin maintenance.',
+  g:['Static HTML','Migration','SEO','Cloudflare']},
+ {c:['web'],t:'Company website growth',x:'HedgeGuard',s:['wip','Ongoing'],
+  p:'The site wasn\'t being found for the right searches in the right countries, and conversions weren\'t measured.',
+  b:'Localized landing pages for five markets, a structured data audit, cleanup of misleading keywords and an analytics setup.',
+  r:'A clear task log and measurable goals for the site instead of guesswork.',
+  g:['WordPress','SEO','Analytics','Localization']},
+ {c:['web'],t:'Before-and-after project portfolio',x:'Facade cleaning & restoration company',s:['live','Growing'],
+  p:'A specialist with impressive results and no website or presentation material.',
+  b:'A print-ready portfolio with matched before/after comparisons per project, built so new projects slot in as they are completed.',
+  r:'A document the client can send to prospects today.',
+  g:['Print design','Photography layout','Brand']},
+ {c:['hw'],t:'Smart-home network',x:'Mount Lebanon residences',s:['live','Installed'],
+  p:'Homeowners wanted lighting, climate, energy and security controlled in one place.',
+  b:'Raspberry Pi and Home Assistant installations across several properties, with reusable automation templates and dashboards tuned to each household.',
+  r:'Running daily in multiple homes.',
+  g:['Home Assistant','Raspberry Pi','IoT']},
+ {c:['hw','apps'],t:'In-car control device',x:'Rogue Geometry',s:['wip','Prototype'],
+  p:'Switching navigation, music and Focus mode while driving means looking at the phone.',
+  b:'A Bluetooth controller that appears to the phone as a keyboard and triggers Maps, music, Siri and Shortcuts with physical buttons.',
+  r:'Hands-free phone control without touching the screen.',
+  g:['ESP32','Bluetooth','iOS Shortcuts','3D printing']},
+ {c:['hw'],t:'Functional objects',x:'Rogue Geometry',s:['wip','Ongoing'],
+  p:'Most gadgets are disposable and interchangeable.',
+  b:'Limited-edition objects with electronics inside: a smart hydroponic tower, wireless music controllers, e-paper devices and NFC-linked pieces.',
+  r:'Small numbered runs, each designed, coded and printed in-house.',
+  g:['ESP32','E-paper','NFC','Product design']},
+ {c:['hw'],t:'Sidewalk projection for venues',x:'Outdoor marketing venture',s:['wip','Launching'],
+  p:'Restaurants and bars compete for foot traffic on busy streets.',
+  b:'Leased and sold projectors that cast a venue\'s logo and promotions onto the sidewalk outside, with installation and maintenance included.',
+  r:'Launching in Beirut\'s busiest pedestrian districts.',
+  g:['Retail marketing','Hardware','Business model']}
+];
+const fEl=document.getElementById('filters'),pEl=document.getElementById('projects');
+function cnt(k){return k==='all'?P.length:P.filter(p=>p.c.includes(k)).length}
+fEl.innerHTML=CATS.map(([k,l],i)=>`<button type="button" class="chip" data-k="${k}" aria-pressed="${i===0}">${l}<span class="n">${cnt(k)}</span></button>`).join('');
+pEl.innerHTML=P.map((p,i)=>`<li class="proj" data-c="${p.c.join(' ')}">
+  <button type="button" class="proj-btn" aria-expanded="false" aria-controls="pb${i}">
+    <span><span class="proj-title">${p.t}</span><span class="proj-ctx">${p.x}</span></span>
+    <span class="proj-status ${p.s[0]}">${p.s[1]}</span><span class="plus" aria-hidden="true"></span>
+  </button>
+  <div class="proj-body" id="pb${i}"><div class="proj-inner"><div class="pbd">
+    <div><h4>The problem</h4><p>${p.p}</p></div>
+    <div><h4>What was built</h4><p>${p.b}</p></div>
+    <div><h4>Where it stands</h4><p>${p.r}</p></div>
+    <div class="tags">${p.g.map(g=>`<span>${g}</span>`).join('')}</div>
+  </div></div></div></li>`).join('');
+pEl.addEventListener('click',e=>{
+  const b=e.target.closest('.proj-btn');if(!b)return;
+  const li=b.parentElement,open=!li.classList.contains('open');
+  li.classList.toggle('open',open);b.setAttribute('aria-expanded',open);
+});
+fEl.addEventListener('click',e=>{
+  const b=e.target.closest('.chip');if(!b)return;
+  fEl.querySelectorAll('.chip').forEach(c=>c.setAttribute('aria-pressed',c===b));
+  const k=b.dataset.k;
+  pEl.querySelectorAll('.proj').forEach(li=>{li.hidden=!(k==='all'||li.dataset.c.split(' ').includes(k))});
+});
+pEl.querySelector('.proj-btn').click();
+
+/* ---------- team ---------- */
+const T={
+ app:{ n:'App & platform',d:'An app for your users, a dashboard for your team and the backend that connects them to the systems you already run.',
+  r:[['Rita Ghanem','Product lead and delivery, your single point of contact',1],['UX/UI designer','Flows, screens and prototype testing with real users'],['Mobile developer','iOS and Android from one codebase'],['Backend & API developer','Data, integrations, payments and notifications'],['Security specialist','Architecture review and independent testing before launch'],['QA tester','Device testing across phones and OS versions']]},
+ ops:{n:'Operations & automation',d:'Replacing manual, repetitive work with systems your team actually uses.',
+  r:[['Rita Ghanem','Process mapping, system design and rollout',1],['Automation developer','Scheduled workflows, integrations and alerting'],['Data specialist','Clean structures, reporting and dashboards'],['IT administrator','Accounts, permissions and Microsoft 365 or Google Workspace setup']]},
+ web:{n:'Website & brand',d:'Sites and material that get found, load fast and say clearly what you do.',
+  r:[['Rita Ghanem','Structure, build and search setup',1],['Designer','Visual identity and layouts'],['Copywriter & translator','English, French and Arabic content'],['Photographer','Project and product photography']]},
+ arch:{n:'Architecture & BIM',d:'Tools for architecture and engineering firms working on large, drawing-heavy projects.',
+  r:[['Rita Ghanem','Product lead and software design',1],['Practising architects','Define the workflows and test every tool on live projects'],['Revit developer','Automation inside Revit and related tools'],['BIM coordinator','Standards, templates and rollout across teams']]},
+ hw:{n:'Smart spaces & hardware',d:'Connected homes, devices and physical installations.',
+  r:[['Rita Ghanem','System design, firmware and integration',1],['Installer / electrician','Safe wiring and on-site installation'],['Industrial designer','Enclosures and 3D-printed parts'],['IoT developer','Sensors, connectivity and dashboards']]}
+};
+const ttEl=document.getElementById('teamTypes');
+ttEl.innerHTML=Object.entries(T).map(([k,v],i)=>`<button type="button" class="tt" data-k="${k}" aria-pressed="${i===0}">${v.n}</button>`).join('');
+function showTeam(k){
+  const v=T[k];
+  document.getElementById('rTitle').textContent=v.n;
+  document.getElementById('rDesc').textContent=v.d;
+  document.getElementById('rRoles').innerHTML=v.r.map((r,i)=>`<li class="${r[2]?'lead':''}" style="animation-delay:${i*50}ms"><b>${r[0]}</b><span>${r[1]}</span></li>`).join('');
+}
+ttEl.addEventListener('click',e=>{
+  const b=e.target.closest('.tt');if(!b)return;
+  ttEl.querySelectorAll('.tt').forEach(x=>x.setAttribute('aria-pressed',x===b));
+  showTeam(b.dataset.k);
+});
+showTeam('app');
+
+/* ---------- estimating demo ---------- */
+const $=id=>document.getElementById(id);
+const LOTS={
+  cw:{n:'Curtain wall',inst:95,o:[['Option A','Premium European system',540,16],['Option B','Mid-range system',470,12],['Option C','Value system',415,9]]},
+  win:{n:'Windows',inst:60,o:[['Option A','Premium European system',340,12],['Option B','Mid-range system',295,9],['Option C','Value system',255,7]]},
+  clad:{n:'Cladding',inst:45,o:[['Option A','Premium panel',200,10],['Option B','Mid-range panel',165,8],['Option C','Value panel',140,6]]}
+};
+const COLORS=['#6f8fa8','#8a7550','#8fb59e','#9a978d','#c9a96e'];
+const usd=n=>'$'+Math.round(n).toLocaleString('en');
+let lot='cw';
+$('lotSeg').addEventListener('click',e=>{
+  const b=e.target.closest('button');if(!b)return;lot=b.dataset.v;
+  $('lotSeg').querySelectorAll('button').forEach(x=>x.setAttribute('aria-pressed',x===b));run();
+});
+function run(){
+  const A=+$('area').value,F=+$('frt').value/100,O=+$('oh').value/100,M=+$('mg').value/100,L=LOTS[lot];
+  $('areaOut').textContent=A.toLocaleString('en')+' m²';$('frtOut').textContent=Math.round(F*100)+'%';
+  $('ohOut').textContent=Math.round(O*100)+'%';$('mgOut').textContent=Math.round(M*100)+'%';
+  const R=L.o.map(([n,d,p,lt])=>{
+    const sup=p*A,frt=sup*F,ins=L.inst*A,base=sup+frt+ins,oh=base*O,cost=base+oh,sell=cost/(1-M);
+    return {n,d,lt,sell,parts:[sup,frt,ins,oh,sell-cost]};
+  });
+  const min=Math.min(...R.map(r=>r.sell)),max=Math.max(...R.map(r=>r.sell));
+  $('opts').innerHTML=R.map(r=>`<li class="${r.sell===min?'best':''}">
+    <div class="opt-head"><span class="opt-name">${r.n}<small>${r.d} · ${r.lt} weeks lead time</small></span>
+    <span class="opt-price"><b>${usd(r.sell)}</b><small>${usd(r.sell/A)} per m²</small></span></div>
+    <div class="stack" role="img" aria-label="Cost breakdown for ${r.n}">${r.parts.map((v,i)=>`<i style="width:${v/max*100}%;background:${COLORS[i]}"></i>`).join('')}</div></li>`).join('');
+  const fast=R.reduce((a,b)=>a.lt<b.lt?a:b);
+  $('summary').innerHTML=`<div><small>Spread between options</small><b>${usd(max-min)}</b></div>
+    <div><small>Lowest price per m²</small><b>${usd(min/A)}</b></div>
+    <div><small>Fastest delivery</small><b>${fast.n.replace('Option ','Option ')} · ${fast.lt} wk</b></div>`;
+}
+['area','frt','oh','mg'].forEach(id=>$(id).addEventListener('input',run));
+run();
+</script>
 </body>
 </html>
