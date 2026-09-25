@@ -53,7 +53,7 @@ nav{position:sticky;top:0;z-index:100;background:var(--nav-bg);backdrop-filter:b
 @media (max-width:860px){.nav-links{display:none}}
  
 /* hero */
-.hero{padding:clamp(56px,10vw,120px) 0 clamp(48px,7vw,88px);border-bottom:1px solid var(--line)}
+.hero{padding:clamp(32px,4.5vw,60px) 0 clamp(48px,7vw,88px);border-bottom:1px solid var(--line)}
 .hero-grid{display:grid;grid-template-columns:1.35fr 1fr;gap:clamp(32px,6vw,80px);align-items:end}
 .hero-role{font-size:15px;color:var(--brass);margin-bottom:22px}
 .hero h1{font-family:var(--serif);font-weight:300;font-size:clamp(46px,7.2vw,96px);line-height:.98;letter-spacing:-.035em;margin-bottom:30px}
@@ -731,12 +731,12 @@ showHub(0);
 /* ---------- Rogue Geometry objects ---------- */
 const OBJ_ST={made:'Made',bench:'On the bench',plan:'In the pipeline'};
 const OBJ=[
- ['made','Pour-sensing cruet','A flask-shaped sauce cruet that knows when it\'s being poured.','Made as a one-off wedding gift. It senses tilt and pouring, lights up, and shows messages on a small e-ink screen. An NFC tag in the base opens a recipe diary website styled like a video game menu.','ESP32-S3 · e-ink screen · LEDs · tilt sensing · NFC · 3D-printed body'],
+ ['made','Pour-sensing cruet','A flask-shaped sauce cruet that knows when it\'s being poured.','It senses tilt and pouring, lights up, and shows messages on a small e-ink screen. An NFC tag in the base opens a recipe diary website styled like a video game menu.','ESP32-S3 · e-ink screen · LEDs · tilt sensing · NFC · 3D-printed body'],
  ['bench','RogueDeck','A driving controller for your phone.','Two chunky tape-recorder-style buttons switch between maps and music. Four more trigger Siri, rotation lock, Driving Focus and a custom shortcut. A joystick navigates lists, and a rotary encoder is left programmable. It pairs as a Bluetooth keyboard, so no app is needed.','ESP32 · Bluetooth keyboard · joystick · rotary encoder · iOS Shortcuts'],
  ['bench','Loop pad','Hands-free loop control while you play.','A wireless pad for Loopy Pro on iPad, so loops can be recorded and triggered with both hands on an instrument. Its 16-key matrix is built on a repurposed calculator circuit board.','ESP32 · Bluetooth MIDI · 16-key switch matrix'],
  ['bench','Guitar foot controller','Stompbox switching and expression in one pedal.','Footswitches turn effects on and off, and a treadle controls wah, volume or any continuous setting, sent wirelessly to Loopy Pro.','ESP32-S3 · Bluetooth MIDI · footswitches · expression treadle'],
  ['bench','E-paper weather display','The forecast on a 4.7-inch paper-like screen.','Pulls the forecast over Wi-Fi and draws it on an e-paper panel that stays readable without a backlight and uses almost no power between updates.','LilyGo T5 · ESP32 · 4.7" e-paper · weather API'],
- ['bench','NFC carabiner','A carabiner that opens a climbing journal.','Tap it with a phone and a personal climbing journal opens, ready to log the session.','NFC tag · web journal · 3D-printed parts'],
+ ['made','NFC carabiner','A carabiner that opens a climbing journal.','Tap it with a phone and a personal climbing journal opens, ready to log the session.','NFC tag · web journal · 3D-printed parts'],
  ['plan','Pocket cycle tracker','Cycle tracking in a pager-sized device.','A minimalist, pager-sized device for cycle tracking and prediction. Planned as the studio\'s second drop.','Microcontroller · low-power display · custom enclosure'],
  ['plan','Pull-cord CD player','A wall-mounted CD player you start with a cord.','A reinterpretation of the pull-cord wall CD player. Planned as the third drop.','Audio electronics · 3D-printed housing'],
  ['plan','Sculptural lamps','A series of numbered, 3D-printed lamps.','Collectible lamps where the printed form is the design, not a shell around a bulb.','3D printing · LED lighting'],
@@ -832,4 +832,3 @@ run();
 </script>
 </body>
 </html>
- 
