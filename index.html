@@ -33,7 +33,7 @@ a{color:inherit}
 .wrap{max-width:var(--wrap);margin:0 auto;padding:0 var(--pad)}
 .skip{position:absolute;left:-999px;top:8px;background:var(--brass);color:var(--on-brass);padding:8px 14px;z-index:200}
 .skip:focus{left:8px}
-
+ 
 /* nav */
 nav{position:sticky;top:0;z-index:100;background:var(--nav-bg);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
 .nav-in{display:flex;align-items:center;justify-content:space-between;height:60px}
@@ -51,7 +51,7 @@ nav{position:sticky;top:0;z-index:100;background:var(--nav-bg);backdrop-filter:b
 :root[data-theme="light"] .theme-btn .sun{display:block}:root[data-theme="light"] .theme-btn .moon{display:none}
 .nav-right{display:flex;align-items:center;gap:10px}
 @media (max-width:860px){.nav-links{display:none}}
-
+ 
 /* hero */
 .hero{padding:clamp(56px,10vw,120px) 0 clamp(48px,7vw,88px);border-bottom:1px solid var(--line)}
 .hero-grid{display:grid;grid-template-columns:1.35fr 1fr;gap:clamp(32px,6vw,80px);align-items:end}
@@ -76,14 +76,14 @@ nav{position:sticky;top:0;z-index:100;background:var(--nav-bg);backdrop-filter:b
 .load.d1{animation-delay:.08s}.load.d2{animation-delay:.2s}.load.d3{animation-delay:.34s}.load.d4{animation-delay:.5s}
 @keyframes rise{to{opacity:1;transform:none}}
 @media (max-width:900px){.hero-grid{grid-template-columns:1fr}}
-
+ 
 /* sections */
 section{padding:clamp(64px,9vw,112px) 0;border-bottom:1px solid var(--line)}
 .sec-head{display:grid;grid-template-columns:1fr 1.3fr;gap:clamp(24px,5vw,72px);margin-bottom:clamp(36px,5vw,56px);align-items:end}
 .sec-head h2{font-family:var(--serif);font-weight:300;font-size:clamp(32px,4.4vw,52px);line-height:1.05;letter-spacing:-.025em}
 .sec-head p{color:var(--muted);max-width:36em}
 @media (max-width:860px){.sec-head{grid-template-columns:1fr}}
-
+ 
 /* principles */
 .principles{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line)}
 .pr{padding:30px 28px 30px 0;border-right:1px solid var(--line)}
@@ -93,7 +93,7 @@ section{padding:clamp(64px,9vw,112px) 0;border-bottom:1px solid var(--line)}
 .pr p{color:var(--muted);font-size:15.5px}
 .pr .eg{margin-top:16px;font-size:14px;color:var(--text);border-left:2px solid var(--brass-dim);padding-left:12px}
 @media (max-width:860px){.principles{grid-template-columns:1fr}.pr,.pr+.pr{padding:26px 0;border-right:none;border-bottom:1px solid var(--line)}}
-
+ 
 /* feature: hedgeguard */
 .feature{margin-top:clamp(48px,6vw,72px);display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,5vw,64px);background:var(--panel);border:1px solid var(--line);border-radius:4px;padding:clamp(26px,4vw,44px)}
 .feature h3{font-family:var(--serif);font-weight:300;font-size:clamp(26px,3vw,34px);line-height:1.12;letter-spacing:-.015em;margin:6px 0 16px}
@@ -106,7 +106,7 @@ section{padding:clamp(64px,9vw,112px) 0;border-bottom:1px solid var(--line)}
 .flow span strong{display:block;color:var(--text);font-weight:500}
 .flow span{color:var(--muted)}
 @media (max-width:860px){.feature{grid-template-columns:1fr}}
-
+ 
 /* demo — the one bold moment */
 #demo{background:linear-gradient(180deg,var(--bg),var(--tint) 40%,var(--bg))}
 .demo{display:grid;grid-template-columns:340px 1fr;border:1px solid var(--line2);border-radius:6px;overflow:hidden;background:var(--panel)}
@@ -143,7 +143,7 @@ section{padding:clamp(64px,9vw,112px) 0;border-bottom:1px solid var(--line)}
 .demo-note{font-size:13px;color:var(--faint)}
 @media (max-width:900px){.demo{grid-template-columns:1fr}.demo-controls{border-right:none;border-bottom:1px solid var(--line2)}}
 @media (max-width:520px){.summary{grid-template-columns:1fr}}
-
+ 
 /* work */
 .filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:28px}
 .chip{font:14px var(--sans);padding:8px 15px;border-radius:999px;border:1px solid var(--line2);background:none;color:var(--muted);cursor:pointer;transition:all .2s}
@@ -173,7 +173,7 @@ section{padding:clamp(64px,9vw,112px) 0;border-bottom:1px solid var(--line)}
 .tags{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:6px}
 .tags span{font-size:12.5px;color:var(--muted);border:1px solid var(--line);padding:3px 10px;border-radius:999px}
 @media (max-width:760px){.pbd{grid-template-columns:1fr;gap:16px}.proj-status{display:none}.proj-btn{grid-template-columns:1fr 28px}}
-
+ 
 /* spotlight */
 .sec-title-lg{font-family:var(--serif);font-weight:300;font-size:clamp(32px,4.4vw,52px);line-height:1.05;letter-spacing:-.025em;margin-bottom:20px}
 .spot-lede{color:var(--muted);max-width:34em}
@@ -194,7 +194,7 @@ section{padding:clamp(64px,9vw,112px) 0;border-bottom:1px solid var(--line)}
 .hub li b{font-weight:500}
 .hub li span{color:var(--muted)}
 @media (max-width:860px){.spot{grid-template-columns:1fr}}
-
+ 
 /* objects */
 .obj-grid{list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:12px;align-items:start}
 .obj{border:1px solid var(--line);border-radius:4px;background:var(--panel);transition:border-color .2s}
@@ -220,11 +220,11 @@ section{padding:clamp(64px,9vw,112px) 0;border-bottom:1px solid var(--line)}
 .drop-note b{color:var(--text);font-weight:500}
 @media (max-width:960px){.obj-grid{grid-template-columns:1fr 1fr}}
 @media (max-width:600px){.obj-grid{grid-template-columns:1fr}}
-
+ 
 .facts{grid-column:1/-1;list-style:none;display:flex;flex-wrap:wrap;gap:8px 28px;border-top:1px solid var(--line);padding-top:14px}
 .facts li{font-size:14.5px;color:var(--text)}
 .facts li::before{content:'';display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--brass);margin-right:9px;vertical-align:2px}
-
+ 
 /* team */
 .team{display:grid;grid-template-columns:300px 1fr;gap:clamp(24px,4vw,56px)}
 .team-types{display:flex;flex-direction:column;gap:6px}
@@ -245,7 +245,7 @@ section{padding:clamp(64px,9vw,112px) 0;border-bottom:1px solid var(--line)}
 .team-note b{display:block;font-weight:500;margin-bottom:4px}
 .team-note p{font-size:15px;color:var(--muted)}
 @media (max-width:860px){.team{grid-template-columns:1fr}.team-types{flex-direction:row;flex-wrap:wrap}.tt{flex:1 1 44%}.roles{grid-template-columns:1fr}.team-note{grid-template-columns:1fr}}
-
+ 
 /* process */
 .steps{list-style:none;display:grid;grid-template-columns:repeat(5,1fr);border-top:1px solid var(--line2);counter-reset:s}
 .steps li{padding:22px 20px 0 0;position:relative;counter-increment:s}
@@ -260,7 +260,7 @@ section{padding:clamp(64px,9vw,112px) 0;border-bottom:1px solid var(--line)}
 .promises p{font-size:14.5px;color:var(--muted)}
 @media (max-width:960px){.steps{grid-template-columns:1fr 1fr;gap:28px 20px}.promises{grid-template-columns:1fr 1fr}}
 @media (max-width:540px){.steps,.promises{grid-template-columns:1fr}}
-
+ 
 /* experience */
 .xp{list-style:none;border-top:1px solid var(--line)}
 .xp li{display:grid;grid-template-columns:200px 1fr;gap:28px;padding:24px 0;border-bottom:1px solid var(--line)}
@@ -269,12 +269,12 @@ section{padding:clamp(64px,9vw,112px) 0;border-bottom:1px solid var(--line)}
 .xp h3 span{color:var(--brass);font-style:italic;font-weight:300}
 .xp p{color:var(--muted);margin-top:8px;max-width:48em;font-size:15.5px}
 @media (max-width:700px){.xp li{grid-template-columns:1fr;gap:6px}}
-
+ 
 .tools{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:clamp(40px,5vw,60px)}
 .tools h3{font-size:14px;font-weight:600;color:var(--brass);margin-bottom:8px}
 .tools p{font-size:15px;color:var(--muted)}
 @media (max-width:760px){.tools{grid-template-columns:1fr}}
-
+ 
 /* contact */
 #contact{border-bottom:none}
 .contact{display:grid;grid-template-columns:1.2fr 1fr;gap:clamp(32px,6vw,80px);align-items:end}
@@ -288,7 +288,7 @@ section{padding:clamp(64px,9vw,112px) 0;border-bottom:1px solid var(--line)}
 @media (max-width:860px){.contact{grid-template-columns:1fr}}
 footer{border-top:1px solid var(--line);padding:24px 0;font-size:13px;color:var(--faint)}
 footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
-
+ 
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{animation:none!important;transition:none!important}
   .load{opacity:1;transform:none}
@@ -303,7 +303,7 @@ document.documentElement.setAttribute('data-theme',t)})();
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
-
+ 
 <nav aria-label="Main">
   <div class="wrap nav-in">
     <a class="logo" href="#top">Rita <span>Ghanem</span></a>
@@ -325,7 +325,7 @@ document.documentElement.setAttribute('data-theme',t)})();
     </div>
   </div>
 </nav>
-
+ 
 <main id="main">
 <header class="hero" id="top">
   <div class="wrap hero-grid">
@@ -349,7 +349,7 @@ document.documentElement.setAttribute('data-theme',t)})();
     </aside>
   </div>
 </header>
-
+ 
 <!-- APPROACH -->
 <section id="approach">
   <div class="wrap">
@@ -374,7 +374,7 @@ document.documentElement.setAttribute('data-theme',t)})();
         <p class="eg">The AACI ERP started as one hub and grew to three: projects, finance and HR. It's in daily use.</p>
       </div>
     </div>
-
+ 
     <div class="feature">
       <div>
         <p class="kicker">Current flagship</p>
@@ -390,7 +390,7 @@ document.documentElement.setAttribute('data-theme',t)})();
     </div>
   </div>
 </section>
-
+ 
 <!-- DEMO -->
 <section id="demo" aria-labelledby="demo-title">
   <div class="wrap">
@@ -398,7 +398,7 @@ document.documentElement.setAttribute('data-theme',t)})();
       <h2 id="demo-title">A quotation, in miniature</h2>
       <p>For a facade contractor, every quote meant pricing two or three supplier options by hand, lot by lot. This is a stripped-down version of the estimating tool I built for them. Change any input and every option reprices at once.</p>
     </div>
-
+ 
     <div class="demo">
       <form class="demo-controls" onsubmit="return false">
         <div class="field">
@@ -426,7 +426,7 @@ document.documentElement.setAttribute('data-theme',t)})();
           <input type="range" id="mg" min="5" max="30" step="1" value="15">
         </div>
       </form>
-
+ 
       <div class="demo-out" aria-live="polite">
         <div class="demo-top">
           <h3 id="qTitle">Three options, priced side by side</h3>
@@ -442,7 +442,7 @@ document.documentElement.setAttribute('data-theme',t)})();
     </div>
   </div>
 </section>
-
+ 
 <!-- ERP SPOTLIGHT -->
 <section id="erp" aria-labelledby="erp-title">
   <div class="wrap spot">
@@ -462,7 +462,7 @@ document.documentElement.setAttribute('data-theme',t)})();
     </div>
   </div>
 </section>
-
+ 
 <!-- WORK -->
 <section id="work">
   <div class="wrap">
@@ -474,7 +474,7 @@ document.documentElement.setAttribute('data-theme',t)})();
     <ul class="projects" id="projects"></ul>
   </div>
 </section>
-
+ 
 <!-- OBJECTS -->
 <section id="objects">
   <div class="wrap">
@@ -491,7 +491,7 @@ document.documentElement.setAttribute('data-theme',t)})();
     </div>
   </div>
 </section>
-
+ 
 <!-- TEAM -->
 <section id="team">
   <div class="wrap">
@@ -514,7 +514,7 @@ document.documentElement.setAttribute('data-theme',t)})();
     </div>
   </div>
 </section>
-
+ 
 <!-- PROCESS -->
 <section id="process">
   <div class="wrap">
@@ -537,7 +537,7 @@ document.documentElement.setAttribute('data-theme',t)})();
     </div>
   </div>
 </section>
-
+ 
 <!-- EXPERIENCE -->
 <section id="experience">
   <div class="wrap">
@@ -559,7 +559,7 @@ document.documentElement.setAttribute('data-theme',t)})();
     </div>
   </div>
 </section>
-
+ 
 <!-- CONTACT -->
 <section id="contact">
   <div class="wrap contact">
@@ -576,15 +576,15 @@ document.documentElement.setAttribute('data-theme',t)})();
   </div>
 </section>
 </main>
-
+ 
 <footer><div class="wrap"><span>Rita Ghanem · Beirut · 2026</span><span>Designed and built in-house</span></div></footer>
-
+ 
 <script>
 /* ---------- theme ---------- */
 (function(){const b=document.getElementById('themeBtn'),h=document.documentElement;
  const sync=()=>b.setAttribute('aria-label',h.dataset.theme==='light'?'Switch to dark mode':'Switch to light mode');
  sync();b.addEventListener('click',()=>{const t=h.dataset.theme==='light'?'dark':'light';h.dataset.theme=t;try{localStorage.setItem('theme',t)}catch(e){};sync()});})();
-
+ 
 /* ---------- projects ---------- */
 const CATS=[
   ['all','All'],
@@ -701,7 +701,7 @@ fEl.addEventListener('click',e=>{
   pEl.querySelectorAll('.proj').forEach(li=>{li.hidden=!(k==='all'||li.dataset.c.split(' ').includes(k))});
 });
 pEl.querySelector('.proj-btn').click();
-
+ 
 /* ---------- ERP spotlight ---------- */
 const HUBS=[
  ['Projects','Project lifecycle hub','Every project lives in one register, from award to handover. The finance and HR hubs read from it, so nothing is typed twice.',
@@ -727,7 +727,7 @@ eT.addEventListener('keydown',e=>{
   tabs[n].focus();showHub(n);
 });
 showHub(0);
-
+ 
 /* ---------- Rogue Geometry objects ---------- */
 const OBJ_ST={made:'Made',bench:'On the bench',plan:'In the pipeline'};
 const OBJ=[
@@ -766,7 +766,7 @@ oF.addEventListener('click',e=>{
   const k=b.dataset.k;
   oG.querySelectorAll('.obj').forEach(li=>{li.hidden=!(k==='all'||li.dataset.s===k)});
 });
-
+ 
 /* ---------- team ---------- */
 const T={
  app:{ n:'App & platform',d:'An app for your users, a dashboard for your team and the backend that connects them to the systems you already run.',
@@ -794,7 +794,7 @@ ttEl.addEventListener('click',e=>{
   showTeam(b.dataset.k);
 });
 showTeam('app');
-
+ 
 /* ---------- estimating demo ---------- */
 const $=id=>document.getElementById(id);
 const LOTS={
@@ -832,3 +832,4 @@ run();
 </script>
 </body>
 </html>
+ 
