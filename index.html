@@ -657,12 +657,6 @@ const P=[
   b:'Localized landing pages for five markets, a structured data audit, cleanup of misleading keywords and an analytics setup.',
   r:'A clear task log and measurable goals for the site instead of guesswork.',
   g:['WordPress','SEO','Analytics','Localization']},
- {c:['web'],t:'Before-and-after restoration portfolio',x:'Établissement Georges Arsouni · Clean All, Zahlé',s:['live','Growing'],
-  p:'A facade cleaning and stone restoration specialist with striking results, no website, and nothing to send prospects but phone photos.',
-  b:'A print-ready portfolio with a cover, company profile and one chapter per project: a spec table, matched before/after pairs and photo galleries. Chapter one is the historic Couvent Notre-Dame de Bzommar, with nine before and nine after photos paired into five comparisons and a separate section for its interior restoration. Chapter two is a stone residential building on Zahlé\'s main road.',
-  r:'13 pages and growing. Each new job slots in as its own chapter.',
-  k:['2 projects, 13 pages','Historic convent restoration','Built for print and PDF'],
-  g:['Print design','Layout system','Brand']},
  {c:['hw'],t:'Smart-home network',x:'Mount Lebanon residences',s:['live','Installed'],
   p:'Homeowners wanted lighting, climate, energy and security controlled in one place.',
   b:'Raspberry Pi and Home Assistant installations across several properties, with reusable automation templates and dashboards tuned to each household.',
@@ -729,20 +723,20 @@ eT.addEventListener('keydown',e=>{
 showHub(0);
  
 /* ---------- Rogue Geometry objects ---------- */
-const OBJ_ST={made:'Made',bench:'On the bench',plan:'In the pipeline'};
+const OBJ_ST={made:'Made',bench:'In the making'};
 const OBJ=[
  ['made','Pour-sensing cruet','A flask-shaped sauce cruet that knows when it\'s being poured.','It senses tilt and pouring, lights up, and shows messages on a small e-ink screen. An NFC tag in the base opens a recipe diary website styled like a video game menu.','ESP32-S3 · e-ink screen · LEDs · tilt sensing · NFC · 3D-printed body'],
- ['bench','RogueDeck','A driving controller for your phone.','Two chunky tape-recorder-style buttons switch between maps and music. Four more trigger Siri, rotation lock, Driving Focus and a custom shortcut. A joystick navigates lists, and a rotary encoder is left programmable. It pairs as a Bluetooth keyboard, so no app is needed.','ESP32 · Bluetooth keyboard · joystick · rotary encoder · iOS Shortcuts'],
+ ['made','RogueDeck','A driving controller for your phone.','Two chunky tape-recorder-style buttons switch between maps and music. Four more trigger Siri, rotation lock, Driving Focus and a custom shortcut. A joystick navigates lists, and a rotary encoder is left programmable. It pairs as a Bluetooth keyboard, so no app is needed.','ESP32 · Bluetooth keyboard · joystick · rotary encoder · iOS Shortcuts'],
  ['bench','Loop pad','Hands-free loop control while you play.','A wireless pad for Loopy Pro on iPad, so loops can be recorded and triggered with both hands on an instrument. Its 16-key matrix is built on a repurposed calculator circuit board.','ESP32 · Bluetooth MIDI · 16-key switch matrix'],
- ['bench','Guitar foot controller','Stompbox switching and expression in one pedal.','Footswitches turn effects on and off, and a treadle controls wah, volume or any continuous setting, sent wirelessly to Loopy Pro.','ESP32-S3 · Bluetooth MIDI · footswitches · expression treadle'],
- ['bench','E-paper weather display','The forecast on a 4.7-inch paper-like screen.','Pulls the forecast over Wi-Fi and draws it on an e-paper panel that stays readable without a backlight and uses almost no power between updates.','LilyGo T5 · ESP32 · 4.7" e-paper · weather API'],
+ ['made','Guitar foot controller','Stompbox switching and expression in one pedal.','Footswitches turn effects on and off, and a treadle controls wah, volume or any continuous setting, sent wirelessly to Loopy Pro.','ESP32-S3 · Bluetooth MIDI · footswitches · expression treadle'],
+ ['made','E-paper weather display','The forecast on a 4.7-inch paper-like screen.','Pulls the forecast over Wi-Fi and draws it on an e-paper panel that stays readable without a backlight and uses almost no power between updates.','LilyGo T5 · ESP32 · 4.7" e-paper · weather API'],
  ['made','NFC carabiner','A carabiner that opens a climbing journal.','Tap it with a phone and a personal climbing journal opens, ready to log the session.','NFC tag · web journal · 3D-printed parts'],
- ['plan','Pocket cycle tracker','Cycle tracking in a pager-sized device.','A minimalist, pager-sized device for cycle tracking and prediction. Planned as the studio\'s second drop.','Microcontroller · low-power display · custom enclosure'],
- ['plan','Pull-cord CD player','A wall-mounted CD player you start with a cord.','A reinterpretation of the pull-cord wall CD player. Planned as the third drop.','Audio electronics · 3D-printed housing'],
- ['plan','Sculptural lamps','A series of numbered, 3D-printed lamps.','Collectible lamps where the printed form is the design, not a shell around a bulb.','3D printing · LED lighting'],
- ['plan','Bustan','A modular smart hydroponic tower for Lebanese herbs.','Stackable growing modules with automated irrigation and grow lighting.','Arduino · pumps · grow lights · modular tower'],
- ['plan','FocusCube','A desk companion that keeps you on task.','A small, Tamagotchi-inspired cube that reacts to how focused your day has been.','Microcontroller · small display · sensors'],
- ['plan','Pocket e-paper reader','A palm-sized e-reader.','A handheld reader built around a small e-paper screen, sized to live in a pocket.','E-paper · microcontroller · battery']
+ ['made','Pocket cycle tracker','Cycle tracking in a pager-sized device.','A minimalist, pager-sized device for cycle tracking and prediction.','Microcontroller · low-power display · custom enclosure'],
+ ['made','Pull-cord CD player','A wall-mounted CD player you start with a cord.','A reinterpretation of the pull-cord wall CD player.','Audio electronics · 3D-printed housing'],
+ ['made','Sculptural lamps','A series of numbered, 3D-printed lamps.','Collectible lamps where the printed form is the design, not a shell around a bulb.','3D printing · LED lighting'],
+ ['made','Bustan','A modular smart hydroponic tower for Lebanese herbs.','Stackable growing modules with automated irrigation and grow lighting.','Arduino · pumps · grow lights · modular tower'],
+ ['made','FocusCube','A desk companion that keeps you on task.','A small, Tamagotchi-inspired cube that reacts to how focused your day has been.','Microcontroller · small display · sensors'],
+ ['made','Pocket e-paper reader','A palm-sized e-reader.','A handheld reader built around a small e-paper screen, sized to live in a pocket.','E-paper · microcontroller · battery']
 ];
 const oF=document.getElementById('objFilters'),oG=document.getElementById('objGrid');
 const oCats=[['all','All']].concat(Object.entries(OBJ_ST));
