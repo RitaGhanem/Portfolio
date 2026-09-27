@@ -33,7 +33,7 @@ a{color:inherit}
 .wrap{max-width:var(--wrap);margin:0 auto;padding:0 var(--pad)}
 .skip{position:absolute;left:-999px;top:8px;background:var(--brass);color:var(--on-brass);padding:8px 14px;z-index:200}
 .skip:focus{left:8px}
- 
+
 /* nav */
 nav{position:sticky;top:0;z-index:100;background:var(--nav-bg);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
 .nav-in{display:flex;align-items:center;justify-content:space-between;height:60px}
@@ -51,7 +51,7 @@ nav{position:sticky;top:0;z-index:100;background:var(--nav-bg);backdrop-filter:b
 :root[data-theme="light"] .theme-btn .sun{display:block}:root[data-theme="light"] .theme-btn .moon{display:none}
 .nav-right{display:flex;align-items:center;gap:10px}
 @media (max-width:860px){.nav-links{display:none}}
- 
+
 /* hero */
 .hero{padding:clamp(32px,4.5vw,60px) 0 clamp(48px,7vw,88px);border-bottom:1px solid var(--line)}
 .hero-grid{display:grid;grid-template-columns:1.35fr 1fr;gap:clamp(32px,6vw,80px);align-items:end}
@@ -76,14 +76,14 @@ nav{position:sticky;top:0;z-index:100;background:var(--nav-bg);backdrop-filter:b
 .load.d1{animation-delay:.08s}.load.d2{animation-delay:.2s}.load.d3{animation-delay:.34s}.load.d4{animation-delay:.5s}
 @keyframes rise{to{opacity:1;transform:none}}
 @media (max-width:900px){.hero-grid{grid-template-columns:1fr}}
- 
+
 /* sections */
 section{padding:clamp(64px,9vw,112px) 0;border-bottom:1px solid var(--line)}
 .sec-head{display:grid;grid-template-columns:1fr 1.3fr;gap:clamp(24px,5vw,72px);margin-bottom:clamp(36px,5vw,56px);align-items:end}
 .sec-head h2{font-family:var(--serif);font-weight:300;font-size:clamp(32px,4.4vw,52px);line-height:1.05;letter-spacing:-.025em}
 .sec-head p{color:var(--muted);max-width:36em}
 @media (max-width:860px){.sec-head{grid-template-columns:1fr}}
- 
+
 /* principles */
 .principles{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line)}
 .pr{padding:30px 28px 30px 0;border-right:1px solid var(--line)}
@@ -93,7 +93,7 @@ section{padding:clamp(64px,9vw,112px) 0;border-bottom:1px solid var(--line)}
 .pr p{color:var(--muted);font-size:15.5px}
 .pr .eg{margin-top:16px;font-size:14px;color:var(--text);border-left:2px solid var(--brass-dim);padding-left:12px}
 @media (max-width:860px){.principles{grid-template-columns:1fr}.pr,.pr+.pr{padding:26px 0;border-right:none;border-bottom:1px solid var(--line)}}
- 
+
 /* feature: hedgeguard */
 .feature{margin-top:clamp(48px,6vw,72px);display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,5vw,64px);background:var(--panel);border:1px solid var(--line);border-radius:4px;padding:clamp(26px,4vw,44px)}
 .feature h3{font-family:var(--serif);font-weight:300;font-size:clamp(26px,3vw,34px);line-height:1.12;letter-spacing:-.015em;margin:6px 0 16px}
@@ -106,7 +106,7 @@ section{padding:clamp(64px,9vw,112px) 0;border-bottom:1px solid var(--line)}
 .flow span strong{display:block;color:var(--text);font-weight:500}
 .flow span{color:var(--muted)}
 @media (max-width:860px){.feature{grid-template-columns:1fr}}
- 
+
 /* demo — the one bold moment */
 #demo{background:linear-gradient(180deg,var(--bg),var(--tint) 40%,var(--bg))}
 .demo{display:grid;grid-template-columns:340px 1fr;border:1px solid var(--line2);border-radius:6px;overflow:hidden;background:var(--panel)}
@@ -143,7 +143,7 @@ section{padding:clamp(64px,9vw,112px) 0;border-bottom:1px solid var(--line)}
 .demo-note{font-size:13px;color:var(--faint)}
 @media (max-width:900px){.demo{grid-template-columns:1fr}.demo-controls{border-right:none;border-bottom:1px solid var(--line2)}}
 @media (max-width:520px){.summary{grid-template-columns:1fr}}
- 
+
 /* work */
 .filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:28px}
 .chip{font:14px var(--sans);padding:8px 15px;border-radius:999px;border:1px solid var(--line2);background:none;color:var(--muted);cursor:pointer;transition:all .2s}
@@ -173,7 +173,7 @@ section{padding:clamp(64px,9vw,112px) 0;border-bottom:1px solid var(--line)}
 .tags{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:6px}
 .tags span{font-size:12.5px;color:var(--muted);border:1px solid var(--line);padding:3px 10px;border-radius:999px}
 @media (max-width:760px){.pbd{grid-template-columns:1fr;gap:16px}.proj-status{display:none}.proj-btn{grid-template-columns:1fr 28px}}
- 
+
 /* spotlight */
 .sec-title-lg{font-family:var(--serif);font-weight:300;font-size:clamp(32px,4.4vw,52px);line-height:1.05;letter-spacing:-.025em;margin-bottom:20px}
 .spot-lede{color:var(--muted);max-width:34em}
@@ -194,7 +194,7 @@ section{padding:clamp(64px,9vw,112px) 0;border-bottom:1px solid var(--line)}
 .hub li b{font-weight:500}
 .hub li span{color:var(--muted)}
 @media (max-width:860px){.spot{grid-template-columns:1fr}}
- 
+
 /* objects */
 .obj-grid{list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:12px;align-items:start}
 .obj{border:1px solid var(--line);border-radius:4px;background:var(--panel);transition:border-color .2s}
@@ -220,11 +220,11 @@ section{padding:clamp(64px,9vw,112px) 0;border-bottom:1px solid var(--line)}
 .drop-note b{color:var(--text);font-weight:500}
 @media (max-width:960px){.obj-grid{grid-template-columns:1fr 1fr}}
 @media (max-width:600px){.obj-grid{grid-template-columns:1fr}}
- 
+
 .facts{grid-column:1/-1;list-style:none;display:flex;flex-wrap:wrap;gap:8px 28px;border-top:1px solid var(--line);padding-top:14px}
 .facts li{font-size:14.5px;color:var(--text)}
 .facts li::before{content:'';display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--brass);margin-right:9px;vertical-align:2px}
- 
+
 /* team */
 .team{display:grid;grid-template-columns:300px 1fr;gap:clamp(24px,4vw,56px)}
 .team-types{display:flex;flex-direction:column;gap:6px}
@@ -245,7 +245,7 @@ section{padding:clamp(64px,9vw,112px) 0;border-bottom:1px solid var(--line)}
 .team-note b{display:block;font-weight:500;margin-bottom:4px}
 .team-note p{font-size:15px;color:var(--muted)}
 @media (max-width:860px){.team{grid-template-columns:1fr}.team-types{flex-direction:row;flex-wrap:wrap}.tt{flex:1 1 44%}.roles{grid-template-columns:1fr}.team-note{grid-template-columns:1fr}}
- 
+
 /* process */
 .steps{list-style:none;display:grid;grid-template-columns:repeat(5,1fr);gap:0 20px;counter-reset:s}
 .steps li{padding:26px 0 0;position:relative;counter-increment:s;--p:0%;
@@ -262,7 +262,7 @@ section{padding:clamp(64px,9vw,112px) 0;border-bottom:1px solid var(--line)}
 .promises p{font-size:14.5px;color:var(--muted)}
 @media (max-width:960px){.steps{grid-template-columns:1fr 1fr;gap:28px 20px}.promises{grid-template-columns:1fr 1fr}}
 @media (max-width:540px){.steps,.promises{grid-template-columns:1fr}}
- 
+
 /* experience */
 .xp{list-style:none;border-top:1px solid var(--line)}
 .xp li{display:grid;grid-template-columns:200px 1fr;gap:28px;padding:24px 0;border-bottom:1px solid var(--line)}
@@ -271,12 +271,12 @@ section{padding:clamp(64px,9vw,112px) 0;border-bottom:1px solid var(--line)}
 .xp h3 span{color:var(--brass);font-style:italic;font-weight:300}
 .xp p{color:var(--muted);margin-top:8px;max-width:48em;font-size:15.5px}
 @media (max-width:700px){.xp li{grid-template-columns:1fr;gap:6px}}
- 
+
 .tools{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:clamp(40px,5vw,60px)}
 .tools h3{font-size:14px;font-weight:600;color:var(--brass);margin-bottom:8px}
 .tools p{font-size:15px;color:var(--muted)}
 @media (max-width:760px){.tools{grid-template-columns:1fr}}
- 
+
 /* contact */
 #contact{border-bottom:none}
 .contact{display:grid;grid-template-columns:1.2fr 1fr;gap:clamp(32px,6vw,80px);align-items:end}
@@ -290,13 +290,13 @@ section{padding:clamp(64px,9vw,112px) 0;border-bottom:1px solid var(--line)}
 @media (max-width:860px){.contact{grid-template-columns:1fr}}
 footer{border-top:1px solid var(--line);padding:24px 0;font-size:13px;color:var(--faint)}
 footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
- 
+
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{animation:none!important;transition:none!important}
   .load{opacity:1;transform:none}
   html{scroll-behavior:auto}
 }
- 
+
 /* ================= BAUHAUS THEME ================= */
 :root[data-style="bauhaus"]{--c1:var(--blue);--c2:var(--yellow);--c3:var(--red);--c4:var(--faint);--c5:var(--ink);--serif:'Jost','Futura','Century Gothic',system-ui,sans-serif;--sans:'Jost','Futura','Century Gothic',system-ui,sans-serif;
   --bg:#141414;--panel:#1c1c1c;--panel2:#232323;--line:#3a3a3a;--line2:#e9e3d6;--text:#f2ede3;--muted:#b6b0a4;--faint:#8c877d;
@@ -304,7 +304,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
   --red:#e5483a;--blue:#3f6fd8;--yellow:#f5c21a;--ink:#f2ede3}
 @media (prefers-color-scheme:light){:root[data-style="bauhaus"]:not([data-theme="dark"]){--bg:#f2ede3;--panel:#fbf8f1;--panel2:#e9e2d3;--line:#d3cbbb;--line2:#141414;--text:#141414;--muted:#48443d;--faint:#736d64;--brass:#c8341f;--brass-dim:#c8341f;--sage:#1f4fa3;--rust:#b88700;--on-brass:#fff;--nav-bg:rgba(242,237,227,.96);--tint:#f2ede3;--red:#d13b2a;--blue:#1f4fa3;--yellow:#f2b705;--ink:#141414}}
 :root[data-style="bauhaus"][data-theme="light"]{--bg:#f2ede3;--panel:#fbf8f1;--panel2:#e9e2d3;--line:#d3cbbb;--line2:#141414;--text:#141414;--muted:#48443d;--faint:#736d64;--brass:#c8341f;--brass-dim:#c8341f;--sage:#1f4fa3;--rust:#b88700;--on-brass:#fff;--nav-bg:rgba(242,237,227,.96);--tint:#f2ede3;--red:#d13b2a;--blue:#1f4fa3;--yellow:#f2b705;--ink:#141414}
- 
+
 html[data-style="bauhaus"] *,html[data-style="bauhaus"] *::before,html[data-style="bauhaus"] *::after{border-radius:0!important}
 html[data-style="bauhaus"] .pulse,html[data-style="bauhaus"] .steps li::after,html[data-style="bauhaus"] .theme-btn,html[data-style="bauhaus"] .bh-mark .c{border-radius:50%!important}
 html[data-style="bauhaus"] body{font-size:16.5px}
@@ -320,14 +320,14 @@ html[data-style="bauhaus"] .bh-mark .t{background:var(--yellow);clip-path:polygo
 html[data-style="bauhaus"] nav{border-bottom:2px solid var(--ink)}
 html[data-style="bauhaus"] section,html[data-style="bauhaus"] .hero{border-bottom:2px solid var(--ink)}
 html[data-style="bauhaus"] .hero-role,html[data-style="bauhaus"] .kicker{font-weight:600;letter-spacing:.02em}
- 
+
 /* hero composition */
 html[data-style="bauhaus"] .hero-side{display:flex;flex-direction:column;gap:22px}
 html[data-style="bauhaus"] .bh-comp{width:100%;max-width:440px;height:auto;align-self:flex-end;overflow:visible}
 html[data-style="bauhaus"] .bh-p{transition:transform .5s cubic-bezier(.2,.7,.2,1)}
 html[data-style="bauhaus"] .now{border:2px solid var(--ink);border-top:10px solid var(--red);background:var(--panel)}
 html[data-style="bauhaus"] .now-row{border-top-color:var(--line)}
- 
+
 /* buttons & controls */
 html[data-style="bauhaus"] .btn{border:2px solid var(--ink);font-weight:600}
 html[data-style="bauhaus"] .btn:hover{background:var(--ink);color:var(--bg)}
@@ -340,7 +340,7 @@ html[data-style="bauhaus"] .chip{border:2px solid var(--line)}
 html[data-style="bauhaus"] .chip[aria-pressed=true]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
 html[data-style="bauhaus"] .tab{border:2px solid var(--line)}
 html[data-style="bauhaus"] .tab[aria-selected=true]{background:var(--blue);border-color:var(--blue);color:#fff}
- 
+
 /* section markers */
 html[data-style="bauhaus"] .sec-head h2::before,html[data-style="bauhaus"] .sec-title-lg::before{content:'';display:block;width:26px;height:26px;margin-bottom:20px;background:var(--red)}
 html[data-style="bauhaus"] #approach .sec-head h2::before{background:var(--red);border-radius:50%!important}
@@ -351,7 +351,7 @@ html[data-style="bauhaus"] #objects .sec-head h2::before{background:var(--blue);
 html[data-style="bauhaus"] #team .sec-head h2::before{background:var(--yellow)}
 html[data-style="bauhaus"] #process .sec-head h2::before{background:var(--red);clip-path:polygon(50% 0,100% 100%,0 100%)}
 html[data-style="bauhaus"] #experience .sec-head h2::before{background:var(--ink);border-radius:50%!important}
- 
+
 /* approach + feature */
 html[data-style="bauhaus"] .principles{border-top:2px solid var(--ink)}
 html[data-style="bauhaus"] .pr .eg{border-left:4px solid var(--blue)}
@@ -359,7 +359,7 @@ html[data-style="bauhaus"] .pr:nth-child(2) .eg{border-left-color:var(--red)}
 html[data-style="bauhaus"] .pr:nth-child(3) .eg{border-left-color:var(--yellow)}
 html[data-style="bauhaus"] .feature{border:2px solid var(--ink);border-left:14px solid var(--blue)}
 html[data-style="bauhaus"] .flow b{color:var(--red);font-weight:600}
- 
+
 /* demo */
 html[data-style="bauhaus"] #demo{background:var(--bg)}
 html[data-style="bauhaus"] .demo{border:2px solid var(--ink)}
@@ -368,12 +368,12 @@ html[data-style="bauhaus"] .demo-controls label{font-weight:500}
 html[data-style="bauhaus"] .opt-price b{font-weight:600}
 html[data-style="bauhaus"] .summary{border:2px solid var(--ink)}
 html[data-style="bauhaus"] .stack{height:14px}
- 
+
 /* ERP */
 html[data-style="bauhaus"] .hub{border:2px solid var(--ink);border-top:10px solid var(--yellow)}
 html[data-style="bauhaus"] .hub li::before{background:var(--red)}
 html[data-style="bauhaus"] .spot-facts{border-top:2px solid var(--ink)}
- 
+
 /* work */
 html[data-style="bauhaus"] .projects{border-top:2px solid var(--ink)}
 html[data-style="bauhaus"] .proj-btn:hover .proj-title{color:var(--red)}
@@ -381,7 +381,7 @@ html[data-style="bauhaus"] .plus{border:2px solid var(--ink)}
 html[data-style="bauhaus"] .plus::before,html[data-style="bauhaus"] .plus::after{background:var(--text)}
 html[data-style="bauhaus"] .pbd h4{color:var(--blue)}
 html[data-style="bauhaus"] .facts li::before{background:var(--red)}
- 
+
 /* objects */
 html[data-style="bauhaus"] .obj{border:2px solid var(--ink);background:var(--panel)}
 html[data-style="bauhaus"] .obj.open{border-color:var(--red)}
@@ -393,7 +393,7 @@ html[data-style="bauhaus"] .obj-grid .obj:nth-child(3n+1) .obj-btn h3::before,ht
 html[data-style="bauhaus"] .obj-grid .obj:nth-child(3n+1) h3::before{background:var(--red);border-radius:50%!important}
 html[data-style="bauhaus"] .obj-grid .obj:nth-child(3n+2) h3::before{background:var(--blue)}
 html[data-style="bauhaus"] .obj-grid .obj:nth-child(3n) h3::before{background:var(--yellow);clip-path:polygon(50% 0,100% 100%,0 100%)}
- 
+
 /* team */
 html[data-style="bauhaus"] .tt{border:2px solid var(--line)}
 html[data-style="bauhaus"] .tt[aria-pressed=true]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
@@ -404,7 +404,7 @@ html[data-style="bauhaus"] .roles li.lead b{color:var(--red)}
 html[data-style="bauhaus"] .team-note div{border-top:4px solid var(--blue)}
 html[data-style="bauhaus"] .team-note div:nth-child(2){border-top-color:var(--red)}
 html[data-style="bauhaus"] .team-note div:nth-child(3){border-top-color:var(--yellow)}
- 
+
 /* process */
 html[data-style="bauhaus"] .steps li{background:linear-gradient(90deg,var(--red) 0 var(--p),var(--line) var(--p) 100%) top left/100% 4px no-repeat}
 html[data-style="bauhaus"] .steps li::before{color:var(--ink);font-weight:600}
@@ -414,7 +414,7 @@ html[data-style="bauhaus"] .promises div{border-top:8px solid var(--red)}
 html[data-style="bauhaus"] .promises div:nth-child(2){border-top-color:var(--blue)}
 html[data-style="bauhaus"] .promises div:nth-child(3){border-top-color:var(--yellow)}
 html[data-style="bauhaus"] .promises div:nth-child(4){border-top-color:var(--ink)}
- 
+
 /* experience + contact */
 html[data-style="bauhaus"] .xp{border-top:2px solid var(--ink)}
 html[data-style="bauhaus"] .tools h3{color:var(--blue)}
@@ -422,7 +422,7 @@ html[data-style="bauhaus"] .clinks a,html[data-style="bauhaus"] .clinks div{bord
 html[data-style="bauhaus"] .clinks a:hover span:last-child{color:var(--red)}
 html[data-style="bauhaus"] footer{border-top:2px solid var(--ink)}
 @media (max-width:900px){html[data-style="bauhaus"] .bh-comp{max-width:320px;align-self:flex-start}}
- 
+
 /* style switcher */
 .bh-mark,.bh-comp{display:none}
 html[data-style="bauhaus"] .bh-mark{display:inline-flex}
@@ -432,7 +432,7 @@ html[data-style="bauhaus"] .bh-comp{display:block}
 .style-btn svg{width:26px;height:12px;flex:none}
 html[data-style="bauhaus"] .style-btn{border:2px solid var(--ink);color:var(--text);font-weight:600}
 @media (max-width:520px){.nav-cta{display:none}.style-btn span{display:none}}
- 
+
 /* ================= MOTION ================= */
 @property --p{syntax:'<percentage>';inherits:false;initial-value:0%}
 .rv{opacity:0;transform:translateY(24px);transition:opacity .75s cubic-bezier(.2,.7,.2,1),transform .75s cubic-bezier(.2,.7,.2,1)}
@@ -441,24 +441,24 @@ html[data-style="bauhaus"] .style-btn{border:2px solid var(--ink);color:var(--te
 .obj.in:hover{transform:translateY(-4px)}
 .proj-btn .proj-title{display:inline-block;transition:color .2s,transform .3s cubic-bezier(.2,.7,.2,1)}
 .proj-btn:hover .proj-title{transform:translateX(6px)}
- 
+
 /* process lines draw in */
 .steps li{transition:--p 1.1s cubic-bezier(.6,0,.2,1)}
 .steps li:nth-child(2){transition-delay:.15s}.steps li:nth-child(3){transition-delay:.3s}.steps li:nth-child(4){transition-delay:.45s}.steps li:nth-child(5){transition-delay:.6s}
 .steps:not(.in) li{--p:0%!important}
- 
+
 /* demo bars grow in */
 .demo:not(.in) .stack i{width:0!important}
 .stack i{transition:width .7s cubic-bezier(.2,.7,.2,1)}
 .opt-price b{transition:color .3s}
- 
+
 /* headline underline */
 .hero h1 .l2{position:relative;display:inline-block}
 .hero h1 .l2::after{content:'';position:absolute;left:0;right:.12em;bottom:.02em;height:3px;background:var(--brass);transform:scaleX(0);transform-origin:left;animation:draw 1.1s cubic-bezier(.6,0,.2,1) 1s forwards}
 @keyframes draw{to{transform:scaleX(1)}}
 html[data-style="bauhaus"] .hero h1 .l2::after{height:.26em;bottom:.08em;background:var(--yellow);z-index:-1;right:0}
 html[data-style="bauhaus"] .hero h1{position:relative;z-index:0}
- 
+
 /* ticker */
 .ticker{overflow:hidden;border-bottom:1px solid var(--line);padding:16px 0;white-space:nowrap}
 .ticker-track{display:inline-flex;align-items:center;gap:28px;animation:tick 48s linear infinite;padding-right:28px}
@@ -472,7 +472,7 @@ html[data-style="bauhaus"] .tk{width:14px;height:14px;transform:none}
 html[data-style="bauhaus"] .tk-c{background:var(--red);border-radius:50%!important}
 html[data-style="bauhaus"] .tk-s{background:var(--blue)}
 html[data-style="bauhaus"] .tk-t{background:var(--yellow);clip-path:polygon(50% 0,100% 100%,0 100%)}
- 
+
 /* bauhaus composition motion */
 .bh-comp{cursor:pointer}
 .bh-l{transition:transform .6s cubic-bezier(.2,.7,.2,1)}
@@ -486,25 +486,25 @@ html[data-style="bauhaus"] .tk-t{background:var(--yellow);clip-path:polygon(50% 
 @keyframes ciBreathe{from{transform:translate(0,4px) scale(.97)}to{transform:translate(-6px,-10px) scale(1.05)}}
 @keyframes trFloat{from{transform:translateY(0) rotate(0)}to{transform:translateY(-14px) rotate(-4deg)}}
 @keyframes roll{from{transform:translateX(0)}to{transform:translateX(-318px)}}
- 
+
 /* section markers pop in (bauhaus) */
 html[data-style="bauhaus"] .sec-head h2::before,html[data-style="bauhaus"] .sec-title-lg::before{transform:scale(0) rotate(-120deg);transition:transform .9s cubic-bezier(.3,1.6,.5,1) .15s}
 html[data-style="bauhaus"] .sec-head.in h2::before,html[data-style="bauhaus"] .in .sec-title-lg::before{transform:none}
 html[data-style="bauhaus"] .obj-btn h3::before{transition:transform .5s cubic-bezier(.3,1.6,.5,1)}
 html[data-style="bauhaus"] .obj:hover .obj-btn h3::before{transform:rotate(180deg) scale(1.3)}
- 
+
 /* logo shapes hop on hover */
 .bh-mark i{transition:transform .3s}
 .logo:hover .bh-mark i{animation:hop .55s cubic-bezier(.3,1.6,.5,1)}
 .logo:hover .bh-mark .s{animation-delay:.07s}.logo:hover .bh-mark .t{animation-delay:.14s}
 @keyframes hop{40%{transform:translateY(-6px)}}
- 
+
 @media (prefers-reduced-motion:reduce){
   .rv{opacity:1!important;transform:none!important}
   .ticker-track{animation:none!important}
   .hero h1 .l2::after{transform:none}
 }
- 
+
 /* ================= RG BADGE ================= */
 .rg-badge{position:fixed;right:calc(20px + env(safe-area-inset-right,0px));bottom:calc(20px + env(safe-area-inset-bottom,0px));width:104px;height:104px;z-index:150;display:block;transition:transform .35s cubic-bezier(.3,1.5,.5,1);-webkit-tap-highlight-color:transparent}
 .rg-badge svg{width:100%;height:100%;overflow:visible;filter:drop-shadow(0 6px 18px rgba(0,0,0,.18))}
@@ -522,7 +522,7 @@ html[data-style="bauhaus"] .rg-init{font:700 23px var(--sans);font-style:normal;
 html[data-style="bauhaus"] .rg-ring{font-weight:700}
 @media (max-width:600px){.rg-badge{width:78px;height:78px;right:calc(12px + env(safe-area-inset-right,0px));bottom:calc(12px + env(safe-area-inset-bottom,0px))}}
 @media (prefers-reduced-motion:reduce){.rg-spin{animation:none!important}}
- 
+
 /* ================= STYLE HINT ================= */
 .nav-right{position:relative}
 .style-hint{position:absolute;top:calc(100% + 14px);right:0;width:min(320px,calc(100vw - 32px));background:var(--panel);color:var(--text);border:1px solid var(--line2);border-radius:6px;padding:16px 18px;box-shadow:0 14px 40px rgba(0,0,0,.22);z-index:160;animation:hintIn .5s cubic-bezier(.3,1.4,.5,1)}
@@ -540,6 +540,24 @@ html[data-style="bauhaus"] .style-hint::before{display:none}
 html[data-style="bauhaus"] .style-hint .sh-try{background:var(--red);border:2px solid var(--red);color:#fff}
 html[data-style="bauhaus"] .style-hint .sh-keep{border:2px solid var(--ink)}
 @media (prefers-reduced-motion:reduce){.style-btn.nudge{animation:none!important}}
+
+/* ================= CITY LINKS ================= */
+.city-pill{display:inline-flex;align-items:center;gap:6px;height:36px;padding:0 13px;border-radius:999px;border:1px solid var(--line2);font:500 13.5px var(--sans);color:var(--text);text-decoration:none;white-space:nowrap}
+.city-pill:hover{border-color:var(--brass);color:var(--brass)}
+html[data-style="bauhaus"] .city-pill{border:2px solid var(--ink);font-weight:600}
+.nav-cta,.style-btn,.city-pill{white-space:nowrap;flex:none}.theme-btn{flex:none}
+.nav-links{gap:clamp(14px,1.6vw,26px)}
+.nav-in{gap:24px}
+@media (max-width:1300px){.nav-links a{font-size:13.5px}}
+@media (max-width:1220px){.nav-links{display:none}}
+@media (max-width:520px){.cp-t{display:none}.city-pill{padding:0 10px}}
+.btn-city{gap:10px}
+.city-ic{font-size:15px;line-height:1}
+.city-cta{margin-top:clamp(40px,5vw,60px);display:grid;grid-template-columns:1fr auto;gap:24px;align-items:center;padding:clamp(22px,3vw,32px);border:1px solid var(--line2);border-radius:6px;background:var(--panel)}
+.city-cta h3{font-family:var(--serif);font-weight:400;font-size:clamp(22px,2.6vw,30px);line-height:1.15;margin-bottom:6px}
+.city-cta p{color:var(--muted);max-width:40em}
+html[data-style="bauhaus"] .city-cta{border:2px solid var(--ink);border-left:14px solid var(--yellow)}
+@media (max-width:700px){.city-cta{grid-template-columns:1fr}}
 </style>
 <script>
 (function(){var t=null;try{t=localStorage.getItem('theme')}catch(e){}
@@ -551,7 +569,7 @@ document.documentElement.setAttribute('data-style',st==='classic'?'classic':'bau
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
- 
+
 <nav aria-label="Main">
   <div class="wrap nav-in">
     <a class="logo" href="#top"><span class="bh-mark" aria-hidden="true"><i class="c"></i><i class="s"></i><i class="t"></i></span>Rita <span>Ghanem</span></a>
@@ -565,6 +583,7 @@ document.documentElement.setAttribute('data-style',st==='classic'?'classic':'bau
       <li><a href="#experience">Experience</a></li>
     </ul>
     <div class="nav-right">
+      <a class="city-pill" href="city.html" title="Walk through the work as a 3D city"><span aria-hidden="true">🌳</span><span class="cp-t">3D city</span></a>
       <button type="button" class="style-btn" id="styleBtn" title="Switch between Bauhaus and Classic styles">
         <svg viewBox="0 0 26 12" aria-hidden="true"><circle cx="5" cy="6" r="5" fill="#d13b2a"/><rect x="11" y="1" width="10" height="10" fill="#1f4fa3" opacity=".9"/><polygon points="20,11 23,1 26,11" fill="#f2b705"/></svg>
         <span id="styleLbl">Bauhaus</span>
@@ -584,17 +603,18 @@ document.documentElement.setAttribute('data-style',st==='classic'?'classic':'bau
     </div>
   </div>
 </nav>
- 
+
 <main id="main">
 <header class="hero" id="top">
   <div class="wrap hero-grid">
     <div>
-      <p class="hero-role load d1">Chief Operating Officer at HedgeGuard · Independent systems &amp; app builder</p>
+      <p class="hero-role load d1">Systems thinker · Independent systems &amp; app builder</p>
       <h1 class="load d2">I make systems<span class="l2">work better.</span></h1>
       <p class="hero-lede load d3">I design, build and run the systems businesses depend on: <strong>customer apps, operational platforms, automation and data integrations</strong>. I start from how the work actually happens, then build the smallest thing that measurably improves it, and grow it from there.</p>
       <div class="hero-actions load d4">
         <a class="btn btn-solid" href="#demo">Try the estimating demo</a>
         <a class="btn" href="#work">See the work</a>
+        <a class="btn btn-city" href="city.html"><span class="city-ic" aria-hidden="true">🌳</span> Walk through it in 3D</a>
       </div>
     </div>
     <div class="hero-side">
@@ -609,8 +629,8 @@ document.documentElement.setAttribute('data-style',st==='classic'?'classic':'bau
     <aside class="now load d3" aria-label="Current focus">
       <h2>Right now</h2>
       <dl>
-        <div class="now-row"><dt>Role</dt><dd>Chief Operating Officer, HedgeGuard</dd></div>
-        <div class="now-row"><dt>Building</dt><dd><span class="pulse" aria-hidden="true"></span>HedgeGuard's next-generation platform</dd></div>
+        <div class="now-row"><dt>Role</dt><dd>Operator, architect and builder</dd></div>
+        <div class="now-row"><dt>Building</dt><dd><span class="pulse" aria-hidden="true"></span>One better system at a time</dd></div>
         <div class="now-row"><dt>Taking on</dt><dd>Apps, platforms and operational systems for growing businesses</dd></div>
         <div class="now-row"><dt>Based in</dt><dd>Beirut · working in English, French and Arabic</dd></div>
       </dl>
@@ -618,9 +638,9 @@ document.documentElement.setAttribute('data-style',st==='classic'?'classic':'bau
     </div>
   </div>
 </header>
- 
+
 <div class="ticker" aria-hidden="true"><div class="ticker-track"><span>Operations</span><i class="tk tk-c"></i><span>Automation</span><i class="tk tk-s"></i><span>Apps & platforms</span><i class="tk tk-t"></i><span>Data integrations</span><i class="tk tk-c"></i><span>ERP systems</span><i class="tk tk-s"></i><span>APIs</span><i class="tk tk-t"></i><span>Websites</span><i class="tk tk-c"></i><span>Documentation</span><i class="tk tk-s"></i><span>Hardware</span><i class="tk tk-t"></i><span>Process design</span><i class="tk tk-c"></i><span>Operations</span><i class="tk tk-c"></i><span>Automation</span><i class="tk tk-s"></i><span>Apps & platforms</span><i class="tk tk-t"></i><span>Data integrations</span><i class="tk tk-c"></i><span>ERP systems</span><i class="tk tk-s"></i><span>APIs</span><i class="tk tk-t"></i><span>Websites</span><i class="tk tk-c"></i><span>Documentation</span><i class="tk tk-s"></i><span>Hardware</span><i class="tk tk-t"></i><span>Process design</span><i class="tk tk-c"></i></div></div>
- 
+
 <!-- APPROACH -->
 <section id="approach">
   <div class="wrap">
@@ -645,7 +665,7 @@ document.documentElement.setAttribute('data-style',st==='classic'?'classic':'bau
         <p class="eg">The AACI ERP started as one hub and grew to three: projects, finance and HR. It's in daily use.</p>
       </div>
     </div>
- 
+
     <div class="feature">
       <div>
         <p class="kicker">Current flagship</p>
@@ -661,7 +681,7 @@ document.documentElement.setAttribute('data-style',st==='classic'?'classic':'bau
     </div>
   </div>
 </section>
- 
+
 <!-- DEMO -->
 <section id="demo" aria-labelledby="demo-title">
   <div class="wrap">
@@ -669,7 +689,7 @@ document.documentElement.setAttribute('data-style',st==='classic'?'classic':'bau
       <h2 id="demo-title">A quotation, in miniature</h2>
       <p>For a facade contractor, every quote meant pricing two or three supplier options by hand, lot by lot. This is a stripped-down version of the estimating tool I built for them. Change any input and every option reprices at once.</p>
     </div>
- 
+
     <div class="demo">
       <form class="demo-controls" onsubmit="return false">
         <div class="field">
@@ -697,7 +717,7 @@ document.documentElement.setAttribute('data-style',st==='classic'?'classic':'bau
           <input type="range" id="mg" min="5" max="30" step="1" value="15">
         </div>
       </form>
- 
+
       <div class="demo-out" aria-live="polite">
         <div class="demo-top">
           <h3 id="qTitle">Three options, priced side by side</h3>
@@ -713,7 +733,7 @@ document.documentElement.setAttribute('data-style',st==='classic'?'classic':'bau
     </div>
   </div>
 </section>
- 
+
 <!-- ERP SPOTLIGHT -->
 <section id="erp" aria-labelledby="erp-title">
   <div class="wrap spot">
@@ -733,7 +753,7 @@ document.documentElement.setAttribute('data-style',st==='classic'?'classic':'bau
     </div>
   </div>
 </section>
- 
+
 <!-- WORK -->
 <section id="work">
   <div class="wrap">
@@ -743,9 +763,13 @@ document.documentElement.setAttribute('data-style',st==='classic'?'classic':'bau
     </div>
     <div class="filters" role="group" aria-label="Filter projects" id="filters"></div>
     <ul class="projects" id="projects"></ul>
+    <div class="city-cta">
+      <div><h3>Prefer to wander?</h3><p>The same work, laid out as a small sunny city. Every building is a project; walk in, take your time, listen to the birds.</p></div>
+      <a class="btn btn-solid" href="city.html">Walk the city →</a>
+    </div>
   </div>
 </section>
- 
+
 <!-- OBJECTS -->
 <section id="objects">
   <div class="wrap">
@@ -762,7 +786,7 @@ document.documentElement.setAttribute('data-style',st==='classic'?'classic':'bau
     </div>
   </div>
 </section>
- 
+
 <!-- TEAM -->
 <section id="team">
   <div class="wrap">
@@ -785,7 +809,7 @@ document.documentElement.setAttribute('data-style',st==='classic'?'classic':'bau
     </div>
   </div>
 </section>
- 
+
 <!-- PROCESS -->
 <section id="process">
   <div class="wrap">
@@ -808,7 +832,7 @@ document.documentElement.setAttribute('data-style',st==='classic'?'classic':'bau
     </div>
   </div>
 </section>
- 
+
 <!-- EXPERIENCE -->
 <section id="experience">
   <div class="wrap">
@@ -830,7 +854,7 @@ document.documentElement.setAttribute('data-style',st==='classic'?'classic':'bau
     </div>
   </div>
 </section>
- 
+
 <!-- CONTACT -->
 <section id="contact">
   <div class="wrap contact">
@@ -847,8 +871,8 @@ document.documentElement.setAttribute('data-style',st==='classic'?'classic':'bau
   </div>
 </section>
 </main>
- 
- 
+
+
 <a class="rg-badge" href="#contact" aria-label="Rita Ghanem, system architect. Get in touch">
   <svg viewBox="0 0 120 120" aria-hidden="true">
     <defs><path id="rgRing" d="M60,60 m-44,0 a44,44 0 1,1 88,0 a44,44 0 1,1 -88,0"/></defs>
@@ -860,9 +884,9 @@ document.documentElement.setAttribute('data-style',st==='classic'?'classic':'bau
     <text class="rg-init" x="60" y="60" text-anchor="middle" dominant-baseline="central">RG</text>
   </svg>
 </a>
- 
-<footer><div class="wrap"><span>Rita Ghanem · Beirut · 2026</span><span>Designed and built in-house</span></div></footer>
- 
+
+<footer><div class="wrap"><span>Rita Ghanem · Beirut · 2026</span><span><a href="city.html">Walk the city</a> · Designed and built in-house</span></div></footer>
+
 <script>
 /* ---------- bauhaus composition parallax ---------- */
 (function(){const hero=document.querySelector('.hero'),ps=[...document.querySelectorAll('.bh-l')];
@@ -876,7 +900,7 @@ document.documentElement.setAttribute('data-style',st==='classic'?'classic':'bau
   ps.forEach(p=>{const d=+p.dataset.d;p.style.transform=`translate(${x*d}px,${y*d}px)`})});
  hero.addEventListener('pointerleave',()=>ps.forEach(p=>p.style.transform=''));
 })();
- 
+
 /* ---------- scroll reveal ---------- */
 function setupReveal(){
   const sel=['.sec-head','.principles .pr','.feature','.demo','.spot > div','.proj','.obj','.team-types','.roster','.team-note > div','.steps','.steps li','.promises > div','.xp li','.tools > div','.contact > *'];
@@ -893,12 +917,12 @@ function setupReveal(){
     setTimeout(()=>{if(!e.target.matches('.steps li'))e.target.style.transitionDelay=''},1200)}}),{rootMargin:'0px 0px -8% 0px',threshold:.08});
   els.forEach(e=>io.observe(e));
 }
- 
+
 /* ---------- style switcher ---------- */
 (function(){const b=document.getElementById('styleBtn'),l=document.getElementById('styleLbl'),h=document.documentElement;
  const sync=()=>{const next=h.dataset.style==='bauhaus'?'Classic':'Bauhaus';l.textContent=next;b.setAttribute('aria-label','Switch to '+next.toLowerCase()+' style')};
  sync();b.addEventListener('click',()=>{h.dataset.style=h.dataset.style==='bauhaus'?'classic':'bauhaus';try{localStorage.setItem('style',h.dataset.style)}catch(e){};sync()});})();
- 
+
 /* ---------- first-visit style hint ---------- */
 (function(){const h=document.getElementById('styleHint'),btn=document.getElementById('styleBtn'),html=document.documentElement;
  let seen=false;try{seen=localStorage.getItem('styleHintSeen')||localStorage.getItem('style')}catch(e){}
@@ -912,12 +936,12 @@ function setupReveal(){
  btn.addEventListener('click',()=>{if(!h.hidden)close()});
  setTimeout(()=>{if(!h.hidden)close()},15000);
 })();
- 
+
 /* ---------- theme ---------- */
 (function(){const b=document.getElementById('themeBtn'),h=document.documentElement;
  const sync=()=>b.setAttribute('aria-label',h.dataset.theme==='light'?'Switch to dark mode':'Switch to light mode');
  sync();b.addEventListener('click',()=>{const t=h.dataset.theme==='light'?'dark':'light';h.dataset.theme=t;try{localStorage.setItem('theme',t)}catch(e){};sync()});})();
- 
+
 /* ---------- projects ---------- */
 const CATS=[
   ['all','All'],
@@ -1022,7 +1046,7 @@ fEl.addEventListener('click',e=>{
   pEl.querySelectorAll('.proj').forEach(li=>{li.hidden=!(k==='all'||li.dataset.c.split(' ').includes(k))});
 });
 pEl.querySelector('.proj-btn').click();
- 
+
 /* ---------- ERP spotlight ---------- */
 const HUBS=[
  ['Projects','Project lifecycle hub','Every project lives in one register, from award to handover. The finance and HR hubs read from it, so nothing is typed twice.',
@@ -1048,7 +1072,7 @@ eT.addEventListener('keydown',e=>{
   tabs[n].focus();showHub(n);
 });
 showHub(0);
- 
+
 /* ---------- Rogue Geometry objects ---------- */
 const OBJ_ST={made:'Made',bench:'In the making'};
 const OBJ=[
@@ -1087,7 +1111,7 @@ oF.addEventListener('click',e=>{
   const k=b.dataset.k;
   oG.querySelectorAll('.obj').forEach(li=>{li.hidden=!(k==='all'||li.dataset.s===k)});
 });
- 
+
 /* ---------- team ---------- */
 const T={
  app:{ n:'App & platform',d:'An app for your users, a dashboard for your team and the backend that connects them to the systems you already run.',
@@ -1115,7 +1139,7 @@ ttEl.addEventListener('click',e=>{
   showTeam(b.dataset.k);
 });
 showTeam('app');
- 
+
 /* ---------- estimating demo ---------- */
 const $=id=>document.getElementById(id);
 const LOTS={
